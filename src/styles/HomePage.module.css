@@ -1,0 +1,364 @@
+/* Nav Bar */
+.centerNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+}
+
+.centerNav nav {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90vw;
+  height: 70px;
+  background-color: #14df96;
+  border: 1px solid #6a6a6a;
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+.centerNav nav img {
+  width: 150px;
+  margin-left: 20px;
+}
+.centerNav nav ul {
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  font-weight: 700;
+  font-size: 15px;
+  position: absolute;
+  right: 10px;
+}
+.centerNav nav li {
+  list-style: none;
+}
+.loginButton {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 140px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+/* Header */
+.headerContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff9e8;
+}
+.headerContainer header {
+  display: flex;
+  align-items: center;
+  margin-left: 70px;
+  height: 100vh;
+  position: relative;
+}
+.headerText h1 {
+  width: 300px;
+  font-size: 65px;
+}
+.headerText p {
+  width: 400px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #505050;
+}
+.headerContainer header img {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  height: 90vh;
+}
+
+/* Search */
+.searchBoxContainer {
+  position: absolute;
+  bottom: 20px;
+}
+.searchBox {
+  width: 90vw;
+  height: 15vh;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.searchBox form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.columnInputLocation {
+  display: flex;
+  flex-direction: column;
+}
+.columnInputs {
+  display: flex;
+  flex-direction: column;
+}
+.columnInputs label {
+  font-size: 20px;
+  font-weight: 700;
+}
+.columnInputLocation {
+  font-size: 20px;
+  font-weight: 700;
+}
+.columnInputLocation input {
+  border: none;
+  border-bottom: 3px solid black;
+  width: 200px;
+  margin-top: 10px;
+  font-size: 15px;
+  padding-bottom: 15px;
+  font-weight: 700;
+  outline: none;
+}
+.columnInputs input {
+  border: none;
+  border-bottom: 3px solid black;
+  width: 150px;
+  margin-top: 10px;
+  font-size: 15px;
+  padding-bottom: 15px;
+  font-weight: 700;
+  outline: none;
+}
+
+.columnInputs select {
+  border: none;
+  border-bottom: 3px solid black;
+  width: 150px;
+  margin-top: 10px;
+  font-size: 15px;
+  padding-bottom: 15px;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+}
+.searchBox form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Info Section */
+.infoSectionContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 450px;
+  background-color: #1e1e1e;
+}
+
+.imgAndIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.imgAndIcon img {
+  width: 150px;
+  object-fit: contain;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.infoSection h1 {
+  margin-top: 15px;
+}
+.infoSection p {
+  margin-top: 5px;
+  width: 250px;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* InfoSection Two */
+.infoSectionTwoContainer {
+  margin-top: 100px;
+  margin-bottom: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.infoSectionTwoImage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+.infoSectionTwoImage img {
+  width: 350px;
+}
+.drOwenText {
+  left: -50px;
+  bottom: 100px;
+  position: absolute;
+  color: white;
+  width: 200px;
+  height: 60px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  backdrop-filter: blur(2px);
+}
+.drOwenStars {
+  right: -100px;
+  bottom: 30px;
+  position: absolute;
+  color: #ffd75f;
+  width: 130px;
+  height: 40px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  backdrop-filter: blur(2px);
+}
+
+.infoSectionTwoText {
+  margin-top: 50px;
+}
+
+.infoSectionTwoText h1 {
+  font-size: 30px;
+}
+.infoSectionTwoText p {
+  font-size: 20px;
+  font-weight: 400;
+  width: 430px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.infoSectionTwoText button {
+  width: 200px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Hospitals Near You  */
+.hospitalsNearContainer {
+  padding-top: 50px;
+  padding-left: 120px;
+  padding-top: 100px;
+  height: 500px;
+  background-color: #fff9e8;
+  overflow-x: hidden;
+}
+
+.hospitalsNearText {
+  display: flex;
+  width: 90vw;
+  position: relative;
+}
+.hospitalsNearArrBtns {
+  display: flex;
+  position: absolute;
+  right: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.hospitalsNearDot {
+  color: #6a6a6a;
+}
+.swiperContainer {
+  width: 85vw;
+  height: 300px;
+  position: relative;
+}
+.hospitalsCarousel {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+}
+
+.hospitalsCarouselContainer {
+  margin-right: 30px;
+  width: 300px;
+  height: 220px;
+  border: none;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.hospitalsCarouselContainer img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 6px 6px 0 0;
+}
+.hospitalsCarouselItem {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+.hospitalsCarouselItem .address {
+  width: 180px;
+}
+
+.hospitalsNearViewButton {
+  position: absolute;
+  left: 50%;
+}
+.hospitalsNearViewButton button {
+  background-color: black;
+  width: 100px;
+  height: 40px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  margin-top: 40px;
+  cursor: pointer;
+}
