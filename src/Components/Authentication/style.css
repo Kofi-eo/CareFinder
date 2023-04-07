@@ -6,13 +6,18 @@
   align-items: center;
   font-family: "Poppins", sans-serif;
 }
+
 .auth-container {
   display: flex;
   width: 100%;
 }
+
 .auth-image-container {
-  width: 50%;
-  height: 100%;
+  width: 50vw;
+  height: 100vh;
+  background-image: url("/signInImage.webp");
+  background-size: cover;
+  background-repeat: none;
 }
 .auth-image {
   width: 100%;

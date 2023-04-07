@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Image from "next/image";
 import { getAuth } from "firebase/auth";
+
 // import '@/styles/Home.module.css';
 
-// import './style.css';
+// import "./style.css";
 
 const AuthPage = () => {
   const [form, setForm] = useState({
@@ -12,23 +13,21 @@ const AuthPage = () => {
     showPassword: false,
     submitting: false,
     forgotPassword: false,
-    confirmPassword: '',
-    isNewUser: false
+    confirmPassword: "",
+    isNewUser: false,
   });
 
-  const [user, error,] = useSignInWithGoogle();
+  // const [user, error,] = useSignInWithGoogle();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
   };
-
 
   const onChange = (event) => {
     //update form state
-    setForm(prev => ({
+    setForm((prev) => ({
       ...prev,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     }));
   };
 
@@ -45,9 +44,7 @@ const AuthPage = () => {
     // })
   };
 
-  const sendResetPassword = () => {
-
-  };
+  const sendResetPassword = () => {};
 
   const Heading = () => {
     const date = new Date();
@@ -60,131 +57,141 @@ const AuthPage = () => {
     }
   };
 
-
   return (
-    <section className='auth-section-container'>
-      <div className='auth-container'>
-        <div className='auth-image-container'>
-          {/* <Image className='auth-image' src='https://unsplash.com/photos/pTrhfmj2jDA' width='1' height='1' alt='' /> */}
-        </div>
-
-
-        <section className='auth-section'>
+    <section className="auth-section-container">
+      <div className="auth-container">
+        <div className="auth-image-container"></div>
+        <section className="auth-section">
           <h1>{Heading()}</h1>
-          <h5>{!form.isNewUser ? 'Welcome Back! Enter your details to sign in.' : ' Welcome! Enter your details to sign up.'}</h5>
+          <h5>
+            {!form.isNewUser
+              ? "Welcome Back! Enter your details to sign in."
+              : " Welcome! Enter your details to sign up."}
+          </h5>
 
-
-
-          <form className='form' onSubmit={handleSubmit}>
-
-
+          <form className="form" onSubmit={handleSubmit}>
             {/* if its a new user and he doesnt forget his password this shows up */}
 
-
-            {(!form.forgotPassword) &&
+            {!form.forgotPassword && (
               <>
-                <label for='email'>Email</label>
+                <label for="email">Email</label>
                 <input
-                  className='auth-input'
-                  type='email'
-                  name='email'
+                  className="auth-input"
+                  type="email"
+                  name="email"
                   value={form.email}
-                  placeholder='Email'
+                  placeholder="Email"
                   onChange={onChange}
                 />
 
-                <label for='password'>Password</label>
+                <label for="password">Password</label>
                 <input
-                  className='auth-input'
-                  type='password'
-                  name='password'
-                  placeholder='Password'
+                  className="auth-input"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
                   value={form.password}
                   onChange={onChange}
                 />
 
-
-
                 {/* confirm password only shows if the person is creating an account, it is hidden when signing in  */}
 
-
-                {form.isNewUser &&
+                {form.isNewUser && (
                   <>
-                    <label for='confirm password'>Confirm Password</label>
+                    <label for="confirm password">Confirm Password</label>
                     <input
-                      className='auth-input'
-                      type='password'
-                      name='confirmPassword'
-                      placeholder='Password'
+                      className="auth-input"
+                      type="password"
+                      name="confirmPassword"
+                      placeholder="Password"
                       value={form.confirmPassword}
                       onChange={onChange}
                     />
-                  </>}
-
+                  </>
+                )}
 
                 {/* forgot password option only shows if the person is signing in  */}
 
+                {!form.isNewUser && (
+                  <div
+                    className="forgot-password"
+                    onClick={() =>
+                      setForm((prev) => ({
+                        ...prev,
+                        forgotPassword: !prev.forgotPassword,
+                      }))
+                    }
+                  >
+                    Forgot Password?
+                  </div>
+                )}
 
-                {!form.isNewUser && <div className='forgot-password' onClick={() => setForm((prev) => ({
-                  ...prev,
-                  forgotPassword: !prev.forgotPassword
-                }))}>Forgot Password?</div>
-                }
-
-                <div className='auth-group -buttons'>
+                <div className="auth-group -buttons">
                   <input
-                    className='auth-button'
-                    type='submit'
-                    value={form.isNewUser ? 'Sign Up' : 'Log In'}
+                    className="auth-button"
+                    type="submit"
+                    value={form.isNewUser ? "Sign Up" : "Log In"}
                   />
-                  <p className='or'>OR</p>
-                  <button
-                    className='google-button'
-                    onClick={signInWithGoogle}>Continue with Google</button>
+                  <p className="or">OR</p>
+                  <button className="google-button" onClick={signInWithGoogle}>
+                    Continue with Google
+                  </button>
                 </div>
               </>
-            }
+            )}
 
             {/* this is the reset password section it will on display if the user forgets his password and if it is not a new user */}
 
-
-            {(form.forgotPassword && !form.isNewUser) &&
+            {form.forgotPassword && !form.isNewUser && (
               <>
-                <label for='email'>Email</label>
+                <label htmlFor="email">Email</label>
                 <input
-                  className='auth-input'
-                  type='email'
-                  name='email'
+                  className="auth-input"
+                  type="email"
+                  name="email"
                   value={form.email}
-                  placeholder='Email'
+                  placeholder="Email"
                   onChange={onChange}
                 />
-                <div className='forgot-password' onClick={() => setForm((prev) => ({
-                  ...prev,
-                  forgotPassword: !prev.forgotPassword
-                }))}>Log In</div>
-                <button className='reset-password' onClick={sendResetPassword}>Reset Password</button>
-              </>}
+                <div
+                  className="forgot-password"
+                  onClick={() =>
+                    setForm((prev) => ({
+                      ...prev,
+                      forgotPassword: !prev.forgotPassword,
+                    }))
+                  }
+                >
+                  Log In
+                </div>
+                <button className="reset-password" onClick={sendResetPassword}>
+                  Reset Password
+                </button>
+              </>
+            )}
           </form>
-
 
           {/* conditional option displays only when SignIn/SignUp */}
 
-
-          {(!form.forgotPassword) &&
-            <div className='no-account'>{form.isNewUser ? ' have an account?' : 'no account?'}
-              <span className='no-account-button' onClick={() =>
-                setForm((prev) => ({
-                  ...prev,
-                  isNewUser: !prev.isNewUser,
-                }))}>
-                {form.isNewUser ? 'Log In' : 'Sign Up'}
+          {!form.forgotPassword && (
+            <div className="no-account">
+              {form.isNewUser ? " have an account?" : "no account?"}
+              <span
+                className="no-account-button"
+                onClick={() =>
+                  setForm((prev) => ({
+                    ...prev,
+                    isNewUser: !prev.isNewUser,
+                  }))
+                }
+              >
+                {form.isNewUser ? "Log In" : "Sign Up"}
               </span>
             </div>
-          }
+          )}
         </section>
       </div>
-    </section >
+    </section>
   );
 };
 
