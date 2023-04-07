@@ -9,14 +9,21 @@ const lexend = Lexend({ subsets: ["latin"], weight: ["400", "800"] });
 
 function HospitalsCarousel() {
   const [slides, setSlides] = useState(3.5);
-  const [width, setWidth] = useState();
+
+  const [windowWidth, setWindowWidth] = useState();
 
   useEffect(() => {
-    setWidth(window.screen.width);
-    if (width <= 500) {
-      setSlides(1);
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
     }
-  }, [slides, width]);
+
+    window.addEventListener("resize", handleResize);
+    if (windowWidth <= 700) {
+      setSlides(1);
+    } else {
+      setSlides(3.5);
+    }
+  }, [windowWidth]);
 
   const pagination = {
     el: ".image-swiper-pagination",

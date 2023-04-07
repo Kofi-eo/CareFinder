@@ -6,19 +6,27 @@ import { RiArrowRightLine } from "react-icons/ri";
 import { RiArrowLeftLine } from "react-icons/ri";
 import { Lexend } from "next/font/google";
 import { useEffect, useState } from "react";
+import { RxHeight } from "react-icons/rx";
 
 const lexend = Lexend({ subsets: ["latin"], weight: ["400", "800"] });
 
 function HospitalsCarousel() {
   const [slides, setSlides] = useState(3.5);
-  const [width, setWidth] = useState();
+  const [windowWidth, setWindowWidth] = useState();
 
   useEffect(() => {
-    setWidth(window.screen.width);
-    if (width <= 500) {
-      setSlides(1);
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
     }
-  }, [slides, width]);
+
+    window.addEventListener("resize", handleResize);
+    if (windowWidth <= 750) {
+      setSlides(1);
+    } else {
+      setSlides(3.5);
+    }
+  }, [windowWidth]);
+
   const pagination = {
     el: ".image-swiper-pagination",
     clickable: true,
