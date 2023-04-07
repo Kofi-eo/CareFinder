@@ -10,23 +10,26 @@ const lexend = Lexend({ subsets: ["latin"], weight: ["400", "800"] });
 
 function PharmaciesNear() {
   return (
-    <div className={HomepageStyles.hospitalsNearContainer}>
-      <div className={HomepageStyles.hospitalsNearText}>
-        <h1 className={lexend.className}>Pharmacies Near You</h1>
-        <div className={HomepageStyles.hospitalsNearArrBtns}>
-          <RiArrowLeftLine className="image2-swiper-button-prev" />
-          <RxDotFilled className={HomepageStyles.hospitalsNearDot} />
-          <div className="image-swiper-pagination"></div>
-          <RiArrowRightLine className="image2-swiper-button-next" />
+    <>
+      <hr className={HomepageStyles.hospitalsNearDivider} />
+      <div className={HomepageStyles.hospitalsNearContainer}>
+        <div className={HomepageStyles.hospitalsNearText}>
+          <h1 className={lexend.className}>Pharmacies Near You</h1>
+          <div className={HomepageStyles.hospitalsNearArrBtns}>
+            <RiArrowLeftLine className="image2-swiper-button-prev" />
+            <RxDotFilled className={HomepageStyles.hospitalsNearDot} />
+            <div className="image-swiper-pagination"></div>
+            <RiArrowRightLine className="image2-swiper-button-next" />
+          </div>
+        </div>
+        <PharmaciesCarousel />
+        <div className={HomepageStyles.hospitalsNearViewButton}>
+          <Link href="">
+            <button>View All</button>
+          </Link>
         </div>
       </div>
-      <PharmaciesCarousel />
-      <div className={HomepageStyles.hospitalsNearViewButton}>
-        <Link href="">
-          <button>View All</button>
-        </Link>
-      </div>
-    </div>
+    </>
   );
 }
 

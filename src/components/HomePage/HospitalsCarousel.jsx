@@ -52,7 +52,7 @@ function HospitalsCarousel() {
             </div>
           </SwiperSlide>
           <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
-            <img src="/DrOwen.png" alt="" />
+            <img src="/signInImage.webp" alt="" />
             <div className={HomepageStyles.hospitalsCarouselItem}>
               <div className={lexend.className}>
                 <h2>Kelina</h2>
@@ -66,7 +66,7 @@ function HospitalsCarousel() {
             </div>
           </SwiperSlide>
           <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
-            <img src="/DrOwen.png" alt="" />
+            <img src="/signUpImage.webp" alt="" />
             <div className={HomepageStyles.hospitalsCarouselItem}>
               <div className={lexend.className}>
                 <h2>Kelina</h2>

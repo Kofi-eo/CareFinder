@@ -48,6 +48,12 @@
   height: 40px;
   border-radius: 10px;
 }
+/* Mobile Nav */
+@media (max-width: 700px) {
+  .centerNav nav ul {
+    display: none;
+  }
+}
 
 /* Header */
 .headerContainer {
@@ -77,6 +83,35 @@
   top: 0;
   right: 0px;
   height: 90vh;
+}
+/* Mobile Header */
+@media (max-width: 700px) {
+  .headerContainer {
+    width: 100vw;
+    height: 900px;
+    background-color: #fff9e8;
+    padding-bottom: 100px;
+  }
+  .headerContainer header img {
+    display: none;
+  }
+  .headerContainer header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 20px;
+    padding-top: 150px;
+  }
+  .headerText h1 {
+    width: 300px;
+    font-size: 35px;
+  }
+  .headerText p {
+    padding-top: 10px;
+    font-size: 15px;
+    width: 340px;
+  }
 }
 
 /* Search */
@@ -117,7 +152,7 @@
 .columnInputLocation input {
   border: none;
   border-bottom: 3px solid black;
-  width: 200px;
+  width: 100px;
   margin-top: 10px;
   font-size: 15px;
   padding-bottom: 15px;
@@ -159,6 +194,30 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+}
+/* Mobile Search */
+@media (max-width: 700px) {
+  .searchBoxContainer {
+    position: unset;
+    padding-top: 20px;
+    bottom: 0px;
+  }
+  .searchBox {
+    width: 90vw;
+    height: 500px;
+  }
+  .searchBox form {
+    flex-direction: column;
+  }
+  .columnInputLocation input {
+    width: 250px;
+  }
+  .columnInputs input {
+    width: 250px;
+  }
+  .columnInputs select {
+    width: 250px;
+  }
 }
 
 /* Info Section */
@@ -204,6 +263,13 @@
   font-size: 15px;
   font-weight: 400;
   text-align: center;
+}
+/* Mobile Info Section   */
+@media (max-width: 700px) {
+  .infoSectionContainer {
+    flex-direction: column;
+    height: 950px;
+  }
 }
 
 /* InfoSection Two */
@@ -281,12 +347,55 @@
   cursor: pointer;
 }
 
+/* Mobile Info Section Two   */
+@media (max-width: 700px) {
+  .infoSectionTwoContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .infoSectionTwoImage {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+  }
+  .infoSectionTwoImage img {
+    width: 300px;
+  }
+  .drOwenText {
+    left: -30px;
+    bottom: 70px;
+    width: 150px;
+    height: 60px;
+  }
+  .drOwenStars {
+    right: -30px;
+    bottom: 25px;
+    width: 90px;
+    height: 40px;
+  }
+  .infoSectionTwoText {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .infoSectionTwoText h1 {
+    font-size: 25px;
+  }
+  .infoSectionTwoText p {
+    font-size: 16px;
+    width: 300px;
+  }
+}
+
 /* Hospitals Near You  */
 .hospitalsNearContainer {
-  padding-top: 50px;
+  padding-top: 20px;
   padding-left: 120px;
   padding-top: 100px;
-  height: 500px;
+  height: 600px;
   background-color: #fff9e8;
   overflow-x: hidden;
 }
@@ -361,4 +470,156 @@
   font-size: 15px;
   margin-top: 40px;
   cursor: pointer;
+}
+.hospitalsNearDivider {
+  left: 10%;
+  position: absolute;
+  width: 80%;
+}
+
+/* Trust */
+.trustContainer {
+  margin-top: 150px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 400px;
+}
+.trustContainer h1 {
+  color: #505050;
+  font-size: 30px;
+}
+.trustLogos {
+  display: flex;
+}
+.trustLogos img {
+  width: 200px;
+}
+@media (max-width: 700px) {
+  .trustContainer {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 700px;
+    text-align: start;
+  }
+  .trustContainer h1 {
+    color: #505050;
+    width: 300px;
+    font-size: 35px;
+    margin-left: 0px;
+  }
+  .trustLogos {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20px;
+    grid-template-columns: 200px 200px;
+  }
+  .trustLogos img {
+    width: 150px;
+  }
+}
+
+/* Testimonies */
+
+.TestimoniesContainer {
+  margin-top: 100px;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.TestimoniesContainer h1 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #505050;
+}
+.testimoniesSwiperContainer {
+  width: 80vw;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimoniesCarousel {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  height: 300px;
+}
+
+.testimoniesCarouselItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  background-color: #003963;
+  width: 80vw;
+  height: 300px;
+  color: white;
+  border-radius: 6px;
+}
+.testimoniesCarouselItem h2 {
+  margin-top: 30px;
+  font-size: 30px;
+}
+.testimoniesCarouselItem p {
+  width: 70%;
+  padding-top: 20px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  position: relative;
+}
+.testimoniesCarouselImg {
+  margin-top: -120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimoniesCarouselImg img {
+  width: 150px;
+  border-radius: 100%;
+}
+/* Mobile Testimonies */
+@media (max-width: 700px) {
+  .TestimoniesContainer h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    color: #505050;
+    margin-bottom: 100px;
+  }
+  .testimoniesSwiperContainer {
+    width: 85vw;
+    height: 500px;
+    position: relative;
+    overflow: unset;
+  }
+  .testimoniesCarousel {
+    height: 500px;
+    margin-top: 0px;
+  }
+  .testimoniesCarouselItem {
+    height: 500px;
+  }
+  .testimoniesCarouselImg {
+    margin-top: 50px;
+  }
+  .testimoniesCarouselImg img {
+    top: -35px;
+    position: absolute;
+  }
 }

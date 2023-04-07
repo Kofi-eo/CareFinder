@@ -15,7 +15,7 @@ function SearchBox() {
           </div>
           <div className={HomepageStyles.columnInputs}>
             <label htmlFor="Department">Department</label>
-            <select name="Department" id="Department" value="" onChange="">
+            <select name="Department" id="Department">
               <option value="">General</option>
             </select>
           </div>
