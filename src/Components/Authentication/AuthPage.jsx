@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
 import Image from "next/image";
-import { getAuth } from "firebase/auth";
-// import '@/styles/Home.module.css';
+import toast from "react-hot-toast";
+import { useRouter } from "next/router";
+import { useState } from 'react';
+import { useCreateUserWithEmailAndPassword, useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { auth } from "../../Firebase/firebase.config";
 
-// import './style.css';
+
 
 const AuthPage = () => {
+  const router = useRouter();
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -13,14 +16,39 @@ const AuthPage = () => {
     submitting: false,
     forgotPassword: false,
     confirmPassword: '',
-    isNewUser: false
+    isNewUser: true
   });
 
-  const [user, error,] = useSignInWithGoogle();
+  const [signInWithEmailAndPassword, loading, error,] = useSignInWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);
+  const [signInWithGoogle] = useSignInWithGoogle(auth);
+  const [sendPasswordResetEmail, sending] =
+    useSendPasswordResetEmail(auth);
 
-  const handleSubmit = (e) => {
+  // console.log(user);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
+    try {
+      if (form.isNewUser) {
+        if (form.password != form.confirmPassword) return;
+        await createUserWithEmailAndPassword(form.email, form.password);
+        toast.success('account created');
+      } else {
+        await signInWithEmailAndPassword(form.email, form.password);
+        toast.success('signed in');
+        router.push('/');
+      }
+    } catch (error) {
+      toast.error('something went wrong');
+    } finally {
+      setForm((prev) => ({
+        ...prev,
+        email: '',
+        password: '',
+        confirmPassword: ''
+      }));
+    }
   };
 
 
@@ -33,20 +61,22 @@ const AuthPage = () => {
   };
 
   //google sign in fxn
-  const signInWithGoogle = async () => {
-    const auth = getAuth();
-    await signInWithRedirect(auth, googleProvider);
-    // toast({
-    //   title: "signed in",
-    //   description: "",
-    //   status: "success",
-    //   duration: 3000,
-    //   isClosable: true
-    // })
+  const googleSignIn = async (e) => {
+    e.preventDefault();
+    try {
+      await signInWithGoogle();
+      toast.success('signed in');
+      router.push('/');
+    } catch (err) {
+      toast.error('something went wrong');
+    }
+
   };
 
-  const sendResetPassword = () => {
-
+  const sendResetPassword = async (e) => {
+    e.preventDefault();
+    await sendPasswordResetEmail(form.email);
+    toast.success('reset password email sent');
   };
 
   const Heading = () => {
@@ -65,7 +95,13 @@ const AuthPage = () => {
     <section className='auth-section-container'>
       <div className='auth-container'>
         <div className='auth-image-container'>
-          {/* <Image className='auth-image' src='https://unsplash.com/photos/pTrhfmj2jDA' width='1' height='1' alt='' /> */}
+          <Image
+            className='auth-image'
+            src={form.isNewUser ? '/signUpImage.webp' : '/signInImage.webp'}
+            width='1'
+            height='1'
+            alt='auth image'
+          />
         </div>
 
 
@@ -83,22 +119,24 @@ const AuthPage = () => {
 
             {(!form.forgotPassword) &&
               <>
-                <label for='email'>Email</label>
+                <label htmlFor='email'>Email</label>
                 <input
                   className='auth-input'
                   type='email'
                   name='email'
                   value={form.email}
                   placeholder='Email'
+                  required
                   onChange={onChange}
                 />
 
-                <label for='password'>Password</label>
+                <label htmlFor='password'>Password</label>
                 <input
                   className='auth-input'
                   type='password'
                   name='password'
                   placeholder='Password'
+                  required
                   value={form.password}
                   onChange={onChange}
                 />
@@ -110,12 +148,13 @@ const AuthPage = () => {
 
                 {form.isNewUser &&
                   <>
-                    <label for='confirm password'>Confirm Password</label>
+                    <label htmlFor='confirm password'>Confirm Password</label>
                     <input
                       className='auth-input'
                       type='password'
                       name='confirmPassword'
                       placeholder='Password'
+                      required
                       value={form.confirmPassword}
                       onChange={onChange}
                     />
@@ -131,32 +170,33 @@ const AuthPage = () => {
                 }))}>Forgot Password?</div>
                 }
 
-                <div className='auth-group -buttons'>
+                <div className='auth-group-buttons'>
                   <input
-                    className='auth-button'
+                    className='submit-button'
                     type='submit'
                     value={form.isNewUser ? 'Sign Up' : 'Log In'}
                   />
                   <p className='or'>OR</p>
                   <button
                     className='google-button'
-                    onClick={signInWithGoogle}>Continue with Google</button>
+                    onClick={googleSignIn}>Continue with Google</button>
                 </div>
               </>
             }
 
-            {/* this is the reset password section it will on display if the user forgets his password and if it is not a new user */}
+            {/* this is the reset password section it will only display if the user forgets his password and if it is not a new user */}
 
 
             {(form.forgotPassword && !form.isNewUser) &&
               <>
-                <label for='email'>Email</label>
+                <label htmlFor='email'>Email</label>
                 <input
                   className='auth-input'
                   type='email'
                   name='email'
                   value={form.email}
                   placeholder='Email'
+                  required
                   onChange={onChange}
                 />
                 <div className='forgot-password' onClick={() => setForm((prev) => ({
@@ -172,7 +212,7 @@ const AuthPage = () => {
 
 
           {(!form.forgotPassword) &&
-            <div className='no-account'>{form.isNewUser ? ' have an account?' : 'no account?'}
+            <div className='no-account'>{form.isNewUser ? 'Have an account?' : 'No account?'}
               <span className='no-account-button' onClick={() =>
                 setForm((prev) => ({
                   ...prev,
