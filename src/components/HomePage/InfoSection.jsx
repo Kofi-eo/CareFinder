@@ -1,6 +1,7 @@
 import HomepageStyles from "@/styles/HomePage.module.css";
 import { Lexend } from "next/font/google";
 import { PT_Sans } from "next/font/google";
+import { RiArrowLeftLine } from "react-icons/ri";
 
 const lexend = Lexend({ subsets: ["latin"], weight: ["400", "800"] });
 const pt_sans = PT_Sans({ subsets: ["latin"], weight: ["400", "700"] });
@@ -11,6 +12,9 @@ function InfoSection() {
       <div className={HomepageStyles.infoSection}>
         <div className={HomepageStyles.imgAndIcon}>
           <img src="/Time.png" alt="" />
+          <div className={HomepageStyles.infoIcons}>
+            <RiArrowLeftLine className="image-swiper-button-prev" />
+          </div>
         </div>
         <h1 className={lexend.className}>Convenient</h1>
         <p className={pt_sans.className}>
@@ -21,6 +25,9 @@ function InfoSection() {
       <div className={HomepageStyles.infoSection}>
         <div className={HomepageStyles.imgAndIcon}>
           <img src="/Fill.png" alt="" />
+          <div className={HomepageStyles.infoIcons}>
+            <RiArrowLeftLine className="image-swiper-button-prev" />
+          </div>
         </div>
         <h1 className={lexend.className}>Time-Saving</h1>
         <p className={pt_sans.className}>
@@ -31,6 +38,9 @@ function InfoSection() {
       <div className={HomepageStyles.infoSection}>
         <div className={HomepageStyles.imgAndIcon}>
           <img src="/Doctors.png" alt="" />
+          <div className={HomepageStyles.infoIcons}>
+            <RiArrowLeftLine className="image-swiper-button-prev" />
+          </div>
         </div>
         <h1 className={lexend.className}>Access</h1>
         <p className={pt_sans.className}>

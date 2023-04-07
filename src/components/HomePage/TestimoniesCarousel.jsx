@@ -20,13 +20,13 @@ function TestimoniesCarousel() {
       <Swiper
         modules={[Navigation, Pagination]}
         speed={1000}
-        pagination={{ pagination }}
+        pagination={pagination}
         direction={"horizontal"}
         spaceBetween={30}
         grabCursor={true}
         wrapperClass={HomepageStyles.testimoniesCarousel}
         navigation={{
-          nextEl: ".image-swiper-button-next",
+          nextEl: ".image3-swiper-button-next",
           prevEl: ".image-swiper-button-prev",
           disabledClass: "swiper-button-disabled",
         }}
@@ -35,7 +35,18 @@ function TestimoniesCarousel() {
         <div className={HomepageStyles.hospitalsCarousel}>
           <SwiperSlide className={HomepageStyles.testimoniesCarouselItem}>
             <div className={HomepageStyles.testimoniesCarouselImg}>
-              <img src="/DrOwen.png" alt="" />
+              <img src="/signInImage.webp" alt="" />
+            </div>
+            <h2 className={lexend.className}>“Excellence”</h2>
+            <p className={pt_sans.className}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              venenatis imperdiet tempus. Curabitur eget maximus ipsum. Morbi
+              aliquet felis et libero tempus, ut dictum orci laoreet.
+            </p>
+          </SwiperSlide>
+          <SwiperSlide className={HomepageStyles.testimoniesCarouselItem}>
+            <div className={HomepageStyles.testimoniesCarouselImg}>
+              <img src="/signUpImage.webp" alt="" />
             </div>
             <h2 className={lexend.className}>“Excellence”</h2>
             <p className={pt_sans.className}>

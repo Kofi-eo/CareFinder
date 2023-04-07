@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import Header from "./Header";
 import HospitalsNear from "./HospitalsNear";
 import InfoSection from "./InfoSection";
@@ -19,6 +20,7 @@ function HomePageHeader() {
       <PharmaciesNear />
       <Trust />
       <Testimonies />
+      <Footer />
     </>
   );
 }

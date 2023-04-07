@@ -49,7 +49,7 @@
   border-radius: 10px;
 }
 /* Mobile Nav */
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   .centerNav nav ul {
     display: none;
   }
@@ -85,7 +85,7 @@
   height: 90vh;
 }
 /* Mobile Header */
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   .headerContainer {
     width: 100vw;
     height: 900px;
@@ -104,7 +104,7 @@
     padding-top: 150px;
   }
   .headerText h1 {
-    width: 300px;
+    width: 200px;
     font-size: 35px;
   }
   .headerText p {
@@ -196,7 +196,7 @@
   cursor: pointer;
 }
 /* Mobile Search */
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   .searchBoxContainer {
     position: unset;
     padding-top: 20px;
@@ -245,6 +245,18 @@
   width: 150px;
   object-fit: contain;
 }
+.infoIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 100%;
+  position: absolute;
+  margin-left: 120px;
+  margin-top: 100px;
+}
 
 .infoSection {
   display: flex;
@@ -265,7 +277,7 @@
   text-align: center;
 }
 /* Mobile Info Section   */
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   .infoSectionContainer {
     flex-direction: column;
     height: 950px;
@@ -348,7 +360,7 @@
 }
 
 /* Mobile Info Section Two   */
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   .infoSectionTwoContainer {
     flex-direction: column;
     align-items: center;
@@ -367,6 +379,7 @@
     bottom: 70px;
     width: 150px;
     height: 60px;
+    font-size: 12px;
   }
   .drOwenStars {
     right: -30px;
@@ -476,6 +489,38 @@
   position: absolute;
   width: 80%;
 }
+/* Mobile Hospitals Near */
+@media (max-width: 950px) {
+  .hospitalsNearContainer {
+    padding-left: 20px;
+  }
+  .hospitalsNearText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    position: relative;
+  }
+  .hospitalsNearText h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .hospitalsNearArrBtns {
+    display: none;
+  }
+  .hospitalsCarouselContainer {
+    margin-right: 30px;
+    width: 300px;
+    height: 250px;
+    border: none;
+    border-radius: 6px;
+    background-color: white;
+  }
+  .hospitalsNearViewButton {
+    position: absolute;
+    left: 40%;
+  }
+}
 
 /* Trust */
 .trustContainer {
@@ -496,7 +541,7 @@
 .trustLogos img {
   width: 200px;
 }
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   .trustContainer {
     margin-top: 150px;
     display: flex;
@@ -518,7 +563,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-left: 20px;
+    margin-left: 50px;
     grid-template-columns: 200px 200px;
   }
   .trustLogos img {
@@ -593,6 +638,7 @@
   width: 150px;
   border-radius: 100%;
 }
+
 /* Mobile Testimonies */
 @media (max-width: 700px) {
   .TestimoniesContainer h1 {
@@ -621,5 +667,45 @@
   .testimoniesCarouselImg img {
     top: -35px;
     position: absolute;
+  }
+  .testimoniesPagination {
+    margin-top: 100px;
+  }
+}
+
+/* Footer */
+.footerContainer {
+  width: 100vw;
+  height: 300px;
+  background-color: #003963;
+  color: white;
+  padding: 50px;
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: 208px 41px 143px 197px;
+}
+.footerContainer p {
+  font-size: 15px;
+  padding-bottom: 20px;
+}
+.footerContainer h3 {
+  padding-top: 10px;
+  padding-bottom: 25px;
+  font-size: 20px;
+}
+.footerContainer li {
+  list-style: none;
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+.footerContainer .carefinder img {
+  width: 200px;
+  padding-bottom: 20px;
+}
+@media (max-width: 700px) {
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
   }
 }

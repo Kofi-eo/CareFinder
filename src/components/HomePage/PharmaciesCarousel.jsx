@@ -3,10 +3,21 @@ import { EffectCoverflow, Navigation, Pagination, A11y } from "swiper";
 import HomepageStyles from "@/styles/HomePage.module.css";
 import { IoLocationSharp } from "react-icons/io5";
 import { Lexend } from "next/font/google";
+import { useEffect, useState } from "react";
 
 const lexend = Lexend({ subsets: ["latin"], weight: ["400", "800"] });
 
 function HospitalsCarousel() {
+  const [slides, setSlides] = useState(3.5);
+  const [width, setWidth] = useState();
+
+  useEffect(() => {
+    setWidth(window.screen.width);
+    if (width <= 500) {
+      setSlides(1);
+    }
+  }, [slides, width]);
+
   const pagination = {
     el: ".image-swiper-pagination",
     clickable: true,
@@ -23,7 +34,7 @@ function HospitalsCarousel() {
         speed={600}
         // pagination={pagination}
         direction={"horizontal"}
-        slidesPerView={3.5}
+        slidesPerView={slides}
         spaceBetween={30}
         grabCursor={true}
         wrapperClass={HomepageStyles.hospitalsCarousel}
