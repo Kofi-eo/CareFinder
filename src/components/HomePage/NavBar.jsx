@@ -1,6 +1,7 @@
 import Link from "next/link";
 import HomepageStyles from "@/styles/HomePage.module.css";
 import { PT_Sans } from "next/font/google";
+import { RiMenu4Fill } from "react-icons/ri";
 
 const pt_sans = PT_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -21,6 +22,9 @@ function NavBar() {
             <li className={HomepageStyles.loginButton}>Login/Sign Up </li>
           </Link>
         </ul>
+        <button className={HomepageStyles.navButton}>
+          <RiMenu4Fill />
+        </button>
       </nav>
     </div>
   );

@@ -48,10 +48,24 @@
   height: 40px;
   border-radius: 10px;
 }
+.navButton {
+  display: none;
+}
 /* Mobile Nav */
 @media (max-width: 950px) {
   .centerNav nav ul {
     display: none;
+  }
+  .navButton {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    color: black;
+    font-size: 20px;
   }
 }
 
@@ -152,34 +166,53 @@
 .columnInputLocation input {
   border: none;
   border-bottom: 3px solid black;
-  width: 100px;
+  border-radius: 0%;
+  width: 200px;
   margin-top: 10px;
   font-size: 15px;
   padding-bottom: 15px;
   font-weight: 700;
   outline: none;
+  -webkit-appearance: none;
 }
 .columnInputs input {
   border: none;
   border-bottom: 3px solid black;
+  border-radius: 0%;
   width: 150px;
   margin-top: 10px;
   font-size: 15px;
   padding-bottom: 15px;
   font-weight: 700;
   outline: none;
+  -webkit-appearance: none;
 }
 
 .columnInputs select {
   border: none;
   border-bottom: 3px solid black;
-  width: 150px;
+  width: 200px;
   margin-top: 10px;
   font-size: 15px;
   padding-bottom: 15px;
   font-weight: 700;
   outline: none;
   cursor: pointer;
+  background-color: transparent;
+  color: #000000a5;
+  -webkit-appearance: none;
+}
+.selectArrow {
+  font-size: 20px;
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 180px;
+}
+.calender {
+  font-size: 20px;
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 130px;
 }
 .searchBox form button {
   display: flex;
@@ -214,6 +247,18 @@
   }
   .columnInputs input {
     width: 250px;
+  }
+  .selectArrow {
+    font-size: 20px;
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 230px;
+  }
+  .calender {
+    font-size: 20px;
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 230px;
   }
   .columnInputs select {
     width: 250px;

@@ -10,7 +10,7 @@ const lexend = Lexend({ subsets: ["latin"], weight: ["400", "800"] });
 function TestimoniesCarousel() {
   const pagination = {
     el: ".image3-swiper-pagination",
-    clickable: true,
+    clickable: false,
     renderBullet: function (index, className) {
       return '<span class="' + className + '">' + (index + 1) + "</span>";
     },
