@@ -1,11 +1,6 @@
 import HomepageStyles from "@/styles/HomePage.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
-import { Lexend } from "next/font/google";
-import { PT_Sans } from "next/font/google";
-
-const pt_sans = PT_Sans({ subsets: ["latin"], weight: ["400", "700"] });
-const lexend = Lexend({ subsets: ["latin"], weight: ["400", "800"] });
 
 function TestimoniesCarousel() {
   const pagination = {
@@ -37,8 +32,8 @@ function TestimoniesCarousel() {
             <div className={HomepageStyles.testimoniesCarouselImg}>
               <img src="/signInImage.webp" alt="" />
             </div>
-            <h2 className={lexend.className}>“Excellence”</h2>
-            <p className={pt_sans.className}>
+            <h2>“Excellence”</h2>
+            <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
               venenatis imperdiet tempus. Curabitur eget maximus ipsum. Morbi
               aliquet felis et libero tempus, ut dictum orci laoreet.
@@ -48,8 +43,8 @@ function TestimoniesCarousel() {
             <div className={HomepageStyles.testimoniesCarouselImg}>
               <img src="/signUpImage.webp" alt="" />
             </div>
-            <h2 className={lexend.className}>“Excellence”</h2>
-            <p className={pt_sans.className}>
+            <h2>“Excellence”</h2>
+            <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
               venenatis imperdiet tempus. Curabitur eget maximus ipsum. Morbi
               aliquet felis et libero tempus, ut dictum orci laoreet.
@@ -59,8 +54,8 @@ function TestimoniesCarousel() {
             <div className={HomepageStyles.testimoniesCarouselImg}>
               <img src="/DrOwen.png" alt="" />
             </div>
-            <h2 className={lexend.className}>“Excellence”</h2>
-            <p className={pt_sans.className}>
+            <h2>“Excellence”</h2>
+            <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
               venenatis imperdiet tempus. Curabitur eget maximus ipsum. Morbi
               aliquet felis et libero tempus, ut dictum orci laoreet.

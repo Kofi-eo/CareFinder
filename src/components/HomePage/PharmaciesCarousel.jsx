@@ -18,9 +18,15 @@ function HospitalsCarousel() {
     }
 
     window.addEventListener("resize", handleResize);
-    if (windowWidth <= 700) {
+    if (windowWidth <= 500) {
       setSlides(1);
-    } else {
+    } else if (windowWidth <= 700) {
+      setSlides(1.5);
+    } else if (windowWidth <= 900) {
+      setSlides(2);
+    } else if (windowWidth === 1024) {
+      setSlides(3.2);
+    } else if (windowWidth === 1200) {
       setSlides(3.5);
     }
   }, [windowWidth]);
@@ -55,102 +61,102 @@ function HospitalsCarousel() {
         <div className={HomepageStyles.hospitalsCarousel}>
           <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
             <div className={HomepageStyles.SpecialistsAvailable}>
-              <p className={lexend.className}> 5 Specialists Available</p>
+              <p> 5 Specialists Available</p>
             </div>
             <img src="/DrOwen.png" alt="" />
             <div className={HomepageStyles.hospitalsCarouselItem}>
-              <div className={lexend.className}>
+              <div>
                 <h2>Delvina Care</h2>
                 <p className={HomepageStyles.address}>
                   9, beside Access Bank, Abuja, Nigeria
                 </p>
               </div>
-              <p className={lexend.className}>
+              <p>
                 <IoLocationSharp /> 5.3km
               </p>
             </div>
           </SwiperSlide>
           <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
             <div className={HomepageStyles.SpecialistsAvailable}>
-              <p className={lexend.className}> 5 Specialists Available</p>
+              <p> 5 Specialists Available</p>
             </div>
             <img src="/DrOwen.png" alt="" />
             <div className={HomepageStyles.hospitalsCarouselItem}>
-              <div className={lexend.className}>
+              <div>
                 <h2>Delvina Care</h2>
                 <p className={HomepageStyles.address}>
                   9, beside Access Bank, Abuja, Nigeria
                 </p>
               </div>
-              <p className={lexend.className}>
+              <p>
                 <IoLocationSharp /> 5.3km
               </p>
             </div>
           </SwiperSlide>
           <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
             <div className={HomepageStyles.SpecialistsAvailable}>
-              <p className={lexend.className}> 5 Specialists Available</p>
+              <p> 5 Specialists Available</p>
             </div>
             <img src="/DrOwen.png" alt="" />
             <div className={HomepageStyles.hospitalsCarouselItem}>
-              <div className={lexend.className}>
+              <div>
                 <h2>Delvina Care</h2>
                 <p className={HomepageStyles.address}>
                   9, beside Access Bank, Abuja, Nigeria
                 </p>
               </div>
-              <p className={lexend.className}>
+              <p>
                 <IoLocationSharp /> 5.3km
               </p>
             </div>
           </SwiperSlide>
           <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
             <div className={HomepageStyles.SpecialistsAvailable}>
-              <p className={lexend.className}> 5 Specialists Available</p>
+              <p> 5 Specialists Available</p>
             </div>
             <img src="/DrOwen.png" alt="" />
             <div className={HomepageStyles.hospitalsCarouselItem}>
-              <div className={lexend.className}>
+              <div>
                 <h2>Delvina Care</h2>
                 <p className={HomepageStyles.address}>
                   9, beside Access Bank, Abuja, Nigeria
                 </p>
               </div>
-              <p className={lexend.className}>
+              <p>
                 <IoLocationSharp /> 5.3km
               </p>
             </div>
           </SwiperSlide>
           <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
             <div className={HomepageStyles.SpecialistsAvailable}>
-              <p className={lexend.className}> 5 Specialists Available</p>
+              <p> 5 Specialists Available</p>
             </div>
             <img src="/DrOwen.png" alt="" />
             <div className={HomepageStyles.hospitalsCarouselItem}>
-              <div className={lexend.className}>
+              <div>
                 <h2>Delvina Care</h2>
                 <p className={HomepageStyles.address}>
                   9, beside Access Bank, Abuja, Nigeria
                 </p>
               </div>
-              <p className={lexend.className}>
+              <p>
                 <IoLocationSharp /> 5.3km
               </p>
             </div>
           </SwiperSlide>
           <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
             <div className={HomepageStyles.SpecialistsAvailable}>
-              <p className={lexend.className}> 5 Specialists Available</p>
+              <p> 5 Specialists Available</p>
             </div>
             <img src="/DrOwen.png" alt="" />
             <div className={HomepageStyles.hospitalsCarouselItem}>
-              <div className={lexend.className}>
+              <div>
                 <h2>Delvina Care</h2>
                 <p className={HomepageStyles.address}>
                   9, beside Access Bank, Abuja, Nigeria
                 </p>
               </div>
-              <p className={lexend.className}>
+              <p>
                 <IoLocationSharp /> 5.3km
               </p>
             </div>

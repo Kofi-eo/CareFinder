@@ -1,16 +1,13 @@
 import HomepageStyles from "@/styles/HomePage.module.css";
-import { PT_Sans } from "next/font/google";
 import { GoSearch } from "react-icons/go";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { GoCalendar } from "react-icons/go";
-
-const pt_sans = PT_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
 function SearchBox() {
   return (
     <div className={HomepageStyles.searchBoxContainer}>
       <div className={HomepageStyles.searchBox}>
-        <form action="" className={pt_sans.className}>
+        <form action="">
           <div className={HomepageStyles.columnInputLocation}>
             <label htmlFor="City">Location</label>
             <input type="text" placeholder="City" />

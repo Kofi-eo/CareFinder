@@ -1,13 +1,8 @@
 import HomepageStyles from "@/styles/HomePage.module.css";
-import { Lexend } from "next/font/google";
-import { PT_Sans } from "next/font/google";
 import { RiArrowLeftLine } from "react-icons/ri";
 import { MdOutlinePhoneIphone } from "react-icons/md";
 import { BiTimeFive } from "react-icons/bi";
 import { MdPeopleOutline } from "react-icons/md";
-
-const lexend = Lexend({ subsets: ["latin"], weight: ["400", "800"] });
-const pt_sans = PT_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
 function InfoSection() {
   return (
@@ -19,8 +14,8 @@ function InfoSection() {
             <MdOutlinePhoneIphone />
           </div>
         </div>
-        <h1 className={lexend.className}>Convenient</h1>
-        <p className={pt_sans.className}>
+        <h1>Convenient</h1>
+        <p>
           Book appointments with specialist physicians from the comfort of their
           own homes
         </p>
@@ -32,8 +27,8 @@ function InfoSection() {
             <BiTimeFive />
           </div>
         </div>
-        <h1 className={lexend.className}>Time-Saving</h1>
-        <p className={pt_sans.className}>
+        <h1>Time-Saving</h1>
+        <p>
           Save Time and Hassle with Our System for Booking Appointments with
           Specialist Physicians
         </p>
@@ -45,8 +40,8 @@ function InfoSection() {
             <MdPeopleOutline />
           </div>
         </div>
-        <h1 className={lexend.className}>Access</h1>
-        <p className={pt_sans.className}>
+        <h1>Access</h1>
+        <p>
           Gain access to top-rated specialist physicians who are experts in
           their fields
         </p>

@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
 /* Nav Bar */
+
 .centerNav {
   display: flex;
   align-items: center;
@@ -6,6 +9,7 @@
   width: 100vw;
   flex-direction: column;
   z-index: 1;
+  font-family: "Lexend", sans-serif;
 }
 
 .centerNav nav {
@@ -87,13 +91,16 @@
 .headerText h1 {
   width: 300px;
   font-size: 65px;
+  font-family: "Lexend", sans-serif;
 }
 .headerText p {
   width: 400px;
   font-size: 20px;
   font-weight: 700;
   color: #505050;
+  font-family: "PT Sans", sans-serif;
 }
+
 .headerContainer header img {
   position: absolute;
   top: 0;
@@ -134,6 +141,7 @@
 .searchBoxContainer {
   position: absolute;
   bottom: 20px;
+  font-family: "Lexend", sans-serif;
 }
 .searchBox {
   width: 90vw;
@@ -316,6 +324,7 @@
 
 .infoSection h1 {
   margin-top: 15px;
+  font-family: "Lexend", sans-serif;
 }
 .infoSection p {
   margin-top: 5px;
@@ -323,6 +332,7 @@
   font-size: 15px;
   font-weight: 400;
   text-align: center;
+  font-family: "Lexend", sans-serif;
 }
 /* Mobile Info Section   */
 @media (max-width: 950px) {
@@ -365,6 +375,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   backdrop-filter: blur(2px);
+  font-family: "PT Sans", sans-serif;
 }
 .drOwenStars {
   right: -100px;
@@ -388,6 +399,8 @@
 
 .infoSectionTwoText h1 {
   font-size: 30px;
+  font-weight: 800;
+  font-family: "Lexend", sans-serif;
 }
 .infoSectionTwoText p {
   font-size: 20px;
@@ -395,6 +408,7 @@
   width: 430px;
   margin-top: 20px;
   margin-bottom: 20px;
+  font-family: "PT Sans", sans-serif;
 }
 .infoSectionTwoText button {
   width: 200px;
@@ -405,6 +419,7 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-family: "Lexend", sans-serif;
 }
 
 /* Mobile Info Section Two   */
@@ -465,6 +480,7 @@
   display: flex;
   width: 90vw;
   position: relative;
+  font-family: "Lexend", sans-serif;
 }
 .arrowContainer {
   display: flex;
@@ -485,9 +501,7 @@
   font-size: 20px;
   cursor: pointer;
 }
-.hospitalsNearDot {
-  color: #6a6a6a;
-}
+
 .swiperContainer {
   width: 85vw;
   height: 300px;
@@ -500,6 +514,7 @@
   align-items: center;
   justify-content: space-around;
   position: absolute;
+  font-family: "Lexend", sans-serif;
 }
 
 .hospitalsCarouselContainer {
@@ -574,11 +589,13 @@
     justify-content: center;
     width: 90vw;
     position: relative;
+    font-family: "Lexend", sans-serif;
   }
   .hospitalsNearText h1 {
     font-size: 25px;
     text-align: center;
   }
+
   .hospitalsNearArrBtns {
     display: none;
   }
@@ -589,6 +606,17 @@
     border: none;
     border-radius: 6px;
     background-color: white;
+  }
+  .hospitalsCarouselItem .address {
+    width: 200px;
+    font-size: 13px;
+  }
+  .hospitalsCarouselContainer img {
+    height: 60%;
+  }
+  .SpecialistsAvailable {
+    height: 25px;
+    font-size: 12px;
   }
   .hospitalsNearViewButton {
     position: absolute;
@@ -608,6 +636,7 @@
 .trustContainer h1 {
   color: #505050;
   font-size: 30px;
+  font-family: "PT Snas", sans-serif;
 }
 .trustLogos {
   display: flex;
@@ -660,6 +689,7 @@
   font-size: 35px;
   font-weight: 700;
   color: #505050;
+  font-family: "Lexend", sans-serif;
 }
 .testimoniesSwiperContainer {
   width: 80vw;
@@ -693,6 +723,7 @@
 .testimoniesCarouselItem h2 {
   margin-top: 30px;
   font-size: 30px;
+  font-family: "Lexend", sans-serif;
 }
 .testimoniesCarouselItem p {
   width: 70%;
@@ -701,6 +732,7 @@
   font-weight: 400;
   font-size: 20px;
   position: relative;
+  font-family: "PT Sans", sans-serif;
 }
 .testimoniesCarouselImg {
   margin-top: -120px;
@@ -757,6 +789,7 @@
   display: grid;
   justify-content: space-around;
   grid-template-columns: 208px 41px 143px 197px;
+  font-family: "PT Sans", sans-serif;
 }
 .footerContainer p {
   font-size: 15px;
@@ -776,7 +809,7 @@
   width: 200px;
   padding-bottom: 20px;
 }
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .footerContainer {
     display: flex;
     flex-direction: column;
