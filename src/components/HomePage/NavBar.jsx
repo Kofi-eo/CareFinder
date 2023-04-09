@@ -2,13 +2,29 @@ import Link from "next/link";
 import HomepageStyles from "@/styles/HomePage.module.css";
 import { PT_Sans } from "next/font/google";
 import { RiMenu4Fill } from "react-icons/ri";
+import { useScroll, useMotionValueEvent } from "framer-motion";
+import { useRef } from "react";
 
 const pt_sans = PT_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
 function NavBar() {
+  // Navigation animation on Scroll
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    let nav = document.getElementById("nav");
+    if (latest >= 100) {
+      nav.style.width = "100vw";
+      nav.style.marginTop = "70px";
+    } else {
+      nav.style.width = "90vw";
+      nav.style.marginTop = "90px";
+    }
+  });
+
   return (
     <div className={HomepageStyles.centerNav}>
-      <nav className={HomepageStyles.nav}>
+      <nav id="nav" className={HomepageStyles.nav}>
         <img src="/CarefinderLogo.png" alt="" />
 
         <ul className={pt_sans.className}>

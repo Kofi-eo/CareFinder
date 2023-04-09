@@ -4,12 +4,12 @@
   align-items: center;
   justify-content: center;
   width: 100vw;
-  position: absolute;
+  flex-direction: column;
   z-index: 1;
 }
 
 .centerNav nav {
-  margin-top: 20px;
+  margin-top: 90px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -18,8 +18,23 @@
   background-color: #14df96;
   border: 1px solid #6a6a6a;
   backdrop-filter: blur(10px);
-  position: relative;
+  position: fixed;
+  z-index: 2;
+  transition: 0.5s;
 }
+/* .centerNav nav {
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 70px;
+  background-color: #14df96;
+  border: 1px solid #6a6a6a;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  z-index: 2;
+} */
 .centerNav nav img {
   width: 150px;
   margin-left: 20px;
