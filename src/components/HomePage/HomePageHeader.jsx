@@ -11,7 +11,6 @@ import Trust from "./Trust";
 function HomePageHeader() {
   return (
     <>
-      {/* NavBar */}
       <NavBar />
       <Header />
       <InfoSection />
