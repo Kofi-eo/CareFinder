@@ -1,7 +1,10 @@
-// import AuthContext from "../Context/AuthContext";
 import "@/styles/globals.css";
-import "../Components/Authentication/style.css";
-
+import "@/styles/style.css";
+import Layout from "@/components/Layout";
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
