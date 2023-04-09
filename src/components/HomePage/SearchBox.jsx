@@ -19,9 +19,11 @@ function SearchBox() {
             <label htmlFor="Department">Department</label>{" "}
             <RiArrowDownSLine className={HomepageStyles.selectArrow} />
             <select name="Department" id="Department" placeholder="gg">
-              <option value="" disabled selected>
-                Select your option
-              </option>
+              <option
+                value=""
+                disabled
+                defaultValue={"Select your option"}
+              ></option>
               <option value="">General</option>
               <option value="">Private</option>
             </select>

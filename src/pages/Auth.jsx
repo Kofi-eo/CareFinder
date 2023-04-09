@@ -1,5 +1,5 @@
 import React from "react";
-import AuthPage from "./AuthPage";
+import AuthPage from "../components/Authentication/AuthPage";
 import { Toaster } from "react-hot-toast";
 
 function Auth() {

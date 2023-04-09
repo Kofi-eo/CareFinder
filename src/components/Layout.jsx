@@ -1,11 +1,8 @@
-import Auth from "./Authentication/Auth";
-import HomePageHeader from "./HomePage/HomePageHeader";
+import Auth from "../pages/Auth";
 
 function Layout({ children }) {
   return (
     <>
-      <Auth />
-      <HomePageHeader />
       <main>{children}</main>
     </>
   );

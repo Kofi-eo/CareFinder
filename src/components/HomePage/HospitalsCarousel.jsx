@@ -2,11 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation, Pagination, A11y } from "swiper";
 import HomepageStyles from "@/styles/HomePage.module.css";
 import { IoLocationSharp } from "react-icons/io5";
-import { RiArrowRightLine } from "react-icons/ri";
-import { RiArrowLeftLine } from "react-icons/ri";
 import { Lexend } from "next/font/google";
 import { useEffect, useState } from "react";
-import { RxHeight } from "react-icons/rx";
 
 const lexend = Lexend({ subsets: ["latin"], weight: ["400", "800"] });
 
