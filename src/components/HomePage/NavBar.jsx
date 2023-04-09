@@ -32,7 +32,7 @@ function NavBar() {
             <li>
               <Link href="Appointment">Appointment</Link>
             </li>
-            <Link href="">
+            <Link href="/Auth">
               <li className={HomepageStyles.loginButton}>Login/SignUp</li>
             </Link>
           </ul>
