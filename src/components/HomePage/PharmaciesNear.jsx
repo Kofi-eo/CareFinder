@@ -16,10 +16,13 @@ function PharmaciesNear() {
         <div className={HomepageStyles.hospitalsNearText}>
           <h1 className={lexend.className}>Pharmacies Near You</h1>
           <div className={HomepageStyles.hospitalsNearArrBtns}>
-            <RiArrowLeftLine className="image2-swiper-button-prev" />
-            <RxDotFilled className={HomepageStyles.hospitalsNearDot} />
+            <div className={HomepageStyles.arrowContainer}>
+              <RiArrowLeftLine className="image2-swiper-button-prev" />
+            </div>
             <div className="image-swiper-pagination"></div>
-            <RiArrowRightLine className="image2-swiper-button-next" />
+            <div className={HomepageStyles.arrowContainer}>
+              <RiArrowRightLine className="image2-swiper-button-next" />
+            </div>
           </div>
         </div>
         <PharmaciesCarousel />

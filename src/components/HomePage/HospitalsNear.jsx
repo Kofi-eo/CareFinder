@@ -14,10 +14,13 @@ function HospitalsNear() {
       <div className={HomepageStyles.hospitalsNearText}>
         <h1 className={lexend.className}>Hospitals Near You</h1>
         <div className={HomepageStyles.hospitalsNearArrBtns}>
-          <RiArrowLeftLine className="image-swiper-button-prev" />
-          <RxDotFilled className={HomepageStyles.hospitalsNearDot} />
+          <div className={HomepageStyles.arrowContainer}>
+            <RiArrowLeftLine className="image-swiper-button-prev" />
+          </div>
           <div className="image-swiper-pagination"></div>
-          <RiArrowRightLine className="image-swiper-button-next" />
+          <div className={HomepageStyles.arrowContainer}>
+            <RiArrowRightLine className="image-swiper-button-next" />
+          </div>
         </div>
       </div>
       <HospitalsCarousel />

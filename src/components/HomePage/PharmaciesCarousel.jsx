@@ -54,6 +54,9 @@ function HospitalsCarousel() {
       >
         <div className={HomepageStyles.hospitalsCarousel}>
           <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
+            <div className={HomepageStyles.SpecialistsAvailable}>
+              <p className={lexend.className}> 5 Specialists Available</p>
+            </div>
             <img src="/DrOwen.png" alt="" />
             <div className={HomepageStyles.hospitalsCarouselItem}>
               <div className={lexend.className}>
@@ -68,6 +71,9 @@ function HospitalsCarousel() {
             </div>
           </SwiperSlide>
           <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
+            <div className={HomepageStyles.SpecialistsAvailable}>
+              <p className={lexend.className}> 5 Specialists Available</p>
+            </div>
             <img src="/DrOwen.png" alt="" />
             <div className={HomepageStyles.hospitalsCarouselItem}>
               <div className={lexend.className}>
@@ -82,6 +88,9 @@ function HospitalsCarousel() {
             </div>
           </SwiperSlide>
           <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
+            <div className={HomepageStyles.SpecialistsAvailable}>
+              <p className={lexend.className}> 5 Specialists Available</p>
+            </div>
             <img src="/DrOwen.png" alt="" />
             <div className={HomepageStyles.hospitalsCarouselItem}>
               <div className={lexend.className}>
@@ -96,6 +105,9 @@ function HospitalsCarousel() {
             </div>
           </SwiperSlide>
           <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
+            <div className={HomepageStyles.SpecialistsAvailable}>
+              <p className={lexend.className}> 5 Specialists Available</p>
+            </div>
             <img src="/DrOwen.png" alt="" />
             <div className={HomepageStyles.hospitalsCarouselItem}>
               <div className={lexend.className}>
@@ -110,6 +122,9 @@ function HospitalsCarousel() {
             </div>
           </SwiperSlide>
           <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
+            <div className={HomepageStyles.SpecialistsAvailable}>
+              <p className={lexend.className}> 5 Specialists Available</p>
+            </div>
             <img src="/DrOwen.png" alt="" />
             <div className={HomepageStyles.hospitalsCarouselItem}>
               <div className={lexend.className}>
@@ -124,6 +139,9 @@ function HospitalsCarousel() {
             </div>
           </SwiperSlide>
           <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
+            <div className={HomepageStyles.SpecialistsAvailable}>
+              <p className={lexend.className}> 5 Specialists Available</p>
+            </div>
             <img src="/DrOwen.png" alt="" />
             <div className={HomepageStyles.hospitalsCarouselItem}>
               <div className={lexend.className}>
