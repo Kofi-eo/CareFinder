@@ -277,38 +277,3 @@
     transform: rotate(0deg);
   }
 }
-
-.auth-container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(234, 234, 202);
-}
-.auth-image {
-  width: 100%;
-  object-fit: contain;
-}
-.auth-section {
-  padding: 10px;
-}
-.auth-input {
-  width: 70px;
-  height: 20px;
-  color: black;
-}
-.auth-group-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.auth-button {
-  width: 200px;
-  background-color: black;
-  color: white;
-}
-.google-button {
-  width: 200px;
-  border: 1px solid black;
-}

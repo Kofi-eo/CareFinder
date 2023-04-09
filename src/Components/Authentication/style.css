@@ -13,21 +13,22 @@
 }
 
 .auth-image-container {
-  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
   height: 100vh;
-  background-image: url("/signInImage.webp");
-  background-size: cover;
-  background-repeat: none;
+  margin: auto 0;
 }
 .auth-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .auth-section {
   height: 100%;
   width: 50%;
-  padding: 60px;
+  padding: 50px;
   padding-top: 100px;
 }
 .auth-section h1 {
@@ -48,6 +49,7 @@
 }
 label {
   margin-top: 5px;
+  margin-left: 10px;
   color: black;
   font-size: 0.8rem;
   margin-bottom: 5px;
@@ -55,58 +57,64 @@ label {
   opacity: 0.8;
 }
 
-.form ::placeholder {
+.auth-input::placeholder {
   color: gray;
-  padding-left: 10px;
+  padding-left: 5px;
+  margin-left: 10px;
   font-size: 0.8rem;
   opacity: 0.5;
 }
-.form :focus {
+
+.auth-input:focus {
   border: none;
   outline: none;
   border-bottom: 1px solid gray;
 }
 .auth-input {
   margin-top: -5px;
-  width: 500px;
+  max-width: 500px;
   height: 40px;
   padding: 5px;
   border: none;
   border-bottom: 1px solid gray;
-  color: black;
+  color: rgb(88, 87, 87);
   background-color: #f4f9ff;
 }
 .auth-group-buttons {
   display: flex;
+  flex-direction: column;
+  max-width: 500px;
   width: 100%;
   justify-content: space-between;
-  gap: 5px;
+  gap: 0px 5px;
   border: none;
 }
 .forgot-password {
   font-size: 0.7rem;
-  width: 500px;
+  max-width: 500px;
   text-align: right;
   cursor: pointer;
   color: gray;
 }
-.auth-button {
-  width: 500px;
+.submit-button {
+  cursor: pointer;
+  max-width: 500px;
+  width: 100%;
   height: 40px;
   background-color: black;
   color: white;
   border: none;
 }
 .or {
-  width: 500px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 .or::before {
   content: "";
@@ -126,7 +134,8 @@ label {
 }
 .google-button,
 .reset-password {
-  width: 500px;
+  cursor: pointer;
+  max-width: 500px;
   height: 40px;
   background-color: #f4f9ff;
   color: black;
@@ -135,7 +144,7 @@ label {
 }
 
 .no-account {
-  width: 500px;
+  max-width: 500px;
   display: flex;
   justify-content: center;
   margin-top: 5px;
@@ -147,4 +156,21 @@ label {
   color: gray;
   font-size: 0.8rem;
   cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .auth-section-container {
+    display: block;
+  }
+  .auth-container {
+    display: block;
+  }
+  .auth-image-container {
+    display: none;
+  }
+  .auth-section {
+    width: 100%;
+    padding: 30px;
+    padding-top: 100px;
+  }
 }
