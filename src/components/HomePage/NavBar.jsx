@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import HomepageStyles from "@/styles/HomePage.module.css";
 
 import { RiMenu4Fill } from "react-icons/ri";
@@ -23,22 +24,31 @@ function NavBar() {
     <div>
       <div className={HomepageStyles.centerNav}>
         <nav id="nav" className={HomepageStyles.nav}>
-          <img src="/CarefinderLogo.png" alt="" />
+          <Link href="/">
+            <Image
+              src="/Logo-Black.svg"
+              alt="careFinder"
+              height={35}
+              width={35}
+            />
+          </Link>
 
-          <ul>
-            <li>
-              <Link href="Home">Home</Link>
-            </li>
-            <li>
-              <Link href="Appointment">Appointment</Link>
-            </li>
-            <Link href="/Auth">
-              <li className={HomepageStyles.loginButton}>Login/SignUp</li>
-            </Link>
-          </ul>
-          <button className={HomepageStyles.navButton}>
-            <RiMenu4Fill />
-          </button>
+          <div>
+            <ul>
+              <li>
+                <Link href="Home">Home</Link>
+              </li>
+              <li>
+                <Link href="/Explore">Appointment</Link>
+              </li>
+              <Link href="/Auth">
+                <li className={HomepageStyles.loginButton}>Login/SignUp</li>
+              </Link>
+            </ul>
+            <button className={HomepageStyles.navButton}>
+              <RiMenu4Fill />
+            </button>
+          </div>
         </nav>
       </div>
     </div>

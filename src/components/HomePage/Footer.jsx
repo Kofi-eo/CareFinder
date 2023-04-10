@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import HomepageStyles from "@/styles/HomePage.module.css";
 import Link from "next/link";
 
@@ -6,7 +7,14 @@ function Footer() {
   return (
     <div className={HomepageStyles.footerContainer}>
       <div className={HomepageStyles.carefinder}>
-        <img src="Logo-White.svg" alt="" />
+        <Link href="/">
+          <Image
+            src="/Logo-White.svg"
+            alt="careFinder"
+            height={80}
+            width={80}
+          />
+        </Link>
         <p>
           Easily schedule appointments with expert medical specialists near you,
           at a time and place that suits you best.
