@@ -2,10 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation, Pagination, A11y } from "swiper";
 import HomepageStyles from "@/styles/HomePage.module.css";
 import { IoLocationSharp } from "react-icons/io5";
-import { Lexend } from "next/font/google";
 import { useEffect, useState } from "react";
-
-const lexend = Lexend({ subsets: ["latin"], weight: ["400", "800"] });
 
 function HospitalsCarousel() {
   const [slides, setSlides] = useState(3.5);
@@ -24,21 +21,14 @@ function HospitalsCarousel() {
       setSlides(1.5);
     } else if (windowWidth <= 900) {
       setSlides(2);
-    } else if (windowWidth === 1024) {
-      setSlides(3.2);
-    } else if (windowWidth === 1200) {
+    } else if (windowWidth <= 1024) {
+      setSlides(2.5);
+    } else if (windowWidth <= 1440) {
       setSlides(3.5);
+    } else if (windowWidth >= 1500) {
+      setSlides(5);
     }
   }, [windowWidth]);
-
-  const pagination = {
-    el: ".image-swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + 1 + "</span>";
-    },
-  };
 
   return (
     <div className={HomepageStyles.swiperContainer}>

@@ -2,6 +2,7 @@ import HomepageStyles from "@/styles/HomePage.module.css";
 import { GoSearch } from "react-icons/go";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { GoCalendar } from "react-icons/go";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 function SearchBox() {
   return (
@@ -28,9 +29,13 @@ function SearchBox() {
           <div className={HomepageStyles.columnInputs}>
             <label htmlFor="Time">Schedule Time</label>
             <GoCalendar className={HomepageStyles.calender} />
-            <input type="text" placeholder="4 / 03 /2023" />
+            <input type="text" placeholder="4/10/2023" />
+            {/* <DatePicker
+            value={value}
+            onChange={(newValue) => setValue(newValue)}
+            /> */}
           </div>
-          <button>
+          <button className={HomepageStyles.searchButton}>
             <GoSearch /> Search
           </button>
         </form>

@@ -96,7 +96,7 @@ const AuthPage = () => {
     <section className="auth-section-container">
       <div className="auth-container">
         <div className="auth-image-container">
-          <Image
+          <img
             className="auth-image"
             src={form.isNewUser ? "/SignUpImage.webp" : "/SignInImage.webp"}
             width="1"
