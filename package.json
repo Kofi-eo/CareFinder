@@ -9,6 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.16",
+    "@mui/styled-engine-sc": "^5.11.11",
+    "@mui/x-date-pickers": "^6.0.4",
+    "dayjs": "^1.11.7",
     "babel-plugin-styled-components": "^2.1.1",
     "dotenv": "^16.0.3",
     "eslint": "8.37.0",
@@ -21,6 +27,7 @@
     "react-firebase-hooks": "^5.1.1",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.8.0",
+    "styled-components": "^5.3.9",
     "swiper": "^9.2.0"
   }
 }
