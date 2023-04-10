@@ -1,24 +1,37 @@
 import Link from "next/link";
 import Image from "next/image";
 import HomepageStyles from "@/styles/HomePage.module.css";
+import { useEffect } from "react";
 
 import { RiMenu4Fill } from "react-icons/ri";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 
-function NavBar() {
-  // Navigation animation on Scroll
-  const { scrollY } = useScroll();
+function NavBar({returnBack = false}) {
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    let nav = document.getElementById("nav");
-    if (latest >= 100) {
+  // To return the navbar back to normal on the explore page
+  useEffect(() => {
+    if(returnBack) {
+      let nav = document.getElementById("nav");
       nav.style.width = "100vw";
       nav.style.marginTop = "70px";
-    } else {
-      nav.style.width = "90vw";
-      nav.style.marginTop = "90px";
     }
-  });
+  },[])
+
+  // Navigation animation on Scroll
+  if (!returnBack) {
+    const { scrollY } = useScroll();
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+      let nav = document.getElementById("nav");
+      if (latest >= 100) {
+        nav.style.width = "100vw";
+        nav.style.marginTop = "70px";
+      } else {
+        nav.style.width = "90vw";
+        nav.style.marginTop = "90px";
+      }
+    });  
+  }
 
   return (
     <div>
