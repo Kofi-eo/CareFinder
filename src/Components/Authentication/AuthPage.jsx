@@ -98,7 +98,7 @@ const AuthPage = () => {
         <div className="auth-image-container">
           <Image
             className="auth-image"
-            src={form.isNewUser ? "/vercel.svg" : "/Logo.svg"}
+            src={form.isNewUser ? "/SignUpImage.webp" : "/SignInImage.webp"}
             width="1"
             height="1"
             alt="auth image"

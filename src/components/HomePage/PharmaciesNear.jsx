@@ -1,12 +1,10 @@
 import HomepageStyles from "@/styles/HomePage.module.css";
 import PharmaciesCarousel from "./PharmaciesCarousel";
-import { Lexend } from "next/font/google";
+
 import { RiArrowRightLine } from "react-icons/ri";
 import { RiArrowLeftLine } from "react-icons/ri";
 import { RxDotFilled } from "react-icons/rx";
 import Link from "next/link";
-
-const lexend = Lexend({ subsets: ["latin"], weight: ["400", "800"] });
 
 function PharmaciesNear() {
   return (
@@ -14,7 +12,7 @@ function PharmaciesNear() {
       <hr className={HomepageStyles.hospitalsNearDivider} />
       <div className={HomepageStyles.hospitalsNearContainer}>
         <div className={HomepageStyles.hospitalsNearText}>
-          <h1 className={lexend.className}>Pharmacies Near You</h1>
+          <h1>Pharmacies Near You</h1>
           <div className={HomepageStyles.hospitalsNearArrBtns}>
             <div className={HomepageStyles.arrowContainer}>
               <RiArrowLeftLine className="image2-swiper-button-prev" />
