@@ -1,8 +1,8 @@
 import PopUpModalstyles from "@/styles/PopUpModal.module.css";
 import { useState } from "react";
-import AppiontContent from "./AppiontContent";
-import AppiontContentTwo from "./AppiontContentTwo";
-import AppiontContentThree from "./AppiontContentThree";
+import Appointment from "./Appointment";
+import Details from "./Details";
+import Book from "./Book";
 
 function ModalNav({ setShowModal }) {
   const [progressBar, setProgressBar] = useState(33);
@@ -21,9 +21,9 @@ function ModalNav({ setShowModal }) {
 
   // Modal contents Array
   const modalContents = [
-    { modal: <AppiontContent /> },
-    { modal: <AppiontContentTwo /> },
-    { modal: <AppiontContentThree /> },
+    { modal: <Appointment /> },
+    { modal: <Details /> },
+    { modal: <Book /> },
   ];
 
   return (

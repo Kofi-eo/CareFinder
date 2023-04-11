@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
 .modalContainer {
   top: 0;
   display: flex;
@@ -7,16 +10,17 @@
   width: 100%;
   height: 100%;
   background-color: transparent;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(25px);
   transition: 0.5s;
   position: fixed;
 }
 
 .modalBox {
   width: 40%;
-  height: 70%;
+  height: 95%;
   background-color: white;
   position: relative;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.25);
 }
 /* modal close button */
 .modalCloseBtn {
@@ -32,6 +36,8 @@
   margin-top: -15px;
   left: 97%;
   cursor: pointer;
+  font-family: "Lexend", sans-serif;
+  font-size: 15px;
 }
 
 .modalNavProgressBar {
@@ -42,22 +48,24 @@
 }
 .modalNavProgressBarBlue {
   height: 10px;
-  background-color: rgb(34, 34, 94);
+  background-color: #003963;
   transition: 0.8s;
 }
 .modalNavTexts {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   width: 100%;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-align: center;
   padding: 10px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid#969696;
 }
 .modalNavTexts h1 {
-  font-size: 20px;
+  font-size: 14px;
   color: rgb(195, 193, 193);
+  font-family: "Lexend", sans-serif;
+  font-weight: 200;
 }
 
 .button {
@@ -70,7 +78,7 @@
   height: 40px;
   border: none;
   border-radius: 6px;
-  background-color: rgb(34, 34, 94);
+  background-color: #003963;
   color: white;
   font-size: 13px;
   left: 40%;
@@ -86,4 +94,57 @@
     font-size: 15px;
     color: rgb(195, 193, 193);
   }
+}
+
+/* Appiontment  */
+/* Doctor Profile */
+.appointmentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 180px;
+  border-bottom: 1px solid#969696;
+}
+.doctorImg img {
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  margin-left: 50px;
+}
+.doctordetails {
+  margin-left: 20px;
+  font-family: "Lexend", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 130px;
+}
+.doctordetails h1 {
+  font-size: 18px;
+}
+.doctordetails h2 {
+  font-size: 15px;
+  color: #6a6a6a;
+  font-weight: 300;
+}
+/* Meeting Options */
+.meetingOption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "PT Sans", sans-serif;
+  height: 90px;
+  border-bottom: 1px solid#969696;
+}
+.meetingOptionBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  height: 60%;
+  border: 2px solid #003963;
+}
+.meetingOptionBox h1 {
+  font-size: 16px;
+  font-weight: 400;
 }
