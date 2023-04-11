@@ -2,7 +2,6 @@ import HomepageStyles from "@/styles/HomePage.module.css";
 import { GoSearch } from "react-icons/go";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { GoCalendar } from "react-icons/go";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 function SearchBox() {
   return (

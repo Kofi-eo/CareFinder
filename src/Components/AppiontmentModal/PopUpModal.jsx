@@ -1,5 +1,5 @@
 import PopUpModalstyles from "@/styles/PopUpModal.module.css";
-import ModalNav from "./ModalNav";
+import ModalNavigation from "./ModalNavigation ";
 import { motion } from "framer-motion";
 
 function PopUpModal({ showModal, setShowModal }) {
@@ -10,7 +10,7 @@ function PopUpModal({ showModal, setShowModal }) {
       className={PopUpModalstyles.modalContainer}
     >
       <div className={PopUpModalstyles.modalBox}>
-        <ModalNav showModal={showModal} setShowModal={setShowModal} />
+        <ModalNavigation showModal={showModal} setShowModal={setShowModal} />
       </div>
     </motion.div>
   );

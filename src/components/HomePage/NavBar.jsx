@@ -26,24 +26,21 @@ function NavBar({ returnBack = false, showModal, setShowModal }) {
         nav.style.marginTop = "70px";
       } else {
         nav.style.width = "90vw";
-        nav.style.marginTop = "90px";
+        nav.style.marginTop = "120px";
       }
     });
   }
 
   return (
     <div>
-      <div
-        className={HomepageStyles.centerNav}
-        onClick={() => setShowModal(true)}
-      >
+      <div className={HomepageStyles.centerNav}>
         <nav id="nav" className={HomepageStyles.nav}>
           <Link href="/">
             <Image
               src="/Logo-Black.svg"
               alt="careFinder"
-              height={35}
-              width={35}
+              height={60}
+              width={60}
             />
           </Link>
 

@@ -3,8 +3,68 @@ import { EffectCoverflow, Navigation, Pagination, A11y } from "swiper";
 import HomepageStyles from "@/styles/HomePage.module.css";
 import { IoLocationSharp } from "react-icons/io5";
 import { useEffect, useState } from "react";
+import MedicalCentreCard from "../Cards/MedicalCentreCard";
 
 function HospitalsCarousel() {
+  const sampleData = [
+    {
+      image: "/signInImage.webp",
+      hospital: "Kelina Hospital",
+      location: "9, beside Access Bank, Abuja, Nigeria",
+      distance: "5.3km",
+      specialists: 12,
+    },
+    {
+      image: "/signInImage.webp",
+      hospital: "Kelina Hospital",
+      location: "9, beside Access Bank, Abuja, Nigeria",
+      distance: "5.3km",
+      specialists: 12,
+    },
+    {
+      image: "/signInImage.webp",
+      hospital: "Kelina Hospital",
+      location: "9, beside Access Bank, Abuja, Nigeria",
+      distance: "5.3km",
+      specialists: 12,
+    },
+    {
+      image: "/signInImage.webp",
+      hospital: "Kelina Hospital",
+      location: "9, beside Access Bank, Abuja, Nigeria",
+      distance: "5.3km",
+      specialists: 12,
+    },
+    {
+      image: "/signInImage.webp",
+      hospital: "Kelina Hospital",
+      location: "9, beside Access Bank, Abuja, Nigeria",
+      distance: "5.3km",
+      specialists: 12,
+    },
+    {
+      image: "/signInImage.webp",
+      hospital: "Kelina Hospital",
+      location: "9, beside Access Bank, Abuja, Nigeria",
+      distance: "5.3km",
+      specialists: 12,
+    },
+    {
+      image: "/signInImage.webp",
+      hospital: "Kelina Hospital",
+      location: "9, beside Access Bank, Abuja, Nigeria",
+      distance: "5.3km",
+      specialists: 12,
+    },
+    {
+      image: "/signInImage.webp",
+      hospital: "Kelina Hospital",
+      location: "9, beside Access Bank, Abuja, Nigeria",
+      distance: "5.3km",
+      specialists: 12,
+    },
+  ];
+
   const [slides, setSlides] = useState(3.5);
   const [windowWidth, setWindowWidth] = useState();
 
@@ -37,7 +97,7 @@ function HospitalsCarousel() {
         // pagination={pagination}
         direction={"horizontal"}
         slidesPerView={slides}
-        spaceBetween={30}
+        spaceBetween={50}
         grabCursor={true}
         wrapperClass={HomepageStyles.hospitalsCarousel}
         navigation={{
@@ -48,108 +108,11 @@ function HospitalsCarousel() {
         className={HomepageStyles.swiper}
       >
         <div className={HomepageStyles.hospitalsCarousel}>
-          <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
-            <img src="/DrOwen.png" alt="" />
-            <div className={HomepageStyles.hospitalsCarouselItem}>
-              <div className={HomepageStyles.SpecialistsAvailable}>
-                <p> 5 Specialists Available</p>
-              </div>
-              <div>
-                <h2>Kelina</h2>
-                <p className={HomepageStyles.address}>
-                  9, beside Access Bank, Abuja, Nigeria
-                </p>
-              </div>
-              <p>
-                <IoLocationSharp /> 5.3km
-              </p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
-            <div className={HomepageStyles.SpecialistsAvailable}>
-              <p> 5 Specialists Available</p>
-            </div>
-            <img src="/signInImage.webp" alt="" />
-            <div className={HomepageStyles.hospitalsCarouselItem}>
-              <div>
-                <h2>Kelina</h2>
-                <p className={HomepageStyles.address}>
-                  9, beside Access Bank, Abuja, Nigeria
-                </p>
-              </div>
-              <p>
-                <IoLocationSharp /> 5.3km
-              </p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
-            <div className={HomepageStyles.SpecialistsAvailable}>
-              <p> 5 Specialists Available</p>
-            </div>
-            <img src="/signUpImage.webp" alt="" />
-            <div className={HomepageStyles.hospitalsCarouselItem}>
-              <div>
-                <h2>Kelina</h2>
-                <p className={HomepageStyles.address}>
-                  9, beside Access Bank, Abuja, Nigeria
-                </p>
-              </div>
-              <p>
-                <IoLocationSharp /> 5.3km
-              </p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
-            <div className={HomepageStyles.SpecialistsAvailable}>
-              <p> 5 Specialists Available</p>
-            </div>
-            <img src="/DrOwen.png" alt="" />
-            <div className={HomepageStyles.hospitalsCarouselItem}>
-              <div>
-                <h2>Kelina</h2>
-                <p className={HomepageStyles.address}>
-                  9, beside Access Bank, Abuja, Nigeria
-                </p>
-              </div>
-              <p>
-                <IoLocationSharp /> 5.3km
-              </p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
-            <div className={HomepageStyles.SpecialistsAvailable}>
-              <p> 5 Specialists Available</p>
-            </div>
-            <img src="/DrOwen.png" alt="" />
-            <div className={HomepageStyles.hospitalsCarouselItem}>
-              <div>
-                <h2>Kelina</h2>
-                <p className={HomepageStyles.address}>
-                  9, beside Access Bank, Abuja, Nigeria
-                </p>
-              </div>
-              <p>
-                <IoLocationSharp /> 5.3km
-              </p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className={HomepageStyles.hospitalsCarouselContainer}>
-            <div className={HomepageStyles.SpecialistsAvailable}>
-              <p> 5 Specialists Available</p>
-            </div>
-            <img src="/DrOwen.png" alt="" />
-            <div className={HomepageStyles.hospitalsCarouselItem}>
-              <div>
-                <h2>Kelina</h2>
-                <p className={HomepageStyles.address}>
-                  9, beside Access Bank, Abuja, Nigeria
-                </p>
-              </div>
-              <p>
-                <IoLocationSharp /> 5.3km
-              </p>
-            </div>
-          </SwiperSlide>
+          {sampleData.map((x, index) => (
+            <SwiperSlide key={index}>
+              <MedicalCentreCard details={x} />
+            </SwiperSlide>
+          ))}
         </div>
       </Swiper>
     </div>

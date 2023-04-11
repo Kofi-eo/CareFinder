@@ -13,12 +13,12 @@
 }
 
 .centerNav nav {
-  margin-top: 90px;
+  margin-top: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 90vw;
-  height: 70px;
+  height: 90px;
   background-color: #14df96;
   border: 1px solid #6a6a6a;
   backdrop-filter: blur(10px);
@@ -28,8 +28,7 @@
   padding: 0px 80px;
 }
 .centerNav nav img {
-  width: 150px;
-  margin-left: 20px;
+  width: 190px;
 }
 .centerNav nav ul {
   display: flex;
@@ -51,7 +50,7 @@
   color: white;
   width: 140px;
   height: 40px;
-  border-radius: 10px;
+  padding: 25px 85px;
 }
 .navButton {
   display: none;
@@ -61,13 +60,8 @@
   .centerNav nav ul li {
     display: none;
   }
-  .centerNav nav {
-    padding: unset;
-  }
   .navButton {
     display: flex;
-    position: absolute;
-    right: 20px;
     align-items: center;
     justify-content: center;
     border: none;
@@ -80,60 +74,83 @@
 /* Header */
 .headerContainer {
   width: 100vw;
-  height: 100vh;
   background-color: #fff9e8;
 }
+
 .headerContainer header {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
-  margin-left: 70px;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
+
+.headerText {
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  padding-left: 13%;
+}
+
 .headerText h1 {
-  width: 300px;
-  font-size: 65px;
+  width: 50%;
+  font-size: 4rem;
   font-family: "Lexend", sans-serif;
 }
+
+.headerText h1::first-line {
+  font-weight: 150;
+}
+
 .headerText p {
-  width: 400px;
-  font-size: 20px;
+  width: 75%;
+  margin-top: 25px;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #505050;
   font-family: "PT Sans", sans-serif;
 }
 
-.headerContainer header img {
-  position: absolute;
-  top: 0;
-  right: 0px;
-  height: 90vh;
+.headerImage {
+  height: 100%;
+  grid-column: span 1;
+  background-image: url(/heroImage.webp);
+  background-size: cover;
 }
+
 /* Mobile Header */
 @media (max-width: 950px) {
   .headerContainer {
-    width: 100vw;
-    height: 900px;
+    height: auto;
     background-color: #fff9e8;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
   }
-  .headerContainer header img {
+  .headerImage {
     display: none;
   }
   .headerContainer header {
     display: flex;
+    height: fit-content;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    margin-left: 20px;
-    padding-top: 150px;
+    overflow: visible;
+  }
+
+  .headerText {
+    padding: 15vh 7vw 2vh 7vw;
+    height: auto;
   }
   .headerText h1 {
     width: 200px;
     font-size: 35px;
   }
   .headerText p {
-    padding-top: 10px;
+    padding-top: 2px;
     font-size: 15px;
     width: 340px;
   }
@@ -143,6 +160,10 @@
 .searchBoxContainer {
   position: absolute;
   bottom: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   font-family: "Lexend", sans-serif;
 }
 .searchBox {
@@ -517,11 +538,12 @@
   justify-content: space-around;
   position: absolute;
   font-family: "Lexend", sans-serif;
+  margin-right: 40px;
 }
 
 .hospitalsCarouselContainer {
   margin-right: 30px;
-  width: 300px;
+  width: 350px;
   height: 250px;
   border: none;
   border-radius: 6px;
