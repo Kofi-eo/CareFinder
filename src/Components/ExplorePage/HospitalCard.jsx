@@ -1,14 +1,18 @@
 import { Lexend } from "next/font/google";
 import { PT_Sans } from "next/font/google";
 import ExploreStyles from '@/styles/ExplorePage.module.css'
+import { useRouter } from "next/router";
 import Image from "next/image";
 
 const lexend = Lexend({ subsets: ["latin"], weight: ["400", "800"] });
 const pt_sans = PT_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function HospitalCard() {
+
+    const route = useRouter()
+
     return (
-        <div className={ExploreStyles.explore_item}>
+        <div onClick={() => route.push(`/medical_center/${2}`)} className={ExploreStyles.explore_item}>
             <div className={ExploreStyles.explore_item_imgContainer}>
                 <Image src={'/DrOwen.png'} height={100} width={100}/>
                 <span>12 Specialist Available</span>
