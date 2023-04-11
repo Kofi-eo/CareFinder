@@ -1,0 +1,19 @@
+.modalContainer {
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  transition: 0.5s;
+}
+
+.modalBox {
+  width: 40%;
+  height: 70%;
+  background-color: white;
+}

@@ -58,8 +58,11 @@
 }
 /* Mobile Nav */
 @media (max-width: 950px) {
-  .centerNav nav ul {
+  .centerNav nav ul li {
     display: none;
+  }
+  .centerNav nav {
+    padding: unset;
   }
   .navButton {
     display: flex;

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Footer from "../components/HomePage/Footer";
 import Header from "../components/HomePage/Header";
 import HospitalsNear from "../components/HomePage/HospitalsNear";
@@ -8,8 +9,16 @@ import PharmaciesNear from "../components/HomePage/PharmaciesNear";
 import Testimonies from "../components/HomePage/Testimonies";
 import Trust from "../components/HomePage/Trust";
 import Head from "next/head";
+import PopUpModal from "@/Components/AppiontmentModal/PopUpModal";
 
 function HomePageHeader() {
+  // Testing modal with nav component
+  const [showModal, setShowModal] = useState(false);
+  if (showModal) {
+    console.log("true");
+    const main = document.querySelector("html");
+    main.style.overflow = "hidden";
+  }
   return (
     <>
       <Head>
@@ -21,7 +30,12 @@ function HomePageHeader() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar />
+      {showModal ? (
+        <PopUpModal showModal={showModal} setShowModal={setShowModal} />
+      ) : (
+        ""
+      )}
+      <NavBar showModal={showModal} setShowModal={setShowModal} />
       <Header />
       <InfoSection />
       <InfoSectionTwo />

@@ -4,6 +4,7 @@ import { RiArrowRightLine } from "react-icons/ri";
 import { RiArrowLeftLine } from "react-icons/ri";
 import { RxDotFilled } from "react-icons/rx";
 import Link from "next/link";
+import Modal from "../AppiontmentModal/PopUpModal";
 
 function HospitalsNear() {
   return (
