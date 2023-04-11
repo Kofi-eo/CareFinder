@@ -11,9 +11,8 @@ function Header() {
             Easily schedule appointments with expert medical specialists near
             you, at a time and place that suits you best.
           </p>
-          <img src="/heroImage.webp" alt="" />
         </div>
-        <SearchBox />
+        <div className={HomepageStyles.headerImage}> </div> <SearchBox />
       </header>
     </div>
   );
