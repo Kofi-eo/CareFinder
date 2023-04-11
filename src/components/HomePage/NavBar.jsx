@@ -23,10 +23,10 @@ function NavBar({ returnBack = false }) {
       let nav = document.getElementById("nav");
       if (latest >= 100) {
         nav.style.width = "100vw";
-        nav.style.marginTop = "100px";
+        nav.style.marginTop = "70px";
       } else {
         nav.style.width = "90vw";
-        nav.style.marginTop = "150px";
+        nav.style.marginTop = "120px";
       }
     });
   }

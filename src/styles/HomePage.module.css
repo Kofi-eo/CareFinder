@@ -13,12 +13,12 @@
 }
 
 .centerNav nav {
-  margin-top: 150px;
+  margin-top: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 90vw;
-  height: 100px;
+  height: 90px;
   background-color: #14df96;
   border: 1px solid #6a6a6a;
   backdrop-filter: blur(10px);
@@ -28,7 +28,7 @@
   padding: 0px 80px;
 }
 .centerNav nav img {
-  width: 210px;
+  width: 190px;
 }
 .centerNav nav ul {
   display: flex;
@@ -62,6 +62,7 @@
   }
 
   .centerNav nav {
+    margin-top: 90px;
     padding: 0px 20px;
     height: 70px;
   }
@@ -151,7 +152,7 @@
   }
 
   .headerText {
-    padding: 12vh 7vw 2vh 7vw;
+    padding: 15vh 7vw 2vh 7vw;
     height: auto;
   }
   .headerText h1 {
@@ -159,7 +160,7 @@
     font-size: 35px;
   }
   .headerText p {
-    padding-top: 10px;
+    padding-top: 2px;
     font-size: 15px;
     width: 340px;
   }
@@ -547,7 +548,6 @@
   justify-content: space-around;
   position: absolute;
   font-family: "Lexend", sans-serif;
-  gap: 10px;
   margin-right: 40px;
 }
 
