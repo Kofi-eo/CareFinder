@@ -1,6 +1,7 @@
 import HomepageStyles from "@/styles/HomePage.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
+// import Image from "next/image"
 
 function TestimoniesCarousel() {
   const pagination = {
