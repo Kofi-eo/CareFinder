@@ -6,10 +6,12 @@
   align-items: center;
   font-family: "Poppins", sans-serif;
 }
+
 .auth-container {
   display: flex;
   width: 100%;
 }
+
 .auth-image-container {
   display: flex;
   justify-content: center;
@@ -45,7 +47,7 @@
   flex-direction: column;
   gap: 10px;
 }
-label {
+.auth-section label {
   margin-top: 5px;
   margin-left: 10px;
   color: black;

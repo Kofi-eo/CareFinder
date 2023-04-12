@@ -1,11 +1,14 @@
 import Image from "next/image";
 import toast from "react-hot-toast";
 import { useRouter } from "next/router";
-import { useState } from 'react';
-import { useCreateUserWithEmailAndPassword, useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useState } from "react";
+import {
+  useCreateUserWithEmailAndPassword,
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import { auth } from "../../Firebase/firebase.config";
-
-
 
 const AuthPage = () => {
   const router = useRouter();
@@ -15,15 +18,16 @@ const AuthPage = () => {
     showPassword: false,
     submitting: false,
     forgotPassword: false,
-    confirmPassword: '',
-    isNewUser: true
+    confirmPassword: "",
+    isNewUser: true,
   });
 
-  const [signInWithEmailAndPassword, loading, error,] = useSignInWithEmailAndPassword(auth);
-  const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);
+  const [signInWithEmailAndPassword, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword] =
+    useCreateUserWithEmailAndPassword(auth);
   const [signInWithGoogle] = useSignInWithGoogle(auth);
-  const [sendPasswordResetEmail, sending] =
-    useSendPasswordResetEmail(auth);
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
   // console.log(user);
 
@@ -33,30 +37,29 @@ const AuthPage = () => {
       if (form.isNewUser) {
         if (form.password != form.confirmPassword) return;
         await createUserWithEmailAndPassword(form.email, form.password);
-        toast.success('account created');
+        toast.success("account created");
       } else {
         await signInWithEmailAndPassword(form.email, form.password);
-        toast.success('signed in');
-        router.push('/');
+        toast.success("signed in");
+        router.push("/");
       }
     } catch (error) {
-      toast.error('something went wrong');
+      toast.error("something went wrong");
     } finally {
       setForm((prev) => ({
         ...prev,
-        email: '',
-        password: '',
-        confirmPassword: ''
+        email: "",
+        password: "",
+        confirmPassword: "",
       }));
     }
   };
 
-
   const onChange = (event) => {
     //update form state
-    setForm(prev => ({
+    setForm((prev) => ({
       ...prev,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     }));
   };
 
@@ -65,12 +68,11 @@ const AuthPage = () => {
     e.preventDefault();
     try {
       await signInWithGoogle();
-      toast.success('signed in');
-      router.push('/');
+      toast.success("signed in");
+      router.push("/");
     } catch (err) {
-      toast.error('something went wrong');
+      toast.error("something went wrong");
     }
-
   };
 
   const sendResetPassword = async (e) => {
@@ -94,16 +96,16 @@ const AuthPage = () => {
       }
     };
 
-
     return (
-      <section className='auth-section-container'>
-        <div className='auth-container'>
-          <div className='auth-image-container'>
-            <img
-              className='auth-image'
-              src={form.isNewUser ? '/signUpImage.webp' : '/signInImage.webp'}
-
-              alt='auth image'
+      <section className="auth-section-container">
+        <div className="auth-container">
+          <div className="auth-image-container">
+            <Image
+              className="auth-image"
+              src={form.isNewUser ? "/SignUpImage.webp" : "/SignInImage.webp"}
+              width="1"
+              height="1"
+              alt="auth image"
             />
           </div>
 
@@ -230,8 +232,9 @@ const AuthPage = () => {
             }
           </section>
         </div>
-      </section >
+      </section>
     );
   };
 };
+
 export default AuthPage;

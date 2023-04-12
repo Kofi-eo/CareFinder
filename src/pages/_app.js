@@ -1,11 +1,18 @@
 import AuthContext from "../Context/AuthContext";
 import "@/styles/globals.css";
-import "../Components/Authentication/style.css";
+import "@/styles/style.css";
+import Layout from "@/components/Layout";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
 export default function App({ Component, pageProps }) {
   return (
     <AuthContext>
-      <Component {...pageProps} />;
+      <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </LocalizationProvider>
     </AuthContext>
   );
 }
