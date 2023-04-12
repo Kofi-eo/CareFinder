@@ -1,5 +1,4 @@
 import Image from "next/image";
-import toast from "react-hot-toast";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import {
@@ -8,6 +7,7 @@ import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
+import toast from "react-hot-toast";
 import { auth } from "../../Firebase/firebase.config";
 
 const AuthPage = () => {
@@ -22,12 +22,12 @@ const AuthPage = () => {
     isNewUser: true,
   });
 
-  const [signInWithEmailAndPassword, loading, error] =
+  const [signInWithEmailAndPassword] =
     useSignInWithEmailAndPassword(auth);
   const [createUserWithEmailAndPassword] =
     useCreateUserWithEmailAndPassword(auth);
   const [signInWithGoogle] = useSignInWithGoogle(auth);
-  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
   // console.log(user);
 
@@ -80,6 +80,7 @@ const AuthPage = () => {
     try {
       await sendPasswordResetEmail(form.email);
       toast.success('reset password email sent please check your inbox');
+      setForm(prev => ({ ...prev, forgotPassword: !prev.forgotPassword, isNewUser: false }));
     } catch (error) {
       toast.error('this email is not registered');
 
