@@ -1,6 +1,11 @@
 import PopUpModal from "@/styles/PopUpModal.module.css";
+import { color } from "framer-motion";
+import { useState } from "react";
 import { AiFillStar } from "react-icons/ai";
+import { MdHeight } from "react-icons/md";
 import { RiHospitalLine } from "react-icons/ri";
+import MeetingOption from "./MeetingOption";
+import MeetingDate from "./MeetingDate";
 
 function Appointment() {
   return (
@@ -20,16 +25,8 @@ function Appointment() {
           </p>
         </div>
       </div>
-      <div className={PopUpModal.meetingOption}>
-        <div className={PopUpModal.meetingOptionBox}>
-          <div>
-            <h1>In-Person</h1>
-          </div>
-          <div>
-            <h1>Viedo Call</h1>
-          </div>
-        </div>
-      </div>
+      <MeetingOption />
+      <MeetingDate />
     </>
   );
 }

@@ -139,12 +139,104 @@
 .meetingOptionBox {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 80%;
   height: 60%;
   border: 2px solid #003963;
+  position: relative;
+  overflow: hidden;
+}
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.8s;
+}
+.selectorBox {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  transition: 0.8s;
 }
 .meetingOptionBox h1 {
   font-size: 16px;
   font-weight: 400;
+}
+
+/* Meeting Date */
+.meetingDate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+  padding-left: 0px;
+  border-bottom: 1px solid#969696;
+  position: relative;
+  overflow: hidden;
+}
+.ArrBtns {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  justify-content: space-between;
+  width: 60px;
+}
+.arrContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #fff9e8;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Carousel */
+.swiperContainer {
+  width: 70%;
+  height: 0%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: green;
+}
+.dateCarousel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  font-family: "Lexend", sans-serif;
+  margin-right: 40px;
+  margin-top: -40px;
+}
+.dateCarouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+  width: 150px;
+  height: 100%;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+.dateCarouselItem {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  color: white;
+  background-color: #003963;
 }
