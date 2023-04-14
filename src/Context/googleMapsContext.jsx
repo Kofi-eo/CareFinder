@@ -7,6 +7,7 @@ function MapsContextProvider({children}) {
     const [errorPharm, setErrorPharm] = useState(false)
     const [errorHosp, setErrorHosp] = useState(false)
     const [nearByHosp, setNearByHosp] = useState([])
+    const [geoError, setGeoError]  = useState({status: false, message: ''})
 
     const [nearByPharm, setNearByPharm] = useState([])
 
@@ -42,7 +43,7 @@ function MapsContextProvider({children}) {
       }
 
       return (
-        <mapsContext.Provider value={{nearByHosp, nearByPharm, errorHosp, errorPharm, getHospitalsNearBy, getPharmaciesNearBy}}>
+        <mapsContext.Provider value={{nearByHosp, nearByPharm, errorHosp, errorPharm, getHospitalsNearBy, getPharmaciesNearBy, geoError, setGeoError}}>
             {children}
         </mapsContext.Provider>
       )

@@ -10,7 +10,7 @@ import { mapsContext } from "@/Context/googleMapsContext";
 
 function HospitalsCarousel() {
 
-  const {nearByHosp: data, errorHosp: error} = useContext(mapsContext)
+  const {nearByHosp: data, errorHosp: error, geoError} = useContext(mapsContext)
   const [slides, setSlides] = useState(3.5);
   const [windowWidth, setWindowWidth] = useState();
 
@@ -35,7 +35,10 @@ function HospitalsCarousel() {
     }
   }, [windowWidth]);
 
-  if (data.length <= 0 && error == false) {
+  if (geoError.status) {
+    return (<h2> {geoError.message} </h2>)
+  }
+  else if (data.length <= 0 && error == false) {
     return (
       <h1>Loading...</h1>
     )

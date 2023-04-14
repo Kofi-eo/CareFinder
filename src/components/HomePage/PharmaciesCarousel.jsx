@@ -9,7 +9,7 @@ import MedicalCentreCard from "../Cards/MedicalCentreCard";
 
 function HospitalsCarousel() {
 
-  const {nearByPharm: data, errorPharm: error} = useContext(mapsContext)
+  const {nearByPharm: data, errorPharm: error, geoError} = useContext(mapsContext)
   const [slides, setSlides] = useState(3.5);
 
   console.log(data)
@@ -36,7 +36,10 @@ function HospitalsCarousel() {
     }
   }, [windowWidth]);
 
-  if (data.length <= 0 && error == false) {
+  if (geoError.status) {
+    return <h2>{geoError.message}</h2>
+  }
+  else if (data.length <= 0 && error == false) {
     return (
       <h1>Loading...</h1>
     )
