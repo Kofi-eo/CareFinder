@@ -5,7 +5,7 @@ import { auth } from "../Firebase/firebase.config";
 
 const Auth = createContext();
 
-const AuthContext = ({ children }) => {
+const AuthContext = () => {
     const [signedIn, setSignedIn] = useState(false);
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -33,7 +33,7 @@ const AuthContext = ({ children }) => {
                 setLoading,
             }}
         >
-            {children}
+            
         </Auth.Provider>
     );
 };

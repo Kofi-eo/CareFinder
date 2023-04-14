@@ -1,14 +1,15 @@
 import React from "react";
-import AuthPage from "../components/Authentication/AuthPage";
+import Authentication from "../Components/Authentication/Authentication";
 import { Toaster } from "react-hot-toast";
 
 function Auth() {
-  return (
-    <>
-      <Toaster />
-      <AuthPage />
-    </>
-  );
+    return (
+        <>
+            <Authentication />
+            <Toaster />
+        </>
+    );
 }
 
 export default Auth;
+
