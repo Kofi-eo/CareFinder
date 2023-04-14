@@ -216,6 +216,10 @@
         /* grid-template-columns: auto 35%;   
         padding: 2em 0em 2em 2em; */
     }
+    .map_container {
+      height: 30em;
+      width: 100%;
+    }
 }
 
 @media (max-width: 700px) {

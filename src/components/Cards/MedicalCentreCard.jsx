@@ -3,12 +3,12 @@ import Image from "next/image";
 import { IoLocationOutline, IoLocationSharp } from "react-icons/io5";
 
 const MedicalCentreCard = ({ details }) => {
-  if (!details) {
-    return "No data Found";
-  }
+  // if (!details) {
+  //   return "No data Found";
+  // }
 
-  const { image, hospital, location, distance, specialists } = details;
-
+  // const { image, hospital, location, distance, specialists } = details;
+  const {name, vicinity} = details
   return (
     <div
       style={{
@@ -33,11 +33,12 @@ const MedicalCentreCard = ({ details }) => {
           fontSize: "0.7rem",
         }}
       >
-        {specialists} Specialists Available
+        {/* {specialists} Specialists Available */}
+        {'11'} Specialists Available
       </div>
       <div
         style={{
-          backgroundImage: `url(${image})`,
+          backgroundImage: `url(${'/signInImage.webp'})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           height: "150px",
@@ -53,15 +54,16 @@ const MedicalCentreCard = ({ details }) => {
         }}
       >
         <div style={{ fontSize: "0.7rem", maxWidth: "60%" }}>
-          <h1 style={{ fontSize: "0.9rem", marginBottom: "5px" }}>
-            {hospital}
+          <h1 style={{ fontSize: "0.8rem", marginBottom: "5px" }}>
+            {name.substring(0,30)}
           </h1>
-          <span>{location}</span>
+          <span>{vicinity.substring(0,60)}</span>
         </div>
 
         <div style={{ fontSize: "0.7rem" }}>
           <IoLocationSharp />
-          <span>{distance}</span>
+          {/* <span>{distance}</span> */}
+          <span>{'5.3km'}</span>
         </div>
       </div>
     </div>
