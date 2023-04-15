@@ -10,6 +10,7 @@ import Trust from "../components/HomePage/Trust";
 import Head from "next/head";
 
 function HomePageHeader() {
+
   return (
     <>
       <Head>

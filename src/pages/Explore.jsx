@@ -5,7 +5,13 @@ import Filter from "@/Components/ExplorePage/Filter"
 import ExploreStyles from '@/styles/ExplorePage.module.css'
 import ExploreMaps from "@/Components/ExplorePage/ExploreMaps"
 import ExploreHospital from "@/Components/ExplorePage/ExploreHospitals"
+// import { Wrapper, Status } from "@googlemaps/react-wrapper"
 
+// const render = (status) => {
+//     if (status === Status.FAILURE) return <h3 style={{color: 'red'}}>An Error Occured</h3>;
+//     return <h1>Loading...</h1>;
+//   };
+  
 export default function Explore() {
     return (
         <>
@@ -23,7 +29,9 @@ export default function Explore() {
                 <Filter />
                 <div className={ExploreStyles.hospitalmap_container}>
                     <ExploreHospital />
-                    <ExploreMaps />
+                    {/* <Wrapper apiKey={'AIzaSyARdyiVgmpt9uzYygnCgPohTvEOW1FJGnU'} render={render}> */}
+                        <ExploreMaps />
+                    {/* </Wrapper> */}
                 </div>
             </div>
             <Footer />
