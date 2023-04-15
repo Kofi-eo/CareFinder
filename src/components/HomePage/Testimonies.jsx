@@ -1,7 +1,7 @@
 import HomepageStyles from "@/styles/HomePage.module.css";
 
 import TestimoniesCarousel from "./TestimoniesCarousel";
-import { RiArrowRightLine } from "react-icons/ri";
+// import { RiArrowRightLine } from "react-icons/ri";
 
 function Testimonies() {
   return (

@@ -98,7 +98,7 @@ export default function HospitalDetails() {
                     <br /><br />
                     {typeof hospText.current.style !== 'undefined' && handleShowMore(true)}
                 </>                    
-                }
+                } 
             </div>
         </div>
     )

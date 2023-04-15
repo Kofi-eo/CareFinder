@@ -206,6 +206,7 @@
   padding-bottom: 15px;
   font-weight: 700;
   outline: none;
+  appearance: none;
   -webkit-appearance: none;
 }
 .columnInputs input {
@@ -218,6 +219,7 @@
   padding-bottom: 15px;
   font-weight: 700;
   outline: none;
+  appearance: none;
   -webkit-appearance: none;
 }
 
@@ -233,6 +235,7 @@
   cursor: pointer;
   background-color: transparent;
   color: #000000a5;
+  appearance: none;
   -webkit-appearance: none;
 }
 .selectArrow {

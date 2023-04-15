@@ -12,6 +12,7 @@ import Head from "next/head";
 import PopUpModal from "@/Components/AppiontmentModal/PopUpModal";
 
 function HomePageHeader() {
+
   return (
     <>
       <Head>
