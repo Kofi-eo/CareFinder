@@ -6,6 +6,7 @@ import { MdHeight } from "react-icons/md";
 import { RiHospitalLine } from "react-icons/ri";
 import MeetingOption from "./MeetingOption";
 import MeetingDate from "./MeetingDate";
+import MeetingTime from "./MeetingTime";
 
 function Appointment() {
   return (
@@ -27,6 +28,7 @@ function Appointment() {
       </div>
       <MeetingOption />
       <MeetingDate />
+      <MeetingTime />
     </>
   );
 }
