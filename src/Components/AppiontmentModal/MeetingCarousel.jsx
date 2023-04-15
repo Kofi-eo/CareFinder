@@ -1,28 +1,68 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation, Pagination, A11y } from "swiper";
-import HomepageStyles from "@/styles/HomePage.module.css";
 import PopUpModal from "@/styles/PopUpModal.module.css";
+import "swiper/css";
+import "swiper/css/navigation";
 
 function MeetingCarousel() {
   return (
-    <>
-      <div className={PopUpModal.swiperContainer}>
-        <div className={PopUpModal.dateCarouselContainer}>
-          <div className={PopUpModal.dateCarouselItem}>
-            <h1>Today</h1>
-            <p>
-              12 March <br /> 2023
-            </p>
+    <div className={PopUpModal.swiperContainer}>
+      <Swiper
+        navigation={{
+          nextEl: ".image-swiper-button-next",
+          prevEl: ".image-swiper-button-prev",
+          disabledClass: "swiper-button-disabled",
+        }}
+        modules={[Navigation]}
+        slidesPerView={3.5}
+        spaceBetween={0}
+        className={PopUpModal.swiper}
+      >
+        <SwiperSlide>
+          <div className={PopUpModal.dateCarouselContainer}>
+            <div className={PopUpModal.dateCarouselItem}>
+              <h1>Today</h1>
+              <p>
+                12 March <br /> 2023
+              </p>
+            </div>
           </div>
-          <div className={PopUpModal.dateCarouselItem}>
-            <h1>Today</h1>
-            <p>
-              12 March <br /> 2023
-            </p>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <div className={PopUpModal.dateCarouselContainer}>
+            <div className={PopUpModal.dateCarouselItem}>
+              <h1>Today</h1>
+              <p>
+                12 March <br /> 2023
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
-    </>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <div className={PopUpModal.dateCarouselContainer}>
+            <div className={PopUpModal.dateCarouselItem}>
+              <h1>Today</h1>
+              <p>
+                12 March <br /> 2023
+              </p>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <div className={PopUpModal.dateCarouselContainer}>
+            <div className={PopUpModal.dateCarouselItem}>
+              <h1>Today</h1>
+              <p>
+                12 March <br /> 2023
+              </p>
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </div>
   );
 }
 

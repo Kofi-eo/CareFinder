@@ -199,6 +199,7 @@
   font-size: 15px;
   cursor: pointer;
 }
+
 /* Meeting Time */
 .meetingTime {
   display: flex;
@@ -213,13 +214,17 @@
 }
 
 /* Carousel */
-.swiperContainer {
+.swiper {
   width: 100%;
+  margin-top: 20px;
+}
+.swiperContainer {
+  width: 90%;
   height: 120px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: 0px;
 }
 .dateCarousel {
@@ -236,7 +241,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 30px;
+  margin-right: 0px;
   height: 100%;
   border: none;
   position: relative;
@@ -251,7 +256,7 @@
   justify-content: center;
   text-align: center;
   padding-top: 10px;
-  margin-left: 30px;
+
   color: white;
   background-color: #003963;
 }
@@ -436,4 +441,47 @@
   font-size: 15px;
   font-family: "Lexend", sans-serif;
   outline: none;
+}
+
+/* Success Modal */
+.sucessContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.sucessBox {
+  background-color: #14df96;
+  width: 200px;
+  height: 200px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  margin-top: 50px;
+}
+.sucessContainer h1 {
+  color: #003963;
+  font-size: 30px;
+  font-family: "Lexend", sans-serif;
+  margin-top: 40px;
+}
+.sucessContainer p {
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+.successButtons {
+  width: 60%;
+  height: 50px;
+  background-color: #003963;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  font-family: "Lexend" sans-serif;
+  font-size: 15px;
+  margin-top: 10px;
+  cursor: pointer;
 }

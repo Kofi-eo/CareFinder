@@ -9,10 +9,10 @@ function MeetingDate() {
       <div className={PopUpModal.meetingDate}>
         <div className={PopUpModal.ArrBtns}>
           <div className={PopUpModal.arrContainer}>
-            <RiArrowLeftLine className="image5-swiper-button-prev" />
+            <RiArrowLeftLine className="image-swiper-button-prev" />
           </div>
           <div className={PopUpModal.arrContainer}>
-            <RiArrowRightLine className="image5-swiper-button-next" />
+            <RiArrowRightLine className="image-swiper-button-next" />
           </div>
         </div>
         <MeetingCarousel />
