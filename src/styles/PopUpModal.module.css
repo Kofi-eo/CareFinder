@@ -388,3 +388,52 @@
   font-family: "Lexend", sans-serif;
   font-size: 15px;
 }
+
+.AppointmentTime {
+  border-bottom: 1px solid #969696;
+  margin-bottom: 20px;
+}
+.AppointmentTimeText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100px;
+  margin-left: 130px;
+  margin-top: 10px;
+  margin-bottom: 70px;
+}
+.AppointmentTimeText p {
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+  font-family: "Lexend", sans-serif;
+  font-size: 20px;
+  color: #6a6a6a;
+}
+.patientDetails {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.patientInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.patientDetails form label {
+  margin-right: 10px;
+  font-size: 20px;
+  font-family: "Lexend", sans-serif;
+}
+.patientDetails form input {
+  width: 230px;
+  height: 30px;
+  padding: 10px;
+  background-color: #f4f9ff;
+  border: none;
+  font-size: 15px;
+  font-family: "Lexend", sans-serif;
+  outline: none;
+}
