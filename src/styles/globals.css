@@ -141,7 +141,7 @@ a {
 
 /* Auth style */
 
-/*  */
+/* meeting date modal carousel navigation */
 .image-swiper-button-prev {
   display: flex;
   align-items: center;
@@ -155,6 +155,32 @@ a {
   z-index: 3;
 }
 .image-swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #fff9e8;
+  font-size: 15px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* Meeting time modal carousel navigation */
+.image6-swiper-button-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #fff9e8;
+  font-size: 15px;
+  cursor: pointer;
+  z-index: 3;
+}
+.image6-swiper-button-next {
   display: flex;
   align-items: center;
   justify-content: center;

@@ -72,20 +72,25 @@ function ModalNav({ setShowModal }) {
 
       {/* Next Button */}
       {/* Rendering different buttons depending on the displayed modal components  */}
-      {nextModal < 2 ? (
-        <button className={PopUpModalstyles.button} onClick={() => progress()}>
-          Next
-        </button>
-      ) : nextModal < 3 ? (
-        <button
-          className={PopUpModalstyles.button}
-          onClick={() => bookAppointment()}
-        >
-          Book
-        </button>
-      ) : (
-        ""
-      )}
+      <div className={PopUpModalstyles.buttonContainer}>
+        {nextModal < 2 ? (
+          <button
+            className={PopUpModalstyles.button}
+            onClick={() => progress()}
+          >
+            Next
+          </button>
+        ) : nextModal < 3 ? (
+          <button
+            className={PopUpModalstyles.button}
+            onClick={() => bookAppointment()}
+          >
+            Book
+          </button>
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 }

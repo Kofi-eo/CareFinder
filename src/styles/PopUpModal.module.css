@@ -67,12 +67,16 @@
   font-family: "Lexend", sans-serif;
   font-weight: 200;
 }
-
+.buttonContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
 .button {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
   margin-top: 30px;
   width: 170px;
   height: 40px;
@@ -81,7 +85,6 @@
   background-color: #003963;
   color: white;
   font-size: 13px;
-  left: 170px;
   cursor: pointer;
 }
 @media (max-width: 950px) {
@@ -188,17 +191,6 @@
   justify-content: space-between;
   width: 60px;
 }
-.arrContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 25px;
-  height: 25px;
-  border-radius: 100%;
-  background-color: #fff9e8;
-  font-size: 15px;
-  cursor: cell;
-}
 
 /* Meeting Time */
 .meetingTime {
@@ -260,7 +252,53 @@
   color: white;
   background-color: #003963;
 }
+/* Time Carousel */
+.swiper {
+  width: 100%;
+  margin-top: 20px;
+}
+.swiperTimeContainer {
+  width: 90%;
+  height: 60px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+.timeCarousel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  font-family: "Lexend", sans-serif;
+  margin-right: 40px;
+  margin-top: -40px;
+}
+.timeCarouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0px;
+  height: 100%;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+.timeCarouselItem {
+  font-family: "Lexend", sans-serif;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
+  color: white;
+  background-color: #003963;
+}
 /* Patient Form */
 .patientFormContainer {
   margin-top: 30px;
