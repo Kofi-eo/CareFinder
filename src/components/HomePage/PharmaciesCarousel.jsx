@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { mapsContext } from "@/Context/googleMapsContext"
 import MedicalCentreCard from "../Cards/MedicalCentreCard";
+import LoadingSpinner from "../LoadingSpinner";
 
 function HospitalsCarousel() {
 
@@ -41,7 +42,7 @@ function HospitalsCarousel() {
   }
   else if (data.length <= 0 && error == false) {
     return (
-      <h1>Loading...</h1>
+      <LoadingSpinner />
     )
   } else if (data.length >= 0 && error == false) {
     return (

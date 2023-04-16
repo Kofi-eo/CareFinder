@@ -3,15 +3,14 @@ import { mapsContext } from "@/Context/googleMapsContext";
 import { useContext, useState } from "react";
 
 function Layout({ children }) {
-  const [coordinates,setCoordinates] = useState({lat:'', lng: ''})
-  const {getHospitalsNearBy, getPharmaciesNearBy, geoError, setGeoError} = useContext(mapsContext)
+  // const [userCoordinates,setUserCoordinates] = useState({lat:'', lng: ''})
+  const {getHospitalsNearBy, getPharmaciesNearBy, setGeoError, setUserCoordinates, userCoordinates} = useContext(mapsContext)
 
   useEffect(() => {
-    console.log('USE EFFECT')
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
         console.log('SUCCESS')
-        setCoordinates({
+        setUserCoordinates({
           lat: position.coords.latitude,
           lng: position.coords.longitude,
         });
@@ -28,7 +27,7 @@ function Layout({ children }) {
       });
 
     } else {
-      console.log('GEO LOcation Not Supported')
+      setGeoError({status: true, message: 'Geo location is not supported by this browser'})
       alert("Geolocation is not supported by this browser.");
     }
   },[])
