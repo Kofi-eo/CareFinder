@@ -84,6 +84,44 @@
   /* outline: 1px solid red; */
 }
 
+/* Number input in Profile's Page */
+#number_input_container {
+  position: relative;
+}
+
+#number_input_container > input {
+  padding-left: 4.5em;
+}
+/*  */
+
+
+/* Remove up and down arrows in form input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/*  */
+
+/* Styling the horizontal scroller */
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #14df96;
+  outline: 1px solid #6a6a6a;
+}
+/*  */
+
 html,
 body {
   overflow-x: hidden;
