@@ -7,10 +7,12 @@ import MedicalCentreCard from "../Cards/MedicalCentreCard";
 import { useContext } from "react";
 import { mapsContext } from "@/Context/googleMapsContext";
 
-
 function HospitalsCarousel() {
-
-  const {nearByHosp: data, errorHosp: error, geoError} = useContext(mapsContext)
+  const {
+    nearByHosp: data,
+    errorHosp: error,
+    geoError,
+  } = useContext(mapsContext);
   const [slides, setSlides] = useState(3.5);
   const [windowWidth, setWindowWidth] = useState();
 
@@ -36,12 +38,9 @@ function HospitalsCarousel() {
   }, [windowWidth]);
 
   if (geoError.status) {
-    return (<h2> {geoError.message} </h2>)
-  }
-  else if (data.length <= 0 && error == false) {
-    return (
-      <h1>Loading...</h1>
-    )
+    return <h2> {geoError.message} </h2>;
+  } else if (data.length <= 0 && error == false) {
+    return <h1>Loading...</h1>;
   } else if (data.length >= 0 && error == false) {
     // const sampleData =[
     //   {
@@ -52,8 +51,7 @@ function HospitalsCarousel() {
     //     specialists: 12,
     //   },
     // ];
-  
-  
+
     return (
       <div className={HomepageStyles.swiperContainer}>
         <Swiper
@@ -82,17 +80,12 @@ function HospitalsCarousel() {
         </Swiper>
       </div>
     );
-  
   } else {
-    return (
-      <h1>AN Erro Occured</h1>
-    )
+    return <h1>AN Erro Occured</h1>;
   }
-
 }
 
 export default HospitalsCarousel;
-
 
 // const sampleData = [
 //   {
