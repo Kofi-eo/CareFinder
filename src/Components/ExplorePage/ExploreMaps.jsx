@@ -1,26 +1,24 @@
 // import { GoogleMap, Marker } from "@googlemaps/react-wrapper"
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useContext } from "react";
 import { useLoadScript, GoogleMap, MarkerF, CircleF } from '@react-google-maps/api'
 import ExploreStyles from '@/styles/ExplorePage.module.css'
-import axios from "axios";
+import { mapsContext } from "@/Context/googleMapsContext";
+import LoadingSpinner from "../LoadingSpinner";
 
 export default function ExploreMaps() {
-    // const [coordinates,setCoordinates] = useState({latitude: '', longitude: ''})
-    // const [map, setMap] = useState(null);
-    // const [nearByData, setNearByData] = useState([])
-    // const [gottenNearData, setGottenNearData] = useState(false)
-    // const [markers, setMarkers] = useState([]);
 
-    // const zoom = 10;
-    
-    // const ref = useRef();
-
+    const {nearByHosp, error, userCoordinates} = useContext(mapsContext);
     const libraries = useMemo(() => ['places'], []);
-    const mapCenter = useMemo(
-        () => ({ lat: 6.5670809, lng: 3.3314182 }),
-        []
-    );
+    const mapCenter = userCoordinates.lat === '' ? {lat: 9.07636, lng: 7.397796} : userCoordinates;
+
+    // const mapCenter = useMemo(
+    //     // () => ({ lat: 6.5670809, lng: 3.3314182 }),
+    //     () => ({lat: 9.07636, lng: 7.397796}),
+    //     []
+    // );
+    const [markers, setMarkers] = useState([]);
     
+
     const mapOptions = useMemo (
         () => ({
           disableDefaultUI: true,
@@ -29,63 +27,41 @@ export default function ExploreMaps() {
         }),
         []
     );
-    
-
-    const { isLoaded } = useLoadScript({
+        
+    const { isLoaded, loadError } = useLoadScript({
             googleMapsApiKey: 'AIzaSyARdyiVgmpt9uzYygnCgPohTvEOW1FJGnU',
             libraries: libraries
     });
 
-    if (!isLoaded) {
-        return <p>Loading...</p>;
+
+    console.log(nearByHosp)
+    if (loadError) {
+        return (
+            <div className={ExploreStyles.error_container} >
+                <p style={{color: 'red', fontSize: '1.1em'}}> An Error Occured, reload page </p>
+            </div>
+        )
     }
-    
-    // useEffect(() => {
-    //     console.log(ref.current)
-    //     new window.google.maps.Map(ref.current, {
-    //         center,
-    //         zoom,
-    //     });
 
-    //     new google.maps.Marker({
-    //         position: {
-    //           lat: -33.86882,
-    //           lng: 151.20929,
-    //         },
-    //         map,
-    //       });
-    // });
-
-    // useEffect(() => {
-    //     if (window.google) {
-    //       const mapOptions = {
-    //         center: { lat: 37.7749, lng: -122.4194 },
-    //         zoom: 12,
-    //       };
-    //       const map = new window.google.maps.Map(
-    //         document.getElementById("map"),
-    //         mapOptions
-    //       );
-    //       setMap(map);
-    //     }
-    //   }, []);
-    
-
-
-
+    else if (!isLoaded) {
+        return <LoadingSpinner />
+    }    
 
     return (
         <div className={ExploreStyles.map_container} >
-             {/* <div >Map Script Loaded...</div> */}
+            {nearByHosp.length > 0 && <p style={{color: 'red',fontFamily: 'Trebuchet MS', fontStyle: 'italic', paddingBottom: '0.5em'}}>The Red Markers Indicate Hospitals Closet to You</p>}
             <GoogleMap
                 options={mapOptions}
-                zoom={12}
+                zoom={13}
                 center={mapCenter}
                 mapTypeId={google.maps.MapTypeId.ROADMAP}
                 mapContainerStyle={{ width: '100%', height: '100%' }}
                 onLoad={() => console.log('Map Component Loaded...')}
             >
                 <MarkerF position={mapCenter} onLoad={() => console.log('Marker Loaded')} />
+                {nearByHosp.length > 0 && nearByHosp.map(item => (
+                    <MarkerF position={item.geometry.location}  />
+                ))}
                 {/* <CircleF
                     key={'AIzaSyARdyiVgmpt9uzYygnCgPohTvEOW1FJGnU'}
                     center={mapCenter}

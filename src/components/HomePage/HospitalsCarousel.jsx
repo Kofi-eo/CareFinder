@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import MedicalCentreCard from "../Cards/MedicalCentreCard";
 import { useContext } from "react";
 import { mapsContext } from "@/Context/googleMapsContext";
+import LoadingSpinner from "../LoadingSpinner";
 
 function HospitalsCarousel() {
   const {
@@ -40,7 +41,7 @@ function HospitalsCarousel() {
   if (geoError.status) {
     return <h2> {geoError.message} </h2>;
   } else if (data.length <= 0 && error == false) {
-    return <h1>Loading...</h1>;
+    return <LoadingSpinner />;
   } else if (data.length >= 0 && error == false) {
     // const sampleData =[
     //   {

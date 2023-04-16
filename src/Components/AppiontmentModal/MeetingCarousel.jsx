@@ -8,8 +8,8 @@ function MeetingCarousel() {
     <div className={PopUpModal.swiperContainer}>
       <Swiper
         navigation={{
-          nextEl: ".image-swiper-button-next",
-          prevEl: ".image-swiper-button-prev",
+          nextEl: ".image5-swiper-button-next",
+          prevEl: ".image5-swiper-button-prev",
           disabledClass: "swiper-button-disabled",
         }}
         modules={[Navigation]}
