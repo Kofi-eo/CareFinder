@@ -3,16 +3,55 @@ import "@/styles/globals.css";
 import "@/styles/style.css";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-// import AuthContext from "../Context/AuthContext";
+import { onAuthStateChanged } from "firebase/auth";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
+import { auth } from "../Firebase/firebase.config";
+
+const Auth = createContext();
 
 export default function App({ Component, pageProps }) {
+  const [signedIn, setSignedIn] = useState(false);
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+
+    onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        setUser(user);
+      }
+      setLoading(false);
+      setSignedIn(!!user);
+    });
+  }, []);
+
   return (
-    // <AuthContext>
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </LocalizationProvider>
-    // </AuthContext>
+    <Auth.Provider
+      value={{
+        user,
+        signedIn,
+        loading,
+        setSignedIn,
+        setUser,
+        setLoading,
+      }}
+    >
+      {" "}
+      <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </LocalizationProvider>
+    </Auth.Provider>
   );
 }
+
+export const useAuth = () => {
+  return useContext(Auth);
+};

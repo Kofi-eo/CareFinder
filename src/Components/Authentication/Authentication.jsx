@@ -10,6 +10,7 @@ import {
 import toast from "react-hot-toast";
 import { auth } from "../../Firebase/firebase.config";
 
+
 const Authentication = () => {
     const router = useRouter();
     const [form, setForm] = useState({
@@ -127,7 +128,6 @@ const Authentication = () => {
 
                         {(!form.forgotPassword) &&
                             <>
-                                <label htmlFor='email'>Email</label>
                                 <input
                                     className='auth-input'
                                     type='email'
@@ -138,7 +138,6 @@ const Authentication = () => {
                                     onChange={onChange}
                                 />
 
-                                <label htmlFor='password'>Password</label>
                                 <input
                                     className='auth-input'
                                     type='password'
@@ -156,12 +155,11 @@ const Authentication = () => {
 
                                 {form.isNewUser &&
                                     <>
-                                        <label htmlFor='confirm password'>Confirm Password</label>
                                         <input
                                             className='auth-input'
                                             type='password'
                                             name='confirmPassword'
-                                            placeholder='Password'
+                                            placeholder='Confirm Password'
                                             required
                                             value={form.confirmPassword}
                                             onChange={onChange}
@@ -199,7 +197,6 @@ const Authentication = () => {
 
                         {(form.forgotPassword && !form.isNewUser) &&
                             <>
-                                <label htmlFor='email'>Email</label>
                                 <input
                                     className='auth-input'
                                     type='email'
@@ -218,7 +215,7 @@ const Authentication = () => {
                     </form>
 
 
-                    {/* conditional option displays only when SignIn/SignUp */}
+                    {/* conditional changes the signIn/signUp text */}
 
 
                     {(!form.forgotPassword) &&

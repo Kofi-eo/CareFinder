@@ -381,7 +381,7 @@
 /* InfoSection Two */
 .infoSectionTwoContainer {
   margin-top: 100px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -403,7 +403,7 @@
   color: white;
   width: 200px;
   height: 60px;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -548,15 +548,15 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   position: absolute;
   font-family: "Lexend", sans-serif;
-  margin-right: 40px;
+  margin-right: 5px;
 }
 
 .hospitalsCarouselContainer {
-  margin-right: 30px;
-  width: 350px;
+  margin-right: 10px;
+  width: 300px;
   height: 250px;
   border: none;
   border-radius: 6px;
@@ -585,7 +585,6 @@
 }
 .hospitalsCarouselItem {
   width: 100%;
-
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
@@ -596,8 +595,11 @@
 }
 
 .hospitalsNearViewButton {
-  position: absolute;
-  left: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* left: 50%; */
+  /* transform: translate(50%, 50%); */
 }
 .hospitalsNearViewButton button {
   background-color: black;
@@ -617,8 +619,17 @@
 }
 /* Mobile Hospitals Near */
 @media (max-width: 950px) {
+  .hospitalsCarousel {
+    display: flex;
+    justify-content: center;
+    margin-right: 3px;
+  }
   .hospitalsNearContainer {
     padding-left: 20px;
+  }
+  .hospitalsNearViewButton {
+    width: 100%;
+    /* left: 50%; */
   }
   .hospitalsNearText {
     display: flex;
