@@ -98,7 +98,6 @@
 .form input:focus {
 	border: none;
 	outline: none;
-	border-bottom: 0px solid #003963;
 	border-right: 5px solid #003963;
 }
 

@@ -12,8 +12,8 @@ const MedicalCentreCard = ({ details }) => {
 	return (
 		<div
 			style={{
-				width: '270px',
-				height: '250px',
+				width: '310px',
+				height: '280px',
 				backgroundColor: 'white',
 				borderRadius: '10px 10px',
 				overflow: 'hidden',
@@ -40,7 +40,7 @@ const MedicalCentreCard = ({ details }) => {
 					backgroundImage: `url(${image})`,
 					backgroundSize: 'cover',
 					backgroundRepeat: 'no-repeat',
-					height: '150px',
+					height: '170px',
 					width: '100%',
 				}}
 			></div>
@@ -55,8 +55,9 @@ const MedicalCentreCard = ({ details }) => {
 				<div style={{ fontSize: '0.7rem', maxWidth: '60%' }}>
 					<h1
 						style={{
-							fontSize: '0.8rem',
+							fontSize: '0.9rem',
 							marginBottom: '5px',
+							color: '#003963',
 						}}
 					>
 						{hospital}

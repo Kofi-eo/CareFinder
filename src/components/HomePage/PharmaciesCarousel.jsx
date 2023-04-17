@@ -46,7 +46,7 @@ function HospitalsCarousel() {
 				// pagination={pagination}
 				direction={'horizontal'}
 				slidesPerView={slides}
-				spaceBetween={5}
+				spaceBetween={20}
 				grabCursor={true}
 				wrapperClass={HomepageStyles.hospitalsCarousel}
 				navigation={{
