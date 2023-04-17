@@ -57,18 +57,8 @@
 }
 /* Mobile Nav */
 @media (max-width: 950px) {
-  .centerNav nav ul {
+  .centerNav nav ul li {
     display: none;
-  }
-
-  .centerNav nav {
-    margin-top: 90px;
-    padding: 0px 20px;
-    height: 70px;
-  }
-
-  .centerNav nav img {
-    width: 150px;
   }
   .navButton {
     display: flex;
@@ -585,7 +575,6 @@
 }
 .hospitalsCarouselItem {
   width: 100%;
-
   display: flex;
   align-items: flex-start;
   justify-content: space-around;

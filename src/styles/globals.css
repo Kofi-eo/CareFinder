@@ -94,7 +94,6 @@
 }
 /*  */
 
-
 /* Remove up and down arrows in form input */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -102,7 +101,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 /*  */
@@ -111,11 +110,11 @@ input[type=number] {
 body::-webkit-scrollbar {
   width: 0.5em;
 }
- 
+
 body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
 }
- 
+
 body::-webkit-scrollbar-thumb {
   background-color: #14df96;
   outline: 1px solid #6a6a6a;
@@ -143,19 +142,16 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 0px;
   color: white;
   font-size: 2px;
-
   background-color: transparent;
   font-size: 15px;
 }
 .swiper-pagination-bullet {
   display: flex;
-
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -177,4 +173,54 @@ a {
   background-color: #717171;
 }
 
-/* Auth style */
+/* meeting date modal carousel navigation */
+.image5-swiper-button-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #fff9e8;
+  font-size: 15px;
+  cursor: pointer;
+  z-index: 3;
+}
+.image5-swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #fff9e8;
+  font-size: 15px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* Meeting time modal carousel navigation */
+.image6-swiper-button-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #fff9e8;
+  font-size: 15px;
+  cursor: pointer;
+  z-index: 3;
+}
+.image6-swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #fff9e8;
+  font-size: 15px;
+  cursor: pointer;
+  z-index: 3;
+}
