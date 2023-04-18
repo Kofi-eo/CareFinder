@@ -1,8 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import { IoLocationOutline, IoLocationSharp } from 'react-icons/io5';
+import { useRouter } from 'next/router';
 
-const MedicalCentreCard = ({ details }) => {
+const MedicalCentreCard = ({ details, width, height, shadow = false }) => {
+	const route = useRouter();
+
 	if (!details) {
 		return 'No data Found';
 	}
@@ -11,14 +14,18 @@ const MedicalCentreCard = ({ details }) => {
 
 	return (
 		<div
+			onClick={() => route.push(`./medical_center/${2}`)}
+			className='Medical-card-cont'
 			style={{
-				width: '310px',
-				height: '280px',
+				width: `${width}px`,
+				height: `${height}px`,
 				backgroundColor: 'white',
 				borderRadius: '10px 10px',
 				overflow: 'hidden',
 				fontSize: '0.9rem',
 				position: 'relative',
+				boxShadow: shadow ? '0px 4px 4px rgba(0, 0, 0, 0.25)' : 'none',
+				cursor: 'pointer',
 			}}
 		>
 			<div
