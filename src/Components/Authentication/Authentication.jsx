@@ -125,7 +125,6 @@ const Authentication = () => {
 
                         {/* if its a new user and he doesnt forget his password this shows up */}
 
-
                         {(!form.forgotPassword) &&
                             <>
                                 <input

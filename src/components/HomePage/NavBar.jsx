@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import HomepageStyles from "@/styles/HomePage.module.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { RiMenu4Fill } from "react-icons/ri";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 
-function NavBar({ returnBack = false }) {
+function NavBar({ returnBack = false, showModal, setShowModal }) {
   // To return the navbar back to normal on the explore page
   useEffect(() => {
     if (returnBack) {
@@ -47,7 +47,7 @@ function NavBar({ returnBack = false }) {
           <div>
             <ul>
               <li>
-                <Link href="Home">Home</Link>
+                <Link href="/">Home</Link>
               </li>
               <li>
                 <Link href="/Explore">Appointment</Link>
@@ -55,10 +55,10 @@ function NavBar({ returnBack = false }) {
               <Link href="/Auth">
                 <li className={HomepageStyles.loginButton}>Login/SignUp</li>
               </Link>
+              <button className={HomepageStyles.navButton}>
+                <RiMenu4Fill />
+              </button>
             </ul>
-            <button className={HomepageStyles.navButton}>
-              <RiMenu4Fill />
-            </button>
           </div>
         </nav>
       </div>

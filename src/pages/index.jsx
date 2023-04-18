@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Footer from "../components/HomePage/Footer";
 import Header from "../components/HomePage/Header";
 import HospitalsNear from "../components/HomePage/HospitalsNear";
@@ -8,8 +9,10 @@ import PharmaciesNear from "../components/HomePage/PharmaciesNear";
 import Testimonies from "../components/HomePage/Testimonies";
 import Trust from "../components/HomePage/Trust";
 import Head from "next/head";
+import PopUpModal from "@/Components/AppointmentModal/PopUpModal";
 
 function HomePageHeader() {
+
   return (
     <>
       <Head>
@@ -21,6 +24,7 @@ function HomePageHeader() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <NavBar />
       <Header />
       <InfoSection />

@@ -4,8 +4,10 @@ import { RiArrowRightLine } from "react-icons/ri";
 import { RiArrowLeftLine } from "react-icons/ri";
 import { RxDotFilled } from "react-icons/rx";
 import Link from "next/link";
+import Modal from "../AppointmentModal/PopUpModal";
 
 function HospitalsNear() {
+
   return (
     <div className={HomepageStyles.hospitalsNearContainer}>
       <div className={HomepageStyles.hospitalsNearText}>
@@ -28,6 +30,7 @@ function HospitalsNear() {
       </div>
     </div>
   );
+
 }
 
 export default HospitalsNear;

@@ -11,6 +11,7 @@ import {
   useState,
 } from "react";
 import { auth } from "../Firebase/firebase.config";
+import { MapsContextProvider } from "@/Context/googleMapsContext";
 
 const Auth = createContext();
 
@@ -44,9 +45,11 @@ export default function App({ Component, pageProps }) {
     >
       {" "}
       <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <MapsContextProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </MapsContextProvider>
       </LocalizationProvider>
     </Auth.Provider>
   );
