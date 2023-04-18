@@ -17,38 +17,40 @@ const pt_sans = PT_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function Profile() {
     const router = useRouter();
-    const { user } = useAuth();
-
+    const { user, signedIn } = useAuth();
+    const [disabled, setDisabled] = useState(false);
     const [form, setForm] = useState({
-        firstName: "",
-        lastName: "",
-        dateOfBirth: "",
+        first_name: "",
+        last_name: "",
+        date_of_birth: "",
         email: "",
-        phoneNo: "",
+        phone_no: "",
         address: "",
-        bloodType: "",
+        blood_type: "",
     });
 
-    // console.log(form);
-    // useEffect(() => {
-    //     const fetchProfile = async () => {
-    //         if (user?.email) {
-    //             // if user is signed in check if the user profile exists then setForm
-    //             const userProfile = collection(firestore,
-    //                 "Profiles",
-    //                 user?.email,
-    //                 "userInfo");
-    //             const q = query(userProfile);
-    //             const docSnap = await getDocs(q);
-    //             const profile = querySnapshot?.docs[0]?.data();
+    console.log(form);
+    useEffect(() => {
+        const fetchProfile = async () => {
+            if (user?.email || signedIn) {
+                // if user is signed in check if the user profile exists then setForm
+                const userProfile = collection(firestore,
+                    "Profiles",
+                    user?.email,
+                    "userInfo");
+                const q = query(userProfile);
+                const docSnap = await getDocs(q);
+                const profile = docSnap?.docs[0]?.data();
 
-    //             if (!docSnap.empty) setForm(profile);
-    //         }
-    //     };
+                if (!docSnap.empty) {
+                    setDisabled(true);
+                    setForm(profile);
+                }
+            };
+        };
+        fetchProfile();
 
-    //     fetchProfile();
-
-    // }, [user?.email]);
+    }, [user?.email, signedIn]);
 
 
     const submitProfile = async (e) => {
@@ -67,13 +69,13 @@ export default function Profile() {
             if (docSnap.empty) {
                 try {
                     await addDoc(collection(firestore, "Profiles", user?.email, "userInfo"), {
-                        firstName: form.firstName,
-                        lastName: form.lastName,
-                        dateOfBirth: form.dateOfBirth,
+                        first_ame: form.firstName,
+                        last_ame: form.lastName,
+                        date_of_birth: form.dateOfBirth,
                         email: form.email,
-                        phoneNo: form.phoneNo,
+                        phone_no: form.phoneNo,
                         address: form.address,
-                        blood: form.bloodType,
+                        blood_type: form.bloodType,
                         created_at: new Date()
                     });
 
@@ -126,7 +128,7 @@ export default function Profile() {
                                 <div className={Styles.input_item}>
                                     <label className={pt_sans.className}>First Name</label>
                                     <input
-                                        name="firstName"
+                                        name="first_name"
                                         type="text"
                                         required
                                         value={form.firstName}
@@ -136,7 +138,7 @@ export default function Profile() {
                                 <div className={Styles.input_item}>
                                     <label className={pt_sans.className}>Last Name </label>
                                     <input
-                                        name="lastName"
+                                        name="last_name"
                                         type="text"
                                         required
                                         value={form.lastName}
@@ -148,7 +150,7 @@ export default function Profile() {
                                 <div className={Styles.input_item}>
                                     <label className={pt_sans.className}>Date of Birth</label>
                                     <input
-                                        name="dateOfBirth"
+                                        name="date_of_birth"
                                         type="date"
                                         required
                                         value={form.dateOfBirth}
@@ -171,7 +173,7 @@ export default function Profile() {
                                 <span className={Styles.numberText}>+234 </span>
                                 <label className={pt_sans.className}>Phone Number</label>
                                 <input
-                                    name="phoneNo"
+                                    name="phone_no"
                                     type="text"
                                     required
                                     value={form.phoneNo}
@@ -198,7 +200,7 @@ export default function Profile() {
 
                             <div className={Styles.input_item}>
                                 <label className={pt_sans.className} >Blood Type</label>
-                                <select name="blood-group" placeholder="Blood Group" onChange={(event) => {
+                                <select name="blood_type" placeholder="Blood Group" onChange={(event) => {
                                     setForm((prev) =>
                                         ({ ...prev, bloodType: event.target.value }));
                                 }}>
@@ -229,7 +231,15 @@ export default function Profile() {
                             <textarea className={Styles.textarea} />
                         </div>
 
-                        <input value='save' type='submit' className={Styles.button} />
+                        {disabled ? <input
+                            value='save'
+                            disabled
+                            className={Styles.button}
+                        /> : <input
+                            value='save'
+                            type='submit'
+                            className={Styles.button}
+                        />}
                     </section>
                 </form>
             </section>
