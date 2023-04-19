@@ -13,7 +13,6 @@
 }
 
 .centerNav nav {
-	margin-top: 120px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -21,7 +20,7 @@
 	height: 90px;
 	background-color: #14df96;
 	backdrop-filter: blur(10px);
-	position: absolute;
+	position: fixed;
 	z-index: 10;
 	transition: 0.2s;
 	padding: 0px 80px;
@@ -71,7 +70,6 @@
 	}
 
 	.centerNav nav {
-		margin-top: 90px;
 		padding: 0px 20px;
 		height: 70px;
 	}
@@ -89,6 +87,8 @@
 		font-size: 20px;
 	}
 }
+
+/* Mobile Nav */
 
 /* Header */
 .headerContainer {

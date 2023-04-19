@@ -1,8 +1,9 @@
 .explorepage {
 	/* background-color: red; */
-	margin-top: 70px;
+	/* margin-top: 70px; */
+	padding-top: 70px;
 	position: relative;
-	height: 100vh;
+	height: 100%;
 	overflow: hidden;
 }
 
@@ -102,9 +103,13 @@
 
 @media (max-width: 950px) {
 	.explore_grid {
-		grid-template-columns: 47% 47%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
 		gap: 2em;
-		padding-right: 1em;
+		width: 100%;
 	}
 	.hospitalmap_container {
 		display: flex;
@@ -114,20 +119,7 @@
 	}
 	.map_container {
 		width: 100%;
-	}
-}
-
-@media (max-width: 700px) {
-	.explore_item_texts > p {
-		width: 70%;
-	}
-	.hospitalmap_container {
-		padding: 2em 0.5em 2em 0.5em;
-	}
-	.explore_grid {
-		gap: 1em;
-		padding-right: unset;
-		margin-bottom: 2em;
+		display: none;
 	}
 }
 
