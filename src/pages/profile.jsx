@@ -8,7 +8,7 @@ import { FaPen } from "react-icons/fa";
 import { Lexend } from "next/font/google";
 import { PT_Sans } from "next/font/google";
 import { useAuth } from "./_app";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/router";
 import { firestore } from "../Firebase/firebase.config";
 import { query, getDocs, collection, addDoc } from "firebase/firestore";
@@ -26,7 +26,11 @@ export default function Profile() {
         email: "",
         phone_no: "",
         address: "",
-        blood_type: "",
+        blood_group: "",
+        genotype: null,
+        height: null,
+        weight: null,
+
     });
 
     console.log(form);
@@ -69,13 +73,16 @@ export default function Profile() {
             if (docSnap.empty) {
                 try {
                     await addDoc(collection(firestore, "Profiles", user?.email, "userInfo"), {
-                        first_ame: form.firstName,
-                        last_ame: form.lastName,
-                        date_of_birth: form.dateOfBirth,
+                        first_ame: form.first_name,
+                        last_ame: form.last_name,
+                        date_of_birth: form.date_of_irth,
                         email: form.email,
-                        phone_no: form.phoneNo,
+                        phone_no: form.phone_no,
                         address: form.address,
-                        blood_type: form.bloodType,
+                        blood_group: form.blood_group,
+                        genotype: form.genotype,
+                        height: form.height,
+                        weight: form.weight,
                         created_at: new Date()
                     });
 
@@ -100,6 +107,7 @@ export default function Profile() {
 
     return (
         <>
+            <Toaster />
             <Head>
                 <title>Care Finder Profile</title>
                 <meta
@@ -131,7 +139,7 @@ export default function Profile() {
                                         name="first_name"
                                         type="text"
                                         required
-                                        value={form.firstName}
+                                        value={form.first_name}
                                         onChange={onChange}
                                     />
                                 </div>
@@ -141,7 +149,7 @@ export default function Profile() {
                                         name="last_name"
                                         type="text"
                                         required
-                                        value={form.lastName}
+                                        value={form.last_name}
                                         onChange={onChange}
                                     />
                                 </div>
@@ -153,7 +161,7 @@ export default function Profile() {
                                         name="date_of_birth"
                                         type="date"
                                         required
-                                        value={form.dateOfBirth}
+                                        value={form.date_of_birth}
                                         onChange={onChange}
                                     />
                                 </div>
@@ -174,9 +182,9 @@ export default function Profile() {
                                 <label className={pt_sans.className}>Phone Number</label>
                                 <input
                                     name="phone_no"
-                                    type="text"
+                                    type="number"
                                     required
-                                    value={form.phoneNo}
+                                    value={form.phone - no}
                                     onChange={onChange}
                                 />
                             </div>
@@ -200,7 +208,7 @@ export default function Profile() {
 
                             <div className={Styles.input_item}>
                                 <label className={pt_sans.className} >Blood Type</label>
-                                <select name="blood_type" placeholder="Blood Group" onChange={(event) => {
+                                <select name="blood_group" placeholder="Blood Group" onChange={(event) => {
                                     setForm((prev) =>
                                         ({ ...prev, bloodType: event.target.value }));
                                 }}>
@@ -212,18 +220,36 @@ export default function Profile() {
                                 </select>
                             </div>
                             <div className={Styles.input_item}>
-                                <label className={pt_sans.className} >Name</label>
-                                <input type="text" />
+                                <label className={pt_sans.className} >Height(cm)t</label>
+                                <input
+                                    name="height"
+                                    type="number"
+                                    required
+                                    value={form.height}
+                                    onChange={onChange}
+                                />
                             </div>
                         </div>
                         <div style={{ display: 'grid', gridTemplateColumns: '30% auto', gap: '2em' }}>
                             <div className={Styles.input_item}>
-                                <label className={pt_sans.className} >Name</label>
-                                <input type="text" />
+                                <label className={pt_sans.className} >Weight(Kg)</label>
+                                <input name="weight"
+                                    type="number"
+                                    required
+                                    value={form.weight}
+                                    onChange={onChange} />
                             </div>
                             <div className={Styles.input_item}>
                                 <label className={pt_sans.className} >Name</label>
-                                <input type="text" />
+                                <select name="Blood Genotype" placeholder="Genotype" onChange={(event) => {
+                                    setForm((prev) =>
+                                        ({ ...prev, genotype: event.target.value }));
+                                }}>
+
+                                    <option value="A">AA</option>
+                                    <option value="B">AS</option>
+                                    <option value="AB">SS</option>
+                                </select>
                             </div>
                         </div>
                         <div className={Styles.textArea_container}>
