@@ -79,6 +79,7 @@
 .input_item {
 	display: flex;
 	flex-direction: column;
+    position: relative;
 }
 
 .input_item > input {
