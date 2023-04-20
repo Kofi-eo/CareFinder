@@ -35,63 +35,65 @@ function ModalNav({ setShowModal }) {
   ];
 
   return (
-    <div className={PopUpModalstyles.modalNav}>
-      {/* Close Button */}
-      <div
-        className={PopUpModalstyles.modalCloseBtn}
-        onClick={() => setShowModal(false)}
-      >
-        X
-      </div>
-      {/* Progress Bar */}
-      {nextModal < 3 ? (
-        <div className={PopUpModalstyles.modalNavProgressBar}>
-          <div
-            style={{ width: `${progressBar}%` }}
-            className={PopUpModalstyles.modalNavProgressBarBlue}
-          ></div>
+    <>
+      <div className={PopUpModalstyles.modalNav}>
+        {/* Close Button */}
+        <div
+          className={PopUpModalstyles.modalCloseBtn}
+          onClick={() => setShowModal(false)}
+        >
+          X
         </div>
-      ) : (
-        ""
-      )}
-
-      {/* Nav Contents */}
-
-      {nextModal < 3 ? (
-        <div className={PopUpModalstyles.modalNavTexts}>
-          <h1>Appiontment</h1>
-          <h1>Details</h1>
-          <h1>Book</h1>
-        </div>
-      ) : (
-        ""
-      )}
-
-      {/* Modal Contents */}
-      {modalContents[nextModal].modal}
-
-      {/* Next Button */}
-      {/* Rendering different buttons depending on the displayed modal components  */}
-      <div className={PopUpModalstyles.buttonContainer}>
-        {nextModal < 2 ? (
-          <button
-            className={PopUpModalstyles.button}
-            onClick={() => progress()}
-          >
-            Next
-          </button>
-        ) : nextModal < 3 ? (
-          <button
-            className={PopUpModalstyles.button}
-            onClick={() => bookAppointment()}
-          >
-            Book
-          </button>
+        {/* Progress Bar */}
+        {nextModal < 3 ? (
+          <div className={PopUpModalstyles.modalNavProgressBar}>
+            <div
+              style={{ width: `${progressBar}%` }}
+              className={PopUpModalstyles.modalNavProgressBarBlue}
+            ></div>
+          </div>
         ) : (
           ""
         )}
+
+        {/* Nav Contents */}
+
+        {nextModal < 3 ? (
+          <div className={PopUpModalstyles.modalNavTexts}>
+            <h1>Appiontment</h1>
+            <h1>Details</h1>
+            <h1>Book</h1>
+          </div>
+        ) : (
+          ""
+        )}
+
+        {/* Modal Contents */}
+        {modalContents[nextModal].modal}
+
+        {/* Next Button */}
+        {/* Rendering different buttons depending on the displayed modal components  */}
+        <div className={PopUpModalstyles.buttonContainer}>
+          {nextModal < 2 ? (
+            <button
+              className={PopUpModalstyles.button}
+              onClick={() => progress()}
+            >
+              Next
+            </button>
+          ) : nextModal < 3 ? (
+            <button
+              className={PopUpModalstyles.button}
+              onClick={() => bookAppointment()}
+            >
+              Book
+            </button>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
