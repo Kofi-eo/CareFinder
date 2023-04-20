@@ -3,38 +3,53 @@ import Image from "next/image";
 import HomepageStyles from "@/styles/HomePage.module.css";
 import { useEffect, useState } from "react";
 import { RiMenu4Fill } from "react-icons/ri";
-import { useScroll, useMotionValueEvent } from "framer-motion";
+import { IoClose } from "react-icons/io5";
 
-function NavBar({ returnBack = false, showModal, setShowModal }) {
-  // To return the navbar back to normal on the explore page
+function NavBar({ returnBack = false }) {
+  const [nav, setNav] = useState({
+    width: "90vw",
+    marginTop: "120px",
+    position: "absolute",
+  });
+
+  const [mobnav, setMobnav] = useState(false);
+  const showMobile = () => setMobnav(!mobnav);
+
   useEffect(() => {
-    if (returnBack) {
-      let nav = document.getElementById("nav");
-      nav.style.width = "100vw";
-      nav.style.marginTop = "70px";
-    }
-  }, []);
-
-  // Navigation animation on Scroll
-  if (!returnBack) {
-    const { scrollY } = useScroll();
-
-    useMotionValueEvent(scrollY, "change", (latest) => {
-      let nav = document.getElementById("nav");
-      if (latest >= 100) {
-        nav.style.width = "100vw";
-        nav.style.marginTop = "70px";
+    function handleScroll() {
+      if (window.scrollY > 300) {
+        setNav({
+          width: "100vw",
+          marginTop: "70px",
+          position: "fixed",
+        });
       } else {
-        nav.style.width = "90vw";
-        nav.style.marginTop = "120px";
+        setNav({
+          width: "90vw",
+          marginTop: "120px",
+          position: "absolute",
+        });
       }
-    });
-  }
+    }
+
+    if (returnBack) {
+      setNav({
+        width: "100vw",
+        marginTop: "70px",
+      });
+    } else {
+      window.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [returnBack]);
 
   return (
     <div>
       <div className={HomepageStyles.centerNav}>
-        <nav id="nav" className={HomepageStyles.nav}>
+        <nav id="nav" className={HomepageStyles.nav} style={nav}>
           <Link href="/">
             <Image
               src="/Logo-Black.svg"
@@ -55,12 +70,48 @@ function NavBar({ returnBack = false, showModal, setShowModal }) {
               <Link href="/Auth">
                 <li className={HomepageStyles.loginButton}>Login/SignUp</li>
               </Link>
-              <button className={HomepageStyles.navButton}>
-                <RiMenu4Fill />
-              </button>
             </ul>
+            <button className={HomepageStyles.navButton} onClick={showMobile}>
+              <RiMenu4Fill />
+            </button>
           </div>
         </nav>
+
+        <div className={mobnav ? "navMobile active" : "navMobile"}>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <Image
+              src={"/Logo-white.svg"}
+              width={150}
+              height={30}
+              alt="careFinder"
+            />
+            <button onClick={showMobile}>
+              <IoClose size={30} color="white" />
+            </button>
+          </div>
+          <div className="navMobileMenu">
+            <ul style={{ gap: 20, textDecoration: "none" }}>
+              <li>
+                <Link href={"/"}>
+                  <span onClick={showMobile}>HOME</span>
+                </Link>
+              </li>
+              <li onClick={showMobile}>
+                <Link href={"/Explore"}>
+                  <span onClick={showMobile}>EXPLORE</span>
+                </Link>
+              </li>
+              <li onClick={showMobile}>
+                <Link href={"/profile"}>
+                  <span onClick={showMobile}>PROFILE</span>
+                </Link>
+              </li>
+            </ul>
+            <span style={{ position: "absolute", bottom: 50, left: 20 }}>
+              LOGOUT
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );

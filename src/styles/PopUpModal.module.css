@@ -22,6 +22,7 @@
   position: relative;
   box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.25);
 }
+
 /* modal close button */
 .modalCloseBtn {
   display: flex;
@@ -87,15 +88,15 @@
   font-size: 13px;
   cursor: pointer;
 }
-@media (max-width: 950px) {
+@media (max-width: 900px) {
   .modalBox {
     width: 85%;
-    height: 70%;
+    height: 90%;
     background-color: white;
     position: relative;
   }
   .modalNavTexts h1 {
-    font-size: 15px;
+    font-size: 13px;
     color: rgb(195, 193, 193);
   }
 }
@@ -130,6 +131,36 @@
   font-size: 15px;
   color: #6a6a6a;
   font-weight: 300;
+}
+@media (max-width: 950px) {
+  .appointmentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 150px;
+    border-bottom: 1px solid#969696;
+  }
+  .doctorImg img {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+  }
+  .doctordetails {
+    margin-left: 20px;
+    font-family: "Lexend", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90px;
+  }
+  .doctordetails h1 {
+    font-size: 15px;
+  }
+  .doctordetails h2 {
+    font-size: 15px;
+    color: #6a6a6a;
+    font-weight: 300;
+  }
 }
 /* Meeting Options */
 .meetingOption {

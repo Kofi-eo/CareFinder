@@ -8,40 +8,43 @@
   justify-content: center;
   width: 100vw;
   flex-direction: column;
-  z-index: 1;
+  z-index: 10;
   font-family: "Lexend", sans-serif;
 }
 
 .centerNav nav {
-  margin-top: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 90vw;
   height: 90px;
   background-color: #14df96;
-  border: 1px solid #6a6a6a;
   backdrop-filter: blur(10px);
   position: fixed;
-  z-index: 2;
-  transition: 0.5s;
+  z-index: 10;
+  transition: 0.2s;
   padding: 0px 80px;
 }
+
 .centerNav nav img {
-  width: 190px;
+  width: 160px;
+  height: 160px;
 }
+
 .centerNav nav ul {
   display: flex;
   width: 400px;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 15px;
 }
+
 .centerNav nav li {
   list-style: none;
 }
+
 .loginButton {
   background-color: black;
   display: flex;
@@ -51,14 +54,28 @@
   width: 140px;
   height: 40px;
   padding: 25px 85px;
+  position: relative;
+  z-index: 5;
+  font-size: 0.8rem;
 }
+
 .navButton {
   display: none;
 }
+
 /* Mobile Nav */
 @media (max-width: 950px) {
-  .centerNav nav ul li {
+  .centerNav nav ul {
     display: none;
+  }
+
+  .centerNav nav {
+    padding: 0px 20px;
+    height: 70px;
+  }
+
+  .centerNav nav img {
+    width: 150px;
   }
   .navButton {
     display: flex;
@@ -71,10 +88,12 @@
   }
 }
 
+/* Mobile Nav */
+
 /* Header */
 .headerContainer {
   width: 100vw;
-  background-color: #fff9e8;
+  background-color: rgba(169, 255, 224, 0.2);
 }
 
 .headerContainer header {
@@ -87,6 +106,7 @@
 }
 
 .headerText {
+  padding-top: 90px;
   grid-column: span 1;
   display: flex;
   flex-direction: column;
@@ -98,19 +118,20 @@
 
 .headerText h1 {
   width: 50%;
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-family: "Lexend", sans-serif;
+  line-height: 1.1;
 }
 
 .headerText h1::first-line {
-  font-weight: 150;
+  font-size: 4rem;
+  color: #076643;
 }
 
 .headerText p {
   width: 75%;
   margin-top: 25px;
   font-size: 1.2rem;
-  font-weight: 700;
   color: #505050;
   font-family: "PT Sans", sans-serif;
 }
@@ -126,7 +147,7 @@
 @media (max-width: 950px) {
   .headerContainer {
     height: auto;
-    background-color: #fff9e8;
+    background-color: rgba(169, 255, 224, 0.2);
     padding-bottom: 20px;
   }
   .headerImage {
@@ -147,12 +168,32 @@
   }
   .headerText h1 {
     width: 200px;
-    font-size: 35px;
+    font-size: 3.5rem;
+  }
+  .headerText h1::first-line {
+    font-size: 3rem;
+    color: #076643;
   }
   .headerText p {
     padding-top: 2px;
     font-size: 15px;
     width: 340px;
+  }
+}
+
+/* Hero Buttons */
+.heroButtonsContainer {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+@media (max-width: 950px) {
+  .heroButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
   }
 }
 
@@ -351,12 +392,12 @@
 .infoSection h1 {
   margin-top: 15px;
   font-family: "Lexend", sans-serif;
+  font-size: 1.5rem;
 }
 .infoSection p {
-  margin-top: 5px;
+  margin-top: 0.8rem;
   width: 250px;
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 0.8rem;
   text-align: center;
   font-family: "Lexend", sans-serif;
 }
@@ -370,8 +411,7 @@
 
 /* InfoSection Two */
 .infoSectionTwoContainer {
-  margin-top: 100px;
-  margin-bottom: 150px;
+  padding: 80px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -429,11 +469,10 @@
   font-family: "Lexend", sans-serif;
 }
 .infoSectionTwoText p {
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 400;
   width: 430px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 15px 0px 30px 0px;
   font-family: "PT Sans", sans-serif;
 }
 .infoSectionTwoText button {
@@ -494,10 +533,7 @@
 
 /* Hospitals Near You  */
 .hospitalsNearContainer {
-  padding-top: 20px;
-  padding-left: 120px;
-  padding-top: 100px;
-  height: 600px;
+  padding: 40px 0px 40px 120px;
   background-color: #fff9e8;
   overflow-x: hidden;
 }
@@ -507,7 +543,10 @@
   width: 90vw;
   position: relative;
   font-family: "Lexend", sans-serif;
+  font-size: 0.9rem;
+  color: #83703c;
 }
+
 .arrowContainer {
   display: flex;
   align-items: center;
@@ -533,6 +572,12 @@
   height: 300px;
   position: relative;
 }
+
+.slideClass {
+  width: fit-content;
+  height: fit-content;
+}
+
 .hospitalsCarousel {
   margin-top: 50px;
   display: flex;
@@ -544,16 +589,6 @@
   margin-right: 40px;
 }
 
-.hospitalsCarouselContainer {
-  margin-right: 30px;
-  width: 350px;
-  height: 250px;
-  border: none;
-  border-radius: 6px;
-  background-color: white;
-  position: relative;
-  overflow: hidden;
-}
 .SpecialistsAvailable {
   display: flex;
   align-items: center;
@@ -585,25 +620,17 @@
 }
 
 .hospitalsNearViewButton {
-  position: absolute;
-  left: 50%;
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+  margin-left: -120px;
 }
-.hospitalsNearViewButton button {
-  background-color: black;
-  width: 100px;
-  height: 40px;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 15px;
-  margin-top: 40px;
-  cursor: pointer;
-}
+
 .hospitalsNearDivider {
-  left: 10%;
-  position: absolute;
-  width: 80%;
+  background-color: #fffcf6;
+  border-color: #fffdf9;
 }
+
 /* Mobile Hospitals Near */
 @media (max-width: 950px) {
   .hospitalsNearContainer {
@@ -645,19 +672,17 @@
     font-size: 12px;
   }
   .hospitalsNearViewButton {
-    position: absolute;
-    left: 40%;
+    margin-left: -20px;
   }
 }
 
 /* Trust */
 .trustContainer {
-  margin-top: 150px;
   align-items: center;
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 400px;
+  padding: 100px 0px;
 }
 .trustContainer h1 {
   color: #505050;
@@ -672,13 +697,11 @@
 }
 @media (max-width: 950px) {
   .trustContainer {
-    margin-top: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100vw;
-    height: 700px;
     text-align: start;
   }
   .trustContainer h1 {
@@ -703,23 +726,24 @@
 /* Testimonies */
 
 .TestimoniesContainer {
-  margin-top: 100px;
-  margin-bottom: 200px;
+  padding: 50px 0px 100px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
+  background-color: #ebf7ff;
 }
 .TestimoniesContainer h1 {
   font-size: 35px;
   font-weight: 700;
-  color: #505050;
+  margin-bottom: 50px;
+  color: #003963;
   font-family: "Lexend", sans-serif;
 }
 .testimoniesSwiperContainer {
   width: 80vw;
-  height: 500px;
+  height: 440px;
   position: relative;
   overflow: hidden;
 }
@@ -768,6 +792,7 @@
 }
 .testimoniesCarouselImg img {
   width: 150px;
+  height: auto;
   border-radius: 100%;
 }
 
