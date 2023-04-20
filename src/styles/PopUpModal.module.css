@@ -253,6 +253,7 @@
   position: relative;
   margin-top: 10px;
   margin-left: 0px;
+  overflow: hidden;
 }
 .dateCarousel {
   display: flex;
@@ -292,6 +293,9 @@
   width: 100%;
   margin-top: 20px;
 }
+.wrapper {
+  display: flex;
+}
 .swiperTimeContainer {
   width: 90%;
   height: 60px;
@@ -300,6 +304,7 @@
   position: relative;
   margin-top: 10px;
   margin-left: 0px;
+  overflow: hidden;
 }
 .timeCarousel {
   display: flex;

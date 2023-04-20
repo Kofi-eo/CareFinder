@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation, Pagination, A11y } from "swiper";
 import PopUpModal from "@/styles/PopUpModal.module.css";
-import "swiper/css";
 
 function MeetingDateCarousel() {
   return (
@@ -14,7 +13,8 @@ function MeetingDateCarousel() {
         }}
         modules={[Navigation]}
         slidesPerView={3.5}
-        spaceBetween={0}
+        spaceBetween={30}
+        wrapperClass={PopUpModal.wrapper}
         className={PopUpModal.swiper}
       >
         <SwiperSlide>
@@ -35,6 +35,13 @@ function MeetingDateCarousel() {
           <div className={PopUpModal.timeCarouselContainer}>
             <div className={PopUpModal.timeCarouselItem}>
               <h2>7:45 AM</h2>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={PopUpModal.timeCarouselContainer}>
+            <div className={PopUpModal.timeCarouselItem}>
+              <h2>7:55 AM</h2>
             </div>
           </div>
         </SwiperSlide>
