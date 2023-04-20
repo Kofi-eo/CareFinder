@@ -32,7 +32,7 @@ input[type="number"] {
 }
 /*  */
 
-/* Styling the horizontal scroller */
+/* Styling the Vertical scroller */
 body::-webkit-scrollbar {
   width: 0.5em;
 }
@@ -46,6 +46,20 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid #6a6a6a;
 }
 /*  */
+
+/* Horizontal Scroll Bar */
+::-webkit-scrollbar {
+	/* width: 1px; */
+	height: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: #14df96;
+    border-radius: 30px;
+}
+/**/
+
 
 html,
 body {
@@ -218,7 +232,11 @@ select {
 }
 
 .filter-form button {
-  padding: 5px 20px;
+	padding: 5px 20px;
+	background-color: black;
+	color: white;
+	border: none;
+	border-radius: 5px;
 }
 
 .filter-form select,

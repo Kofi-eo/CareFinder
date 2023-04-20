@@ -6,10 +6,17 @@ import HospitalDoctors from "@/Components/MedicalCenter/HospitalDoctors";
 import Styles from "@/styles/MedicalCenter.module.css";
 import { useEffect, useState } from "react";
 import PopUpModal from "@/Components/AppiontmentModal/PopUpModal";
+import { MedicalCentreData } from "@/data/medicalCentres";
+import { useRouter } from "next/router";
 
 export default function MedicalCentre() {
   // Testing modal with nav component
   const [showModal, setShowModal] = useState(false);
+  const route = useRouter()
+  const centerID = route.query.centerID
+  
+  const currentData = MedicalCentreData.filter(item => item.id == centerID)
+  
   useEffect(() => {
     if (showModal) {
       const main = document.querySelector("html");
@@ -40,8 +47,8 @@ export default function MedicalCentre() {
       <NavBar returnBack={true} />
       <div className={Styles.medical_center}>
         <div className={Styles.grid_container}>
-          <HospitalDetails />
-          <HospitalDoctors showModal={showModal} setShowModal={setShowModal} />
+          <HospitalDetails data={currentData[0]} />
+          <HospitalDoctors data={currentData[0]} showModal={showModal} setShowModal={setShowModal} />
         </div>
       </div>
     </>

@@ -42,12 +42,26 @@
 }
 
 /* Hospitals cards */
-.explore_grid {
+/* .explore_grid {
 	width: 65%;
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
-	/* grid-template-columns: 30% 30% 30%; */
+	/* grid-template-columns: 30% 30% 30%; *
 	gap: 2em;
+	padding: 3em;
+	background-color: rgba(169, 255, 224, 0.2);
+	height: 1000px;
+	max-height: 100vh;
+	overflow-y: auto;
+} */
+
+.explore_grid {
+	width: 65%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1em;
 	padding: 3em;
 	background-color: rgba(169, 255, 224, 0.2);
 	height: 1000px;
@@ -119,7 +133,10 @@
 	}
 	.map_container {
 		width: 100%;
-		display: none;
+		height: 40em;
+		padding: 1em;
+		margin-bottom: 4em;
+		/* display: none; */
 	}
 }
 
