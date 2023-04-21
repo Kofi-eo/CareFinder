@@ -107,11 +107,11 @@
 }
 
 .doctor_card > button {
-	padding: 0.5em 3em 0.5em 3em;
-	background-color: rgb(38, 38, 136);
+	padding: 0.8em 3em;
+	background-color: #003963;
 	color: white;
 	border: none;
-	border-radius: 5px;
+
 	margin-top: 2em;
 }
 

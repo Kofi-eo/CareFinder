@@ -71,7 +71,7 @@ export default function HospitalDetails({ data }) {
 		<div id='test' className={Styles.hospital_details}>
 			<Image
 				id='hospital_image'
-				src={'/Hospital1.webp'}
+				src={image}
 				height={500}
 				width={500}
 				alt='careFinder Hospital'
