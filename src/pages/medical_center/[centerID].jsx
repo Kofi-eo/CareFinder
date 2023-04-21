@@ -49,7 +49,7 @@ export default function MedicalCentre() {
 				<div className={Styles.grid_container}>
 					<HospitalDetails data={currentData[0]} />
 					<HospitalDoctors
-						data={currentData[0]}
+						data={currentData}
 						showModal={showModal}
 						setShowModal={setShowModal}
 					/>
