@@ -1,14 +1,15 @@
 import { useState } from "react";
 import PopUpModal from "@/styles/PopUpModal.module.css";
 
-function MeetingOption() {
-  const [appiontmentType, setAppiontmentType] = useState("In-Person");
+function MeetingOption({formUpdate, formDetails}) {
+  // const [appiontmentType, setAppiontmentType] = useState("In-Person");
   //   selector Box
   const [selectorBoxPosition, setSelectorBoxPosition] = useState("50%");
 
   //   Meeting Option selctor animation
   function selector(meetingOption) {
-    setAppiontmentType(meetingOption);
+    // setAppiontmentType(meetingOption);
+    formUpdate('appointmentType', meetingOption)
     if (meetingOption === "Video Call") {
       setSelectorBoxPosition("0%");
       let videoCall = document.getElementById("videoCall");
@@ -22,7 +23,7 @@ function MeetingOption() {
       inPerson.style.color = "white";
       setSelectorBoxPosition("50%");
     }
-    console.log(appiontmentType);
+    console.log(formDetails.appointmentType);
   }
 
   return (

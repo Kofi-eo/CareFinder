@@ -2,7 +2,7 @@ import React from "react";
 import PopUpModal from "@/styles/PopUpModal.module.css";
 import PatientsForm from "./PatientsForm";
 
-function Details() {
+function Details({formDetails, formUpdate}) {
   return (
     <>
       <div className={PopUpModal.patientFormContainer}>
@@ -12,7 +12,7 @@ function Details() {
             The following information will be sent to Dr. Paul Eneche’s Office
           </p>
         </div>
-        <PatientsForm />
+        <PatientsForm formDetails={formDetails} formUpdate={formUpdate}/>
       </div>
     </>
   );

@@ -8,7 +8,7 @@ import MeetingOption from "./MeetingOption";
 import MeetingDate from "./MeetingDate";
 import MeetingTime from "./MeetingTime";
 
-function Appointment() {
+function Appointment({formUpdate, formDetails}) {
   return (
     <>
       <div className={PopUpModal.appointmentContainer}>
@@ -26,9 +26,9 @@ function Appointment() {
           </p>
         </div>
       </div>
-      <MeetingOption />
+      <MeetingOption formUpdate={formUpdate} formDetails={formDetails} />
       <MeetingDate />
-      <MeetingTime />
+      <MeetingTime formUpdate={formUpdate} />
     </>
   );
 }

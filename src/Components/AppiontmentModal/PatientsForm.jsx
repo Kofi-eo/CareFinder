@@ -1,13 +1,13 @@
 import PopUpModal from "@/styles/PopUpModal.module.css";
 
-function PatientsForm() {
+function PatientsForm({formDetails, formUpdate}) {
   return (
     <form className={PopUpModal.form}>
       {/* Name */}
       <label className={PopUpModal.nameLabel}>Name</label>
       <div className={PopUpModal.patientName}>
-        <input type="text" placeholder="First Name" />
-        <input type="text" placeholder="Last Name" />
+        <input type="text" placeholder="First Name" value={formDetails.firstName} onChange={(e) => formUpdate('firstName',e.target.value)}/>
+        <input type="text" placeholder="Last Name" value={formDetails.lastName} onChange={(e) => formUpdate('lastName',e.target.value)}/>
       </div>
       {/* Date of birth */}
       <div className={PopUpModal.nameLabel}>
@@ -16,15 +16,15 @@ function PatientsForm() {
       <div className={PopUpModal.patientDOF}>
         <input type="text" placeholder="Day" />
         <input type="text" placeholder="Month" />
-        <input type="text" placeholder="Year" />
+        <input type="number" placeholder="Year" />
       </div>
       {/* Sex */}
       <div className={PopUpModal.nameLabel}>
         <label>Sex</label>
       </div>
       <div className={PopUpModal.patientSex}>
-        <select name="sex" id="">
-          <option value="" disabled defaultValue={"Select your option"}>
+        <select value={formDetails.sex} name="sex" id="" onChange={(e) => formUpdate('sex', e.target.value)}>
+          <option value='' disabled defaultValue={"Select your option"} >
             select
           </option>
           <option value="Male">Male</option>
