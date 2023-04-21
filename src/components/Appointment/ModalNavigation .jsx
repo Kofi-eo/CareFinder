@@ -6,6 +6,21 @@ import Book from "./Book";
 import SucessModal from "./SucessModal";
 
 function ModalNav({ setShowModal }) {
+  const [formDetails, setFormDetails] = useState({
+    appointmentType: 'In-person',
+    meetingDate: '12 March 2023',
+    meetingTime: '7:50AM',
+    firstName: '',
+    lastName: '',
+    sex: ''
+  })
+
+  function formUpdate(key, newvalue) {
+    setFormDetails(item => ({...item, [key]: newvalue}))
+  }
+
+  console.log(formDetails)
+
   const [progressBar, setProgressBar] = useState(33);
   const [nextModal, setNextModal] = useState(0);
   console.log(nextModal);
@@ -28,10 +43,10 @@ function ModalNav({ setShowModal }) {
 
   // Modal contents Array
   const modalContents = [
-    { modal: <Appointment /> },
-    { modal: <Details /> },
-    { modal: <Book /> },
-    { modal: <SucessModal setShowModal={setShowModal} /> },
+    { modal: <Appointment formDetails={formDetails} formUpdate={formUpdate} /> },
+    { modal: <Details formDetails={formDetails} formUpdate={formUpdate} /> },
+    { modal: <Book formDetails={formDetails} formUpdate={formUpdate} /> },
+    { modal: <SucessModal formDetails={formDetails} setShowModal={setShowModal} /> },
   ];
 
   return (
