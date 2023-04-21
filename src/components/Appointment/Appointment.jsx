@@ -33,7 +33,7 @@ function Appointment({ formUpdate, formDetails }) {
 				</div>
 			</div>
 			<MeetingOption formUpdate={formUpdate} formDetails={formDetails} />
-			<MeetingDate />
+			<MeetingDate  formUpdate={formUpdate} />
 			<MeetingTime formUpdate={formUpdate} />
 		</>
 	);
