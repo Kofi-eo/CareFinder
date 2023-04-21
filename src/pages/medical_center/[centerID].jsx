@@ -1,11 +1,11 @@
-import NavBar from '@/Components/HomePage/NavBar';
-import Footer from '@/Components/HomePage/Footer';
+import NavBar from '@/components/HomePage/NavBar';
+import Footer from '@/components/HomePage/Footer';
 import Head from 'next/head';
-import HospitalDetails from '@/Components/MedicalCenter/HospitalDetails';
-import HospitalDoctors from '@/Components/MedicalCenter/HospitalDoctors';
+import HospitalDetails from '@/components/MedicalCenter/HospitalDetails';
+import HospitalDoctors from '@/components/MedicalCenter/HospitalDoctors';
 import Styles from '@/styles/MedicalCenter.module.css';
 import { useEffect, useState } from 'react';
-import PopUpModal from '@/Components/Appointment/PopUpModal';
+import PopUpModal from '@/components/Appointment/PopUpModal';
 import { MedicalCentreData } from '@/data/medicalCentres';
 import { useRouter } from 'next/router';
 

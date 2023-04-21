@@ -9,7 +9,7 @@ import PharmaciesNear from '../components/HomePage/PharmaciesNear';
 import Testimonies from '../components/HomePage/Testimonies';
 import Trust from '../components/HomePage/Trust';
 import Head from 'next/head';
-import PopUpModal from '@/Components/Appointment/PopUpModal';
+import PopUpModal from '@/components/Appointment/PopUpModal';
 
 function HomePageHeader() {
 	return (
