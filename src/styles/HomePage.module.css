@@ -415,10 +415,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 80px 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 
 .infoSectionTwoImage {
@@ -428,7 +424,9 @@
   margin-left: 50px;
 }
 .infoSectionTwoImage img {
+  height: 320px;
   width: 350px;
+  border-radius: 20px;
 }
 .drOwenText {
   left: -50px;
@@ -587,10 +585,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   position: absolute;
   font-family: "Lexend", sans-serif;
-  margin-right: 5px;
+  margin-right: 40px;
 }
 
 .SpecialistsAvailable {

@@ -3,14 +3,13 @@ import Styles from '@/styles/MedicalCenter.module.css';
 import { useEffect, useRef, useState } from 'react';
 import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri';
 
-export default function HospitalDetails({data}) {
+export default function HospitalDetails({ data }) {
 	const [showMore, setShowMore] = useState(false);
 	const [update, setUpdate] = useState(''); // state to store window.innerwidth value after adding event listener
 	const hospText = useRef(0);
 	const [mobileView, setMobileView] = useState(false);
 
-
-    function handleShowMore(backNormal = false) {
+	function handleShowMore(backNormal = false) {
 		if (backNormal) {
 			hospText.current.style = 'unset';
 			hospText.current.style.position = 'unset';
@@ -26,8 +25,10 @@ export default function HospitalDetails({data}) {
 				hospital_text.style.position = 'absolute';
 				hospital_text.style.right = '0';
 				hospital_text.style.width = '65vw';
+				hospital_text.style.boxShadow = '0px 5px 30px hsla(100, 10%, 20%, 0.5)';
 			} else {
 				hospital_text.style.position = 'relative';
+				hospital_text.style.boxShadow = 'none';
 			}
 
 			setShowMore((prevStata) => !prevStata);
@@ -52,15 +53,30 @@ export default function HospitalDetails({data}) {
 		};
 	}, [update]);
 
-    if (!data) {
-        return <h3>No Data Found</h3>
-    }
+	if (!data) {
+		return <h3>No Data Found</h3>;
+	}
 
-    const { image, hospital, location, type, distance, specialists, phoneNumber } = data;
-    
+	const {
+		image,
+		hospital,
+		location,
+		type,
+		distance,
+		specialists,
+		phoneNumber,
+	} = data;
+
 	return (
 		<div id='test' className={Styles.hospital_details}>
-			<Image id='hospital_image' src={'/DrOwen.png'} height={100} width={100} />
+			<Image
+				id='hospital_image'
+				src={'/Hospital1.webp'}
+				height={500}
+				width={500}
+				alt='careFinder Hospital'
+				quality={100}
+			/>
 			<div id='hospital_text' ref={hospText} className={Styles.details_text}>
 				<h3> {hospital} </h3>
 				<p style={{ fontWeight: 'bolder' }}>
@@ -208,7 +224,7 @@ export default function HospitalDetails({data}) {
 							>
 								<path d='M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z'></path>
 								<path d='M13 7h-2v6h6v-2h-4z'></path>
-							</svg>{' '}
+							</svg>
 							Mon - Fri : 7am - 6pm
 						</p>
 						<p>Saturday : 7am - 1pm</p>
