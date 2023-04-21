@@ -106,8 +106,8 @@ const Authentication = () => {
 				className='auth-image-container'
 				style={{
 					backgroundImage: form.isNewUser
-						? 'url(/SignUpImage.webp)'
-						: 'url(/SignInImage.webp)',
+						? 'url(/signUpImage.webp)'
+						: 'url(/signInImage.webp)',
 				}}
 			>
 				<div className='auth-logo-container'>

@@ -1,7 +1,6 @@
 .auth-section-container {
 	height: 100vh;
-	display: grid;
-	grid-template-columns: repeat(4, minmax(0, 1fr));
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-family: 'Poppins', sans-serif;
@@ -10,15 +9,14 @@
 
 .auth-container {
 	display: flex;
-	padding: 0px 55px;
-	grid-column: span 2;
-	width: 100%;
+	padding: 0px 20px;
+	width: 43%;
 	justify-content: center;
 	align-items: center;
 }
 
 .auth-image-container {
-	grid-column: span 2;
+	width: 57%;
 	display: flex;
 	height: 100%;
 	margin: auto 0;
@@ -178,6 +176,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
 }
 
 .no-account {
@@ -205,19 +204,19 @@
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
-		overflow: scroll;
+		overflow-x: scroll;
 		min-height: 100vh;
 		height: auto;
 	}
 	.auth-container {
-		padding: 10%;
+		width: 100%;
+		padding: 5%;
 	}
 	.auth-image-container {
 		display: none;
 	}
 	.auth-section {
 		max-width: 800px;
-
 		padding: 10px 0px;
 	}
 	.form input {
