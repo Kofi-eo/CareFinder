@@ -58,6 +58,7 @@ export default function HospitalDetails({ data }) {
 	}
 
 	const {
+		id,
 		image,
 		hospital,
 		location,
