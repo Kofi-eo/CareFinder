@@ -216,7 +216,7 @@ export const MedicalCentreData = [
 		distance: '3.9km',
 		specialists: 25,
 		type: 'pharmacy',
-		departments: ['Neurology', 'Neurology'],
+		departments: ['Neurology', 'Pharmacists'],
 		phoneNumber: '+234 224 238 9024',
 	},
 	{
