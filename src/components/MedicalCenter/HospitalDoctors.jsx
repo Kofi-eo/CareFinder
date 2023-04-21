@@ -76,7 +76,7 @@ export default function HospitalDoctors({ data, showModal, setShowModal }) {
 				{filteredSpecialistData.map((x, index) => (
 					<DoctorsCard
 						key={index}
-						name={x.name}
+						data={x}
 						showModal={showModal}
 						setShowModal={setShowModal}
 					/>

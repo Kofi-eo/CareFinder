@@ -7,7 +7,7 @@ export const MedicalCentreData = [
 		distance: '5.3km',
 		specialists: 12,
 		type: 'hospital',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 853 922 1083',
 	},
 	{
@@ -18,7 +18,7 @@ export const MedicalCentreData = [
 		distance: '3.8km',
 		specialists: 8,
 		type: 'hospital',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 823 948 9082',
 	},
 	{
@@ -29,7 +29,7 @@ export const MedicalCentreData = [
 		distance: '1.2km',
 		specialists: 2,
 		type: 'pharmacy',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 449 538 394',
 	},
 	{
@@ -40,7 +40,7 @@ export const MedicalCentreData = [
 		distance: '2.5km',
 		specialists: 14,
 		type: 'hospital',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 153 645 9022',
 	},
 	{
@@ -51,7 +51,7 @@ export const MedicalCentreData = [
 		distance: '4.1km',
 		specialists: 3,
 		type: 'pharmacy',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 608 338 9040',
 	},
 	{
@@ -62,7 +62,7 @@ export const MedicalCentreData = [
 		distance: '3.7km',
 		specialists: 10,
 		type: 'hospital',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 129 258 9083',
 	},
 	{
@@ -73,7 +73,7 @@ export const MedicalCentreData = [
 		distance: '6.2km',
 		specialists: 5,
 		type: 'pharmacy',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 848 838 9024',
 	},
 	{
@@ -84,7 +84,7 @@ export const MedicalCentreData = [
 		distance: '7.8km',
 		specialists: 11,
 		type: 'hospital',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 073 548 3042',
 	},
 	{
@@ -95,7 +95,7 @@ export const MedicalCentreData = [
 		distance: '2.1km',
 		specialists: 15,
 		type: 'hospital',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 823 948 9082',
 	},
 	{
@@ -106,7 +106,7 @@ export const MedicalCentreData = [
 		distance: '3.6km',
 		specialists: 5,
 		type: 'pharmacy',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 848 838 9024',
 	},
 	{
@@ -117,7 +117,7 @@ export const MedicalCentreData = [
 		distance: '5.2km',
 		specialists: 9,
 		type: 'hospital',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 823 948 9082',
 	},
 	{
@@ -128,7 +128,7 @@ export const MedicalCentreData = [
 		distance: '1.9km',
 		specialists: 10,
 		type: 'pharmacy',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 848 838 9024',
 	},
 	{
@@ -139,7 +139,7 @@ export const MedicalCentreData = [
 		distance: '4.3km',
 		specialists: 12,
 		type: 'hospital',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 823 948 9082',
 	},
 	{
@@ -150,7 +150,7 @@ export const MedicalCentreData = [
 		distance: '7.1km',
 		specialists: 8,
 		type: 'pharmacy',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 848 838 9024',
 	},
 	{
@@ -161,7 +161,7 @@ export const MedicalCentreData = [
 		distance: '6.9km',
 		specialists: 8,
 		type: 'hospital',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 823 948 9082',
 	},
 	{
@@ -172,7 +172,7 @@ export const MedicalCentreData = [
 		distance: '2.8km',
 		specialists: 9,
 		type: 'pharmacy',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 848 838 9024',
 	},
 	{
@@ -183,7 +183,7 @@ export const MedicalCentreData = [
 		distance: '3.5km',
 		specialists: 13,
 		type: 'hospital',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 823 948 9082',
 	},
 	{
@@ -194,7 +194,7 @@ export const MedicalCentreData = [
 		distance: '4.8km',
 		specialists: 17,
 		type: 'pharmacy',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 848 838 9024',
 	},
 	{
@@ -205,7 +205,7 @@ export const MedicalCentreData = [
 		distance: '2.6km',
 		specialists: 11,
 		type: 'hospital',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 113 948 9983',
 	},
 	{
@@ -216,7 +216,7 @@ export const MedicalCentreData = [
 		distance: '3.9km',
 		specialists: 25,
 		type: 'pharmacy',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 224 238 9024',
 	},
 	{
@@ -227,7 +227,7 @@ export const MedicalCentreData = [
 		distance: '4.8km',
 		specialists: 10,
 		type: 'hospital',
-		departments: ['dentistry', 'pediatrics'],
+		departments: ['Dentistry', 'Pediatrics'],
 		phoneNumber: '+234 783 778 9082',
 	},
 ];
