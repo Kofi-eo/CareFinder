@@ -1,12 +1,18 @@
 import HomepageStyles from '@/styles/HomePage.module.css';
 import Link from 'next/link';
 import { AiFillStar } from 'react-icons/ai';
+import Image from 'next/image';
 
 function InfoSectionTwo() {
 	return (
 		<div className={HomepageStyles.infoSectionTwoContainer}>
 			<div className={HomepageStyles.infoSectionTwoImage}>
-				<img src='/DrOwen.png' alt='' />
+				<Image
+					src='/appointment.webp'
+					height={300}
+					width={500}
+					alt='careFinder Appointment'
+				/>
 				<div className={HomepageStyles.drOwenText}>
 					<h3>Dr. Florence Owen</h3>
 					<p>Dietician</p>
