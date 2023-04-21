@@ -60,7 +60,7 @@ export default function HospitalDoctors({ data, showModal, setShowModal }) {
 						placeholder=''
 						onChange={(e) => setSelectedDepartment(e.target.value)}
 					>
-						<option value={'default'} selected>
+						<option value={'default'} defaultValue={true}>
 							select a department
 						</option>
 						{departments &&

@@ -32,13 +32,13 @@ function Footer() {
 				<h3>Pages</h3>
 				<ul>
 					<li>
-						<Link href=''>Home</Link>
+						<Link href='/'>Home</Link>
 					</li>
 					<li>
-						<Link href=''>Explore</Link>
+						<Link href='/Explore'>Explore</Link>
 					</li>
 					<li>
-						<Link href=''>Profile</Link>
+						<Link href='/profile'>Profile</Link>
 					</li>
 					<li>
 						<Link href=''>About</Link>

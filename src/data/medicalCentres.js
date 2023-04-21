@@ -150,7 +150,7 @@ export const MedicalCentreData = [
 		distance: '7.1km',
 		specialists: 8,
 		type: 'pharmacy',
-		departments: ['Dentistry', 'Pediatrics'],
+		departments: ['Dentistry', 'Psychiatry'],
 		phoneNumber: '+234 848 838 9024',
 	},
 	{

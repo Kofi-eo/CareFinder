@@ -54,9 +54,9 @@
 }
 
 .filter_bar {
-	background-color: antiquewhite;
+	background-color: rgba(169, 255, 224, 0.5);
 	width: 70vw;
-	padding: 1em;
+	padding: 2em;
 	display: flex;
 	justify-content: space-around;
 }
