@@ -8,7 +8,7 @@ import { useState } from 'react';
 const lexend = Lexend({ subsets: ['latin'], weight: ['400', '800'] });
 const pt_sans = PT_Sans({ subsets: ['latin'], weight: ['400', '700'] });
 
-export default function HospitalDoctors({ data, showModal, setShowModal }) {
+export default function HospitalDoctors({ Details, showModal, setShowModal }) {
 	const {
 		id,
 		image,
@@ -19,7 +19,7 @@ export default function HospitalDoctors({ data, showModal, setShowModal }) {
 		type,
 		departments,
 		phoneNumber,
-	} = data;
+	} = Details;
 
 	const specialistData = SpecialistData.filter(
 		(item) => item.medicalCenterId === id
