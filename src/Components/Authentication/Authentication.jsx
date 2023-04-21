@@ -78,12 +78,12 @@ const Authentication = () => {
 		e.preventDefault();
 		try {
 			await sendPasswordResetEmail(form.email);
-			toast.success('reset password email sent please check your inbox');
 			setForm((prev) => ({
 				...prev,
 				forgotPassword: !prev.forgotPassword,
 				isNewUser: false,
 			}));
+			toast.success('reset password email sent please check your inbox');
 		} catch (error) {
 			toast.error('this email is not registered');
 		}
@@ -100,21 +100,9 @@ const Authentication = () => {
 		}
 	};
 
-	const subHead = () => {
-		if (!form.isNewUser){
-			return 'Welcome Back! Enter your details to sign in.'
-		}else if (form.isNewUser){
-			return ' Welcome! Enter your details to sign up.'
-		}else if (form.forgotPassword){
-			return 'enter your registered email to recievve reset mail'
-		}else{
-			return 
-		}
-	}
-
 	return (
 		<section className='auth-section-container'>
-			<div 
+			<div
 				className='auth-image-container'
 				style={{
 					backgroundImage: form.isNewUser
@@ -133,10 +121,14 @@ const Authentication = () => {
 			</div>
 			<div className='auth-container'>
 				<section className='auth-section'>
-					{!form.isNewUser && <h1>{Heading()}</h1>}
-					
-						<h5>{subHead()}</h5>
-					
+					<h1>{Heading()}</h1>
+					{!form.forgotPassword && (
+						<h5>
+							{!form.isNewUser
+								? 'Welcome Back! Enter your details to sign in.'
+								: ' Welcome! Enter your details to sign up.'}
+						</h5>
+					)}
 					<form className='form' onSubmit={handleSubmit}>
 						{/* if its a new user and he doesnt forget his password this shows up */}
 

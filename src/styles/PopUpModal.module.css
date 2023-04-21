@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3;
+  z-index: 11;
   width: 100%;
   height: 100%;
   background-color: transparent;
@@ -22,6 +22,7 @@
   position: relative;
   box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.25);
 }
+
 /* modal close button */
 .modalCloseBtn {
   display: flex;
@@ -86,16 +87,20 @@
   color: white;
   font-size: 13px;
   cursor: pointer;
+  /*  */
+  margin-right: -20px;
 }
-@media (max-width: 950px) {
+@media (max-width: 700px) {
   .modalBox {
     width: 85%;
-    height: 70%;
+    height: 85%;
     background-color: white;
     position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
   .modalNavTexts h1 {
-    font-size: 15px;
+    font-size: 13px;
     color: rgb(195, 193, 193);
   }
 }
@@ -130,6 +135,36 @@
   font-size: 15px;
   color: #6a6a6a;
   font-weight: 300;
+}
+@media (max-width: 950px) {
+  .appointmentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 150px;
+    border-bottom: 1px solid#969696;
+  }
+  .doctorImg img {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+  }
+  .doctordetails {
+    margin-left: 20px;
+    font-family: "Lexend", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90px;
+  }
+  .doctordetails h1 {
+    font-size: 15px;
+  }
+  .doctordetails h2 {
+    font-size: 15px;
+    color: #6a6a6a;
+    font-weight: 300;
+  }
 }
 /* Meeting Options */
 .meetingOption {
@@ -218,6 +253,7 @@
   position: relative;
   margin-top: 10px;
   margin-left: 0px;
+  overflow: hidden;
 }
 .dateCarousel {
   display: flex;
@@ -257,6 +293,9 @@
   width: 100%;
   margin-top: 20px;
 }
+.wrapper {
+  display: flex;
+}
 .swiperTimeContainer {
   width: 90%;
   height: 60px;
@@ -265,6 +304,7 @@
   position: relative;
   margin-top: 10px;
   margin-left: 0px;
+  overflow: hidden;
 }
 .timeCarousel {
   display: flex;
@@ -299,6 +339,7 @@
   color: white;
   background-color: #003963;
 }
+
 /* Patient Form */
 .patientFormContainer {
   margin-top: 30px;
@@ -363,7 +404,7 @@
   outline: none;
 }
 /* Vitals form */
-/* Using the patient DOF class to style the Vitals input  */
+/* Using the patient DOF(Date of Birth) class to style the Vitals input  */
 .patientDOF select {
   width: 160px;
   height: 40px;
@@ -371,6 +412,32 @@
   font-size: 15px;
   font-family: "PT Sans", sans-serif;
   outline: none;
+}
+@media (max-width: 950px) {
+  .patientFormContainer {
+    margin-top: 30px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .patientFormTitle h1 {
+    font-size: 18px;
+  }
+  .patientFormTitle p {
+    font-size: 12px;
+    padding-top: 10px;
+    font-weight: 400;
+    font-family: "PT sans", sans-serif;
+  }
+  .patientName input {
+    width: 130px;
+  }
+  .patientDOF input {
+    width: 90px;
+  }
+  .patientDOF select {
+    width: 90px;
+  }
 }
 /* Additional info   */
 .additionalInfo input {
@@ -480,12 +547,53 @@
   font-family: "Lexend", sans-serif;
   outline: none;
 }
+@media (max-width: 900px) {
+  .AppointmentDetails h1 {
+    font-size: 20px;
+  }
+  .drDetails img {
+    width: 80px;
+    height: 80px;
+  }
+  .drDetailsText {
+    height: 70px;
+    margin-left: 10px;
+  }
+  .drDetailsText h2 {
+    font-size: 15px;
+  }
+  .drDetailsText h3 {
+    font-size: 14px;
+  }
+  .drDetailsText p {
+    font-size: 14px;
+  }
+  .AppointmentTimeText {
+    margin-left: 70px;
+    margin-top: 20px;
+  }
+  .AppointmentTimeText p {
+    font-size: 18px;
+  }
+  .patientDetails form label {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  .patientDetails form input {
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+    background-color: #f4f9ff;
+    border: none;
+    font-size: 12px;
+  }
+}
 
 /* Success Modal */
 .sucessContainer {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 90vh;
   align-items: center;
   justify-content: center;
 }
@@ -522,4 +630,33 @@
   font-size: 15px;
   margin-top: 10px;
   cursor: pointer;
+}
+@media (max-width: 900px) {
+  .sucessBox {
+    margin-top: 0px;
+  }
+  .sucessContainer h1 {
+    color: #003963;
+    font-size: 30px;
+    font-family: "Lexend", sans-serif;
+    margin-top: 20px;
+  }
+  .sucessContainer p {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .successButtons {
+    width: 80%;
+    height: 50px;
+    background-color: #003963;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    font-family: "Lexend" sans-serif;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-right: 0px;
+  }
 }

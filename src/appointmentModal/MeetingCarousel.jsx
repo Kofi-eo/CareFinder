@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation, Pagination, A11y } from "swiper";
 import PopUpModal from "@/styles/PopUpModal.module.css";
-import "swiper/css";
+
 
 function MeetingCarousel() {
   return (
@@ -14,7 +14,8 @@ function MeetingCarousel() {
         }}
         modules={[Navigation]}
         slidesPerView={3.5}
-        spaceBetween={0}
+        spaceBetween={30}
+        wrapperClass={PopUpModal.wrapper}
         className={PopUpModal.swiper}
       >
         <SwiperSlide>

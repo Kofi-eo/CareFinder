@@ -38,12 +38,12 @@ export default function HospitalDoctors({ showModal, setShowModal }) {
       </div>
 
       <div className={Styles.doctorsCard_container}>
-        <DoctorsCard showModal={showModal} setShowModal={setShowModal} />
-        <DoctorsCard showModal={showModal} setShowModal={setShowModal} />
-        <DoctorsCard showModal={showModal} setShowModal={setShowModal} />
-        <DoctorsCard showModal={showModal} setShowModal={setShowModal} />
-        <DoctorsCard showModal={showModal} setShowModal={setShowModal} />
-        <DoctorsCard showModal={showModal} setShowModal={setShowModal} />
+        <DoctorsCard name={'Emmanuel bryan'} showModal={showModal} setShowModal={setShowModal} />
+        <DoctorsCard name={'Jack Dorsey'} showModal={showModal} setShowModal={setShowModal} />
+        <DoctorsCard name={'Peng Peng'} showModal={showModal} setShowModal={setShowModal} />
+        <DoctorsCard name={'caleb jackson'} showModal={showModal} setShowModal={setShowModal} />
+        <DoctorsCard name={'Itachi uchiha'} showModal={showModal} setShowModal={setShowModal} />
+        <DoctorsCard name={'sensei saibot'} showModal={showModal} setShowModal={setShowModal} />
       </div>
     </div>
   );

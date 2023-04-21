@@ -3,6 +3,10 @@ import "@/styles/globals.css";
 import "@/styles/style.css";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+// // import AuthContext from "../Context/AuthContext";
+import { MapsContextProvider } from "@/Context/googleMapsContext";
+import "@/styles/globals.css";
+import "@/styles/style.css";
 import { onAuthStateChanged } from "firebase/auth";
 import {
   createContext,
@@ -11,7 +15,6 @@ import {
   useState,
 } from "react";
 import { auth } from "../Firebase/firebase.config";
-import { MapsContextProvider } from "@/Context/googleMapsContext";
 
 const Auth = createContext();
 

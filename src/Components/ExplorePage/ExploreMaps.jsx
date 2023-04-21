@@ -44,12 +44,16 @@ export default function ExploreMaps() {
     }
 
     else if (!isLoaded) {
-        return <LoadingSpinner />
+        return (
+            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '32vw'}}>
+                <LoadingSpinner />
+            </div>
+        )
     }    
 
     return (
         <div className={ExploreStyles.map_container} >
-            {nearByHosp.length > 0 && <p style={{color: 'red',fontFamily: 'Trebuchet MS', fontStyle: 'italic', paddingBottom: '0.5em'}}>The Red Markers Indicate Hospitals Closet to You</p>}
+            {nearByHosp.length > 0 && <p style={{color: 'black',fontFamily: 'Trebuchet MS', fontStyle: 'italic', paddingBottom: '0.5em'}}>The Green Markers Indicate Hospitals Closet to You</p>}
             <GoogleMap
                 options={mapOptions}
                 zoom={13}

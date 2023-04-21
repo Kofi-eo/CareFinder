@@ -7,11 +7,11 @@ import { PT_Sans } from "next/font/google";
 const lexend = Lexend({ subsets: ["latin"], weight: ["400", "800"] });
 const pt_sans = PT_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
-export default function DoctorsCard({ showModal, setShowModal }) {
+export default function DoctorsCard({ showModal, setShowModal, name }) {
   return (
     <div className={Styles.doctor_card}>
       <Image src={"/DrOwen.png"} height={100} width={100} />
-      <h3 className={lexend.className}>Dr. Paul Eneche</h3>
+      <h3 className={lexend.className}>Dr. {name}</h3>
       <p className={pt_sans.className}>Dentist</p>
       <div className={Styles.drOwenStars}>
         <AiFillStar />

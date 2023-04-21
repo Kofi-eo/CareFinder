@@ -1,209 +1,206 @@
 .medical_center {
-    margin-top: 70px;
+	padding-top: 70px;
 }
 
 .grid_container {
-    display: grid;
-    grid-template-columns: auto auto;
+	display: grid;
+	grid-template-columns: auto auto;
 }
 
 /* hospital details section */
 .hospital_details {
-    background-color: azure;
-    height: 100vh;
-    width: 30vw;
-    position: fixed;
-    /* overflow-y: scroll; */
+	background-color: azure;
+	height: 100vh;
+	width: 30vw;
+	position: fixed;
+	/* overflow-y: scroll; */
 }
 
-
-
 .hospital_details > img {
-    width: 100%;
-    height: 15em;
+	width: 100%;
+	height: 15em;
 }
 
 .details_text {
-    padding-top: 1.5em ;
-    padding-bottom: 1.5em;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
 }
 
 .details_text > h3 {
-    padding-left: 2em;
-    padding-right: 1em;
-    padding-bottom: 1em;
+	padding-left: 2em;
+	padding-right: 1em;
+	padding-bottom: 1em;
 }
 .details_text > p {
-    display: flex;
-    padding-left: 2em;
-    padding-right: 1em;
-    padding-bottom: 1em;
-    /* padding-top: 0.5em; */
+	display: flex;
+	padding-left: 2em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+	/* padding-top: 0.5em; */
 }
 
 .details_text > p > svg {
-    margin-right: 0.5em;
+	margin-right: 0.5em;
 }
 
 .details_text > hr {
-    margin-bottom: 1em;
-    margin-top: 0.5em;
+	margin-bottom: 1em;
+	margin-top: 0.5em;
 }
 
 /* hospital doctors section */
 .hospital_doctors {
-    margin-left: 30vw;
+	margin-left: 30vw;
 }
 
 .filter_bar {
-    background-color: antiquewhite;
-    width: 70vw;
-    padding: 1em;
-    display: flex;
-    justify-content: space-around;
+	background-color: antiquewhite;
+	width: 70vw;
+	padding: 1em;
+	display: flex;
+	justify-content: space-around;
 }
 
 .filter_item {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .filter_item > label {
-    font-weight: bolder;
-    font-size: 1.1em;
-    padding-right: 0.5em;
+	font-weight: bolder;
+	font-size: 1.1em;
+	padding-right: 0.5em;
 }
 
 .filter_item > select {
-    width: 15vw;
-    padding: 0.5em;
+	width: 15vw;
+	padding: 0.5em;
 }
-
 
 /* Doctors Card */
 .doctorsCard_container {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 1em;
-    padding: 2em;
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 1em;
+	padding: 2em;
 }
 
 .doctor_card {
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;    
-    align-items: center;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-}  
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+}
 
 .doctor_card > img {
-    border-radius: 50%;
+	border-radius: 50%;
 }
 
 .doctor_card > h3 {
-    padding-top: 1em;
-    padding-bottom: 0.2em;
+	padding-top: 1em;
+	padding-bottom: 0.2em;
 }
 .doctor_card > p {
-    padding-bottom: 0.5em;
+	padding-bottom: 0.5em;
 }
 
 .doctor_card > button {
-    padding: 0.5em 3em 0.5em 3em;
-    background-color: rgb(38, 38, 136);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 2em;
+	padding: 0.5em 3em 0.5em 3em;
+	background-color: rgb(38, 38, 136);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	margin-top: 2em;
 }
 
 .drOwenStars {
-    margin-bottom: 2em;
-    color: #ffd75f;
-    width: 100px;
-    /* width: 130px;
+	margin-bottom: 2em;
+	color: #ffd75f;
+	width: 100px;
+	/* width: 130px;
     height: 40px;
     padding: 20px; */
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    border-radius: 6px;
-    backdrop-filter: blur(2px);
-  }
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	/* background-color: rgba(0, 0, 0, 0.5); */
+	border-radius: 6px;
+	backdrop-filter: blur(2px);
+}
 
 /* Mobile View */
 @media (max-width: 720px) {
-    .grid_container {
-        display: grid;
-        grid-template-columns: auto ;
-    }   
+	.grid_container {
+		display: grid;
+		grid-template-columns: auto;
+	}
 
-    /* hospital details section */
-    .hospital_details {
-        background-color: azure;
-        /* background-color: red; */
-        height: unset;
-        width: unset;
-        position: unset;
-        display: grid;
-        grid-template-columns: 35% auto;
-        /* overflow: hidden; */
-        /* height: 11em; */
-        /* overflow-y: scroll; */
-    }
-    .details_text {
-        padding-top: 1em ;
-        padding-bottom: 0em;
-    }
-    .hospital_details > img {
-        /* width: 100%; */
-        width: 35vw;
-        height: 11em;
-    }
+	/* hospital details section */
+	.hospital_details {
+		background-color: azure;
+		/* background-color: red; */
+		height: unset;
+		width: unset;
+		position: unset;
+		display: grid;
+		grid-template-columns: 35% auto;
+		/* overflow: hidden; */
+		/* height: 11em; */
+		/* overflow-y: scroll; */
+	}
+	.details_text {
+		padding-top: 1em;
+		padding-bottom: 0em;
+	}
+	.hospital_details > img {
+		/* width: 100%; */
+		width: 35vw;
+		height: 11em;
+	}
 
-    .details_text > h3 {
-        font-size: 1.1em;
-        padding-left: 1em;
-        padding-bottom: 0.7em;
-    }
-    .details_text > p {
-        font-size: 0.9em;
-        padding-left: 1em;
-        padding-right: 1.5em;
-        padding-bottom: 0.7em;
-        /* padding-top: 0.5em; */
-    } 
+	.details_text > h3 {
+		font-size: 1.1em;
+		padding-left: 1em;
+		padding-bottom: 0.7em;
+	}
+	.details_text > p {
+		font-size: 0.9em;
+		padding-left: 1em;
+		padding-right: 1.5em;
+		padding-bottom: 0.7em;
+		/* padding-top: 0.5em; */
+	}
 
-    /* hospital doctors section */
-    .hospital_doctors {
-        margin-left: unset;
-    }
-    
-    .filter_bar {
-        width: 100vw;
-        padding: 1em;
-    }
+	/* hospital doctors section */
+	.hospital_doctors {
+		margin-left: unset;
+	}
 
-    .filter_item > label {
-        font-weight: bolder;
-        font-size: 0.9em;
-        padding-right: 0.5em;
-    }
-    
-    .filter_item > select {
-        width: 25vw;
-        padding: 0.2em;
-    }
+	.filter_bar {
+		width: 100vw;
+		padding: 1em;
+	}
+
+	.filter_item > label {
+		font-weight: bolder;
+		font-size: 0.9em;
+		padding-right: 0.5em;
+	}
+
+	.filter_item > select {
+		width: 25vw;
+		padding: 0.2em;
+	}
 }
 
 @media (max-width: 600px) {
-    /* Doctors Card */
-    .doctorsCard_container {
-        display: grid;
-        grid-template-columns: auto;
-        gap: 2em;
-        padding: 2em 3em 2em 3em;
-    }
+	/* Doctors Card */
+	.doctorsCard_container {
+		display: grid;
+		grid-template-columns: auto;
+		gap: 2em;
+		padding: 2em 3em 2em 3em;
+	}
 }

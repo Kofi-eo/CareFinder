@@ -1,7 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
-import { IoLocationOutline, IoLocationSharp } from 'react-icons/io5';
 import { useRouter } from 'next/router';
+import { IoLocationSharp } from 'react-icons/io5';
 
 const MedicalCentreCard = ({ details, width, height, shadow = false }) => {
 	const route = useRouter();
@@ -10,11 +8,11 @@ const MedicalCentreCard = ({ details, width, height, shadow = false }) => {
 		return 'No data Found';
 	}
 
-	const { image, hospital, location, distance, specialists } = details;
+	const { image, hospital, location, distance, specialists, id } = details;
 
 	return (
 		<div
-			onClick={() => route.push(`./medical_center/${2}`)}
+			onClick={() => route.push(`./medical_center/${id}`)}
 			className='Medical-card-cont'
 			style={{
 				width: `${width}px`,
@@ -26,6 +24,7 @@ const MedicalCentreCard = ({ details, width, height, shadow = false }) => {
 				position: 'relative',
 				boxShadow: shadow ? '0px 4px 4px rgba(0, 0, 0, 0.25)' : 'none',
 				cursor: 'pointer',
+				marginBottom: '1em'
 			}}
 		>
 			<div
