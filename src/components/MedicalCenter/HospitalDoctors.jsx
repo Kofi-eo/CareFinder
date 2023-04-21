@@ -63,24 +63,26 @@ export default function HospitalDoctors({ data, showModal, setShowModal }) {
 						<option value={'default'} selected>
 							select a department
 						</option>
-						{departments.map((x, index) => (
-							<option key={index} value={x}>
-								{x}
-							</option>
-						))}
+						{departments &&
+							departments.map((x, index) => (
+								<option key={index} value={x}>
+									{x}
+								</option>
+							))}
 					</select>
 				</div>
 			</div>
 
 			<div className={Styles.doctorsCard_container}>
-				{filteredSpecialistData.map((x, index) => (
-					<DoctorsCard
-						key={index}
-						data={x}
-						showModal={showModal}
-						setShowModal={setShowModal}
-					/>
-				))}
+				{filteredSpecialistData &&
+					filteredSpecialistData.map((x, index) => (
+						<DoctorsCard
+							key={index}
+							data={x}
+							showModal={showModal}
+							setShowModal={setShowModal}
+						/>
+					))}
 			</div>
 		</div>
 	);
