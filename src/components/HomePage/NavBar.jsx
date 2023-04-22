@@ -137,7 +137,10 @@ function NavBar({ returnBack = false }) {
 							{!user ? (
 
 								<li className={HomepageStyles.loginButton}>
-								Login/SignUp</Link></li>
+								<Link href="/Auth">
+								Login/SignUp
+
+</Link></li>
 
 							) : (<li className={HomepageStyles.loginButton} onClick={() => signOut(auth)}>Logout</li>
 
