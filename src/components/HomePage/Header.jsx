@@ -1,7 +1,9 @@
 import HomepageStyles from '@/styles/HomePage.module.css';
 import SearchBox from './SearchBox';
+import { useRouter } from 'next/router';
 
 function Header() {
+	const route = useRouter();
 	return (
 		<div className={HomepageStyles.headerContainer}>
 			<header>
@@ -12,7 +14,12 @@ function Header() {
 						you, at a time and place that suits you best.
 					</p>
 					<div className={HomepageStyles.heroButtonsContainer}>
-						<button className='Primary-Button'>Get Started</button>
+						<button
+							className='Primary-Button'
+							onClick={() => route.push('/Explore')}
+						>
+							Get Started
+						</button>
 						<button className='Secondary-Button'>Learn More</button>
 					</div>
 				</div>
