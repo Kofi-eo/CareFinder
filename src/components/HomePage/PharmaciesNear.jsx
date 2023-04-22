@@ -25,7 +25,7 @@ function PharmaciesNear() {
 				</div>
 				<PharmaciesCarousel />
 				<div className={HomepageStyles.hospitalsNearViewButton}>
-					<Link href=''>
+					<Link href='/Explore'>
 						<button className='Primary-Button'>View All</button>
 					</Link>
 				</div>

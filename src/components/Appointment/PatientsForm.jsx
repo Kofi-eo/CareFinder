@@ -50,6 +50,7 @@ function PatientsForm({formDetails, formUpdate}) {
       <div className={PopUpModal.additionalInfo}>
         <input type="text" placeholder="Additional Information e.g Allergies" />
       </div>
+
     </form>
   );
 }

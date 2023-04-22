@@ -3,7 +3,7 @@ import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
 import PopUpModal from "@/styles/PopUpModal.module.css";
 import MeetingCarousel from "./MeetingCarousel";
 
-function MeetingDate() {
+function MeetingDate({formUpdate}) {
   return (
     <>
       <div className={PopUpModal.meetingDate}>
@@ -15,7 +15,7 @@ function MeetingDate() {
             <RiArrowRightLine />
           </div>
         </div>
-        <MeetingCarousel />
+        <MeetingCarousel formUpdate={formUpdate}/>
       </div>
     </>
   );
