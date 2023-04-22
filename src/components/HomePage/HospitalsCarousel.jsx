@@ -114,20 +114,6 @@ function HospitalsCarousel() {
 		} else if (windowWidth >= 1500) {
 			setSlides(5);
 		}
-
-		if (windowWidth <= 390) {
-			setSlides(1);
-		} else if (windowWidth <= 700) {
-			setSlides(1.5);
-		} else if (windowWidth <= 900) {
-			setSlides(2);
-		} else if (windowWidth <= 1024) {
-			setSlides(2.5);
-		} else if (windowWidth <= 1440) {
-			setSlides(3.5);
-		} else if (windowWidth >= 1500) {
-			setSlides(5);
-		}
 	}, [windowWidth]);
 
 	return (
