@@ -72,9 +72,9 @@ function NavBar({ returnBack = false }) {
 							<li>
 								<Link href="/Explore">Appointment</Link>
 							</li>
-							<li>
+							{user && <li>
 								<Link href="/profile">Profile</Link>
-							</li>
+							</li>}
 							{!user ? (<Link href="/Auth">
 								<li className={HomepageStyles.loginButton}>Login/SignUp</li>
 							</Link>) : (<li className={HomepageStyles.loginButton} onClick={() => signOut(auth)}>Logout</li>
