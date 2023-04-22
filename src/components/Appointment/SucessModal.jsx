@@ -36,14 +36,18 @@ function SucessModal({ setShowModal, formDetails }) {
         <h1>Success!</h1>
         <p >Your Appointment has been successfully booked</p>
 
-        <div id='formData' style={{opacity: 1, position: 'absolute', zIndex: '-1'}}>
-          <h1>Name: {firstName} {lastName}</h1>
-          <p>Date: {meetingDate} </p>
-          <p>TIme: @{meetingTime}</p>
-          <p>Appointment Type: {appointmentType}</p>
-          <p>sex: {sex}</p>
-          <h3>Doctor: Mr Phil Michaelson</h3>
+        {/* Downloadable Appointment Details */}
+        <div id='formData' className={PopUpModal.receipt}>
+          <ul>
+            <li><h1> {firstName} {lastName}</h1></li>
+            <li><span style={{color: '#003963'}}>Date:</span> {meetingDate} </li>
+            <li><span style={{color: '#003963'}}>TIme:</span> @{meetingTime}AM</li>
+            <li><span style={{color: '#003963'}}>Appointment Type:</span> {appointmentType}</li>
+            <li><span style={{color: '#003963'}}>sex:</span> {sex}</li>
+            <li><h3><span style={{color: '#003963'}}>Doctor:</span> Mr Phil Michaelson</h3></li>
+          </ul>
         </div>
+        {/*  */}
 
         <button onClick={() => handleDocument()} className={PopUpModal.successButtons}>
           Download Appointment Details

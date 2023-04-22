@@ -1,662 +1,703 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+/* Styling appointment Details Receipt */
+.receipt {
+	position: absolute;
+	border: 1px solid black;
+	padding: 0;
+	margin: 0;
+	z-index: -1;
+}
+
+.receipt ul {
+	list-style: none;
+}
+
+.receipt ul > li > span {
+	padding-right: 0.5em;
+	border-right: 2px solid black
+}
+
+.receipt ul > li {
+	padding: 0.5em;
+	border: 1px solid black;
+}
+
+.receipt li > h1 {
+	padding: 0;
+	margin: 0;
+}
+/* END styling Appointment Details receipt  */
 
 .modalContainer {
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 11;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  backdrop-filter: blur(25px);
-  transition: 0.5s;
-  position: fixed;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 11;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	backdrop-filter: blur(25px);
+	transition: 0.5s;
+	position: fixed;
 }
 
 .modalBox {
-  width: 40%;
-  height: 95%;
-  background-color: white;
-  position: relative;
-  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.25);
+	width: 40%;
+	height: auto;
+	padding-bottom: 15px;
+	background-color: white;
+	position: relative;
+	box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.25);
 }
 
 /* modal close button */
 .modalCloseBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  background-color: rgb(34, 34, 94);
-  color: white;
-  border-radius: 100%;
-  position: absolute;
-  margin-top: -15px;
-  left: 97%;
-  cursor: pointer;
-  font-family: "Lexend", sans-serif;
-  font-size: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	background-color: rgb(34, 34, 94);
+	color: white;
+	border-radius: 100%;
+	position: absolute;
+	margin-top: -15px;
+	left: 97%;
+	cursor: pointer;
+	font-family: 'Lexend', sans-serif;
+	font-size: 15px;
 }
 
 .modalNavProgressBar {
-  width: 100%;
-  height: 10px;
-  background-color: rgb(227, 227, 227);
-  z-index: 10;
+	width: 100%;
+	height: 10px;
+	background-color: rgb(227, 227, 227);
+	z-index: 10;
 }
 .modalNavProgressBarBlue {
-  height: 10px;
-  background-color: #003963;
-  transition: 0.8s;
+	height: 10px;
+	background-color: #003963;
+	transition: 0.8s;
 }
 .modalNavTexts {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  width: 100%;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
-  border-bottom: 1px solid#969696;
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	width: 100%;
+	align-items: flex-start;
+	justify-content: center;
+	text-align: center;
+	padding: 10px;
+	border-bottom: 1px solid#969696;
 }
 .modalNavTexts h1 {
-  font-size: 14px;
-  color: rgb(195, 193, 193);
-  font-family: "Lexend", sans-serif;
-  font-weight: 200;
+	font-size: 14px;
+	color: rgb(195, 193, 193);
+	font-family: 'Lexend', sans-serif;
+	font-weight: 200;
 }
 .buttonContainer {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
 }
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 30px;
-  width: 170px;
-  height: 40px;
-  border: none;
-  border-radius: 3px;
-  background-color: #003963;
-  color: white;
-  font-size: 13px;
-  cursor: pointer;
-  /*  */
-  margin-right: -20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+	width: 170px;
+	height: 40px;
+	border: none;
+	border-radius: 3px;
+	background-color: #003963;
+	color: white;
+	font-size: 13px;
+	cursor: pointer;
+	/*  */
+	margin-right: -20px;
 }
+
+.button:disabled {
+	opacity: 0.5;
+}
+
 @media (max-width: 700px) {
-  .modalBox {
-    width: 85%;
-    height: 85%;
-    background-color: white;
-    position: relative;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-  .modalNavTexts h1 {
-    font-size: 13px;
-    color: rgb(195, 193, 193);
-  }
+	.modalBox {
+		width: 85%;
+		padding-bottom: 20px;
+		background-color: white;
+		position: relative;
+		/* overflow-y: scroll;
+		overflow-x: hidden; */
+	}
+	.modalNavTexts h1 {
+		font-size: 13px;
+		color: rgb(195, 193, 193);
+	}
 }
 
 /* Appiontment  */
 /* Doctor Profile */
 .appointmentContainer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: 180px;
-  border-bottom: 1px solid#969696;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	height: 180px;
+	border-bottom: 1px solid#969696;
 }
 .doctorImg img {
-  width: 130px;
-  height: 130px;
-  border-radius: 100%;
-  margin-left: 50px;
+	width: 130px;
+	height: 130px;
+	border-radius: 100%;
+	margin-left: 50px;
 }
 .doctordetails {
-  margin-left: 20px;
-  font-family: "Lexend", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 130px;
+	margin-left: 20px;
+	font-family: 'Lexend', sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 130px;
 }
 .doctordetails h1 {
-  font-size: 18px;
+	font-size: 18px;
 }
 .doctordetails h2 {
-  font-size: 15px;
-  color: #6a6a6a;
-  font-weight: 300;
+	font-size: 15px;
+	color: #6a6a6a;
+	font-weight: 300;
 }
 @media (max-width: 950px) {
-  .appointmentContainer {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 150px;
-    border-bottom: 1px solid#969696;
-  }
-  .doctorImg img {
-    width: 100px;
-    height: 100px;
-    margin-left: 20px;
-  }
-  .doctordetails {
-    margin-left: 20px;
-    font-family: "Lexend", sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 90px;
-  }
-  .doctordetails h1 {
-    font-size: 15px;
-  }
-  .doctordetails h2 {
-    font-size: 15px;
-    color: #6a6a6a;
-    font-weight: 300;
-  }
+	.appointmentContainer {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		height: 150px;
+		border-bottom: 1px solid#969696;
+	}
+	.doctorImg img {
+		width: 100px;
+		height: 100px;
+		margin-left: 20px;
+	}
+	.doctordetails {
+		margin-left: 20px;
+		font-family: 'Lexend', sans-serif;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 90px;
+	}
+	.doctordetails h1 {
+		font-size: 15px;
+	}
+	.doctordetails h2 {
+		font-size: 15px;
+		color: #6a6a6a;
+		font-weight: 300;
+	}
 }
 /* Meeting Options */
 .meetingOption {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "PT Sans", sans-serif;
-  height: 90px;
-  border-bottom: 1px solid#969696;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'PT Sans', sans-serif;
+	height: 90px;
+	border-bottom: 1px solid#969696;
 }
 .meetingOptionBox {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 80%;
-  height: 60%;
-  border: 2px solid #003963;
-  position: relative;
-  overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 80%;
+	height: 60%;
+	border: 2px solid #003963;
+	position: relative;
+	overflow: hidden;
 }
 .select {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  height: 100%;
-  z-index: 1;
-  cursor: pointer;
-  transition: 0.8s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	height: 100%;
+	z-index: 1;
+	cursor: pointer;
+	transition: 0.8s;
 }
 .selectorBox {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  transition: 0.8s;
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	transition: 0.8s;
 }
 .meetingOptionBox h1 {
-  font-size: 16px;
-  font-weight: 400;
+	font-size: 16px;
+	font-weight: 400;
 }
 
 /* Meeting Date */
 .meetingDate {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 150px;
-  padding-left: 0px;
-  border-bottom: 1px solid#969696;
-  position: relative;
-  overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 150px;
+	padding-left: 0px;
+	border-bottom: 1px solid#969696;
+	position: relative;
+	overflow: hidden;
 }
 .ArrBtns {
-  display: flex;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  justify-content: space-between;
-  width: 60px;
+	display: flex;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	justify-content: space-between;
+	width: 60px;
 }
 
 /* Meeting Time */
 .meetingTime {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100px;
-  padding-left: 0px;
-  border-bottom: 1px solid#969696;
-  position: relative;
-  overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100px;
+	padding-left: 0px;
+	border-bottom: 1px solid#969696;
+	position: relative;
+	overflow: hidden;
 }
 
 /* Carousel */
 .swiper {
-  width: 100%;
-  margin-top: 20px;
+	width: 100%;
+	margin-top: 20px;
 }
 .swiperContainer {
-  width: 90%;
-  height: 120px;
-  display: flex;
-  align-items: flex-start;
-  position: relative;
-  margin-top: 10px;
-  margin-left: 0px;
-  overflow: hidden;
+	width: 90%;
+	height: 120px;
+	display: flex;
+	align-items: flex-start;
+	position: relative;
+	margin-top: 10px;
+	margin-left: 0px;
+	overflow: hidden;
 }
 .dateCarousel {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  position: absolute;
-  font-family: "Lexend", sans-serif;
-  margin-right: 40px;
-  margin-top: -40px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	position: absolute;
+	font-family: 'Lexend', sans-serif;
+	margin-right: 40px;
+	margin-top: -40px;
 }
 .dateCarouselContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 0px;
-  height: 100%;
-  border: none;
-  position: relative;
-  overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 0px;
+	height: 100%;
+	border: none;
+	position: relative;
+	overflow: hidden;
 }
 .dateCarouselItem {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 10px;
-
-  color: white;
-  background-color: #003963;
+	width: 130px;
+	padding: 10px;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding-top: 10px;
+	color: white;
+	background-color: #003963;
+	font-size: 0.8rem;
 }
+
+.dateCarouselItem h1 {
+	font-size: 1rem;
+}
+
 /* Time Carousel */
 .swiper {
-  width: 100%;
-  margin-top: 20px;
+	width: 100%;
+	margin-top: 20px;
 }
 .wrapper {
-  display: flex;
+	display: flex;
 }
 .swiperTimeContainer {
-  width: 90%;
-  height: 60px;
-  display: flex;
-  align-items: flex-start;
-  position: relative;
-  margin-top: 10px;
-  margin-left: 0px;
-  overflow: hidden;
+	width: 90%;
+	height: 60px;
+	display: flex;
+	align-items: flex-start;
+	position: relative;
+	margin-top: 10px;
+	margin-left: 0px;
+	overflow: hidden;
 }
 .timeCarousel {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  position: absolute;
-  font-family: "Lexend", sans-serif;
-  margin-right: 40px;
-  margin-top: -40px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	position: absolute;
+	font-family: 'Lexend', sans-serif;
+	margin-right: 40px;
+	margin-top: -40px;
 }
 .timeCarouselContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 0px;
-  height: 100%;
-  border: none;
-  position: relative;
-  overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 0px;
+	height: 100%;
+	border: none;
+	position: relative;
+	overflow: hidden;
 }
 .timeCarouselItem {
-  font-family: "Lexend", sans-serif;
-  width: 100px;
-  height: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  color: white;
-  background-color: #003963;
+	font-family: 'Lexend', sans-serif;
+	width: 100px;
+	height: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: white;
+	background-color: #003963;
+	font-size: 0.8rem;
 }
 
 /* Patient Form */
 .patientFormContainer {
-  margin-top: 30px;
-  margin-left: 30px;
-  display: flex;
-  flex-direction: column;
+	margin-top: 30px;
+	margin-left: 30px;
+	display: flex;
+	flex-direction: column;
 }
 .patientFormTitle h1 {
-  font-size: 25px;
-  font-family: "Lexend", sans-serif;
+	font-size: 25px;
+	font-family: 'Lexend', sans-serif;
 }
 .patientFormTitle p {
-  font-size: 15px;
-  padding-top: 10px;
-  font-weight: 400;
-  font-family: "PT sans", sans-serif;
+	font-size: 15px;
+	padding-top: 10px;
+	font-weight: 400;
+	font-family: 'PT sans', sans-serif;
 }
 .nameLabel {
-  font-family: "Lexend", sans-serif;
-  font-size: 15px;
-  margin-top: 25px;
+	font-family: 'Lexend', sans-serif;
+	font-size: 15px;
+	margin-top: 25px;
 }
 .form {
-  width: 90%;
-  height: 100%;
-  margin-top: 15px;
+	width: 90%;
+	height: 100%;
+	margin-top: 15px;
 }
 .patientName {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
 }
 .patientName input {
-  width: 190px;
-  padding: 10px;
-  height: 40px;
-  font-size: 15px;
-  font-family: "PT Sans", sans-serif;
-  outline: none;
-  border: 1px solid #969696;
+	width: 190px;
+	padding: 10px;
+	height: 40px;
+	font-size: 15px;
+	font-family: 'PT Sans', sans-serif;
+	outline: none;
+	border: 1px solid #969696;
 }
 .patientDOF {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
 }
 .patientDOF input {
-  width: 120px;
-  padding: 10px;
-  height: 40px;
-  font-size: 15px;
-  font-family: "PT Sans", sans-serif;
-  outline: none;
-  border: 1px solid #969696;
+	width: 120px;
+	padding: 10px;
+	height: 40px;
+	font-size: 15px;
+	font-family: 'PT Sans', sans-serif;
+	outline: none;
+	border: 1px solid #969696;
 }
 .patientSex select {
-  width: 120px;
-  height: 40px;
-  border: 1px solid #969696;
-  font-size: 15px;
-  font-family: "PT Sans", sans-serif;
-  outline: none;
+	width: 120px;
+	height: 40px;
+	border: 1px solid #969696;
+	font-size: 15px;
+	font-family: 'PT Sans', sans-serif;
+	outline: none;
 }
 /* Vitals form */
 /* Using the patient DOF(Date of Birth) class to style the Vitals input  */
 .patientDOF select {
-  width: 160px;
-  height: 40px;
-  border: 1px solid #969696;
-  font-size: 15px;
-  font-family: "PT Sans", sans-serif;
-  outline: none;
+	width: 160px;
+	height: 40px;
+	border: 1px solid #969696;
+	font-size: 15px;
+	font-family: 'PT Sans', sans-serif;
+	outline: none;
 }
 @media (max-width: 950px) {
-  .patientFormContainer {
-    margin-top: 30px;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  .patientFormTitle h1 {
-    font-size: 18px;
-  }
-  .patientFormTitle p {
-    font-size: 12px;
-    padding-top: 10px;
-    font-weight: 400;
-    font-family: "PT sans", sans-serif;
-  }
-  .patientName input {
-    width: 130px;
-  }
-  .patientDOF input {
-    width: 90px;
-  }
-  .patientDOF select {
-    width: 90px;
-  }
+	.patientFormContainer {
+		margin-top: 30px;
+		margin-left: 20px;
+		display: flex;
+		flex-direction: column;
+	}
+	.patientFormTitle h1 {
+		font-size: 18px;
+	}
+	.patientFormTitle p {
+		font-size: 12px;
+		padding-top: 10px;
+		font-weight: 400;
+		font-family: 'PT sans', sans-serif;
+	}
+	.patientName input {
+		width: 130px;
+	}
+	.patientDOF input {
+		width: 90px;
+	}
+	.patientDOF select {
+		width: 90px;
+	}
 }
 /* Additional info   */
 .additionalInfo input {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-top: 20px;
-  width: 100%;
-  height: 90px;
-  font-family: "PT Sans", sans-serif;
-  font-size: 15px;
-  outline: none;
-  text-align: top;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin-top: 20px;
+	width: 100%;
+	height: 90px;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 15px;
+	outline: none;
+	text-align: top;
 }
 
 /* Book */
 .AppointmentDetails {
-  margin-top: 25px;
-  border-bottom: 1px solid #969696;
+	margin-top: 25px;
+	border-bottom: 1px solid #969696;
 }
 .AppointmentDetails h1 {
-  margin-left: 30px;
-  font-size: 25px;
-  font-family: "Lexend", sans-serif;
+	margin-left: 30px;
+	font-size: 25px;
+	font-family: 'Lexend', sans-serif;
 }
 .drDetails {
-  margin-top: 30px;
-  margin-left: 30px;
-  margin-bottom: 25px;
-  display: flex;
-  align-items: center;
+	margin-top: 30px;
+	margin-left: 30px;
+	margin-bottom: 25px;
+	display: flex;
+	align-items: center;
 }
 .drDetails img {
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
 }
 .drDetailsText {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100px;
-  margin-left: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 100px;
+	margin-left: 30px;
 }
 .drDetailsText h2 {
-  font-size: 20px;
-  font-family: "Lexend", sans-serif;
+	font-size: 20px;
+	font-family: 'Lexend', sans-serif;
 }
 .drDetailsText h3 {
-  color: #6a6a6a;
-  font-family: "Lexend", sans-serif;
-  font-size: 17px;
+	color: #6a6a6a;
+	font-family: 'Lexend', sans-serif;
+	font-size: 17px;
 }
 .drDetailsText p {
-  display: flex;
-  align-items: center;
-  color: #6a6a6a;
-  font-family: "Lexend", sans-serif;
-  font-size: 15px;
+	display: flex;
+	align-items: center;
+	color: #6a6a6a;
+	font-family: 'Lexend', sans-serif;
+	font-size: 15px;
 }
 
 .AppointmentTime {
-  border-bottom: 1px solid #969696;
-  margin-bottom: 20px;
+	border-bottom: 1px solid #969696;
+	margin-bottom: 20px;
 }
 .AppointmentTimeText {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100px;
-  margin-left: 130px;
-  margin-top: 10px;
-  margin-bottom: 70px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 100px;
+	margin-left: 130px;
+	margin-top: 10px;
+	margin-bottom: 70px;
 }
 .AppointmentTimeText p {
-  display: flex;
-  align-items: center;
-  margin-top: 35px;
-  font-family: "Lexend", sans-serif;
-  font-size: 20px;
-  color: #6a6a6a;
+	display: flex;
+	align-items: center;
+	margin-top: 35px;
+	font-family: 'Lexend', sans-serif;
+	font-size: 20px;
+	color: #6a6a6a;
 }
 .patientDetails {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .patientInput {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
 }
 .patientDetails form label {
-  margin-right: 10px;
-  font-size: 20px;
-  font-family: "Lexend", sans-serif;
+	margin-right: 10px;
+	font-size: 20px;
+	font-family: 'Lexend', sans-serif;
 }
 .patientDetails form input {
-  width: 230px;
-  height: 30px;
-  padding: 10px;
-  background-color: #f4f9ff;
-  border: none;
-  font-size: 15px;
-  font-family: "Lexend", sans-serif;
-  outline: none;
+	width: 230px;
+	height: 30px;
+	padding: 10px;
+	background-color: #f4f9ff;
+	border: none;
+	font-size: 15px;
+	font-family: 'Lexend', sans-serif;
+	outline: none;
 }
 @media (max-width: 900px) {
-  .AppointmentDetails h1 {
-    font-size: 20px;
-  }
-  .drDetails img {
-    width: 80px;
-    height: 80px;
-  }
-  .drDetailsText {
-    height: 70px;
-    margin-left: 10px;
-  }
-  .drDetailsText h2 {
-    font-size: 15px;
-  }
-  .drDetailsText h3 {
-    font-size: 14px;
-  }
-  .drDetailsText p {
-    font-size: 14px;
-  }
-  .AppointmentTimeText {
-    margin-left: 70px;
-    margin-top: 20px;
-  }
-  .AppointmentTimeText p {
-    font-size: 18px;
-  }
-  .patientDetails form label {
-    margin-right: 10px;
-    font-size: 16px;
-  }
-  .patientDetails form input {
-    width: 200px;
-    height: 30px;
-    padding: 10px;
-    background-color: #f4f9ff;
-    border: none;
-    font-size: 12px;
-  }
+	.AppointmentDetails h1 {
+		font-size: 20px;
+	}
+	.drDetails img {
+		width: 80px;
+		height: 80px;
+	}
+	.drDetailsText {
+		height: 70px;
+		margin-left: 10px;
+	}
+	.drDetailsText h2 {
+		font-size: 15px;
+	}
+	.drDetailsText h3 {
+		font-size: 14px;
+	}
+	.drDetailsText p {
+		font-size: 14px;
+	}
+	.AppointmentTimeText {
+		margin-left: 70px;
+		margin-top: 20px;
+	}
+	.AppointmentTimeText p {
+		font-size: 18px;
+	}
+	.patientDetails form label {
+		margin-right: 10px;
+		font-size: 16px;
+	}
+	.patientDetails form input {
+		width: 200px;
+		height: 30px;
+		padding: 10px;
+		background-color: #f4f9ff;
+		border: none;
+		font-size: 12px;
+	}
 }
 
 /* Success Modal */
 .sucessContainer {
-  display: flex;
-  flex-direction: column;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	flex-direction: column;
+	height: 90vh;
+	align-items: center;
+	justify-content: center;
 }
 .sucessBox {
-  background-color: #14df96;
-  width: 200px;
-  height: 200px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  margin-top: 50px;
+	background-color: #14df96;
+	width: 200px;
+	height: 200px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100%;
+	margin-top: 50px;
 }
 .sucessContainer h1 {
-  color: #003963;
-  font-size: 30px;
-  font-family: "Lexend", sans-serif;
-  margin-top: 40px;
+	color: #003963;
+	font-size: 30px;
+	font-family: 'Lexend', sans-serif;
+	margin-top: 40px;
 }
 .sucessContainer p {
-  font-family: "PT Sans", sans-serif;
-  font-size: 20px;
-  margin-bottom: 50px;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 20px;
+	margin-bottom: 50px;
 }
 .successButtons {
-  width: 60%;
-  height: 50px;
-  background-color: #003963;
-  border-radius: 3px;
-  border: none;
-  color: white;
-  font-family: "Lexend" sans-serif;
-  font-size: 15px;
-  margin-top: 10px;
-  cursor: pointer;
+	width: 60%;
+	height: 50px;
+	background-color: #003963;
+	border-radius: 3px;
+	border: none;
+	color: white;
+	font-family: 'Lexend' sans-serif;
+	font-size: 15px;
+	margin-top: 10px;
+	cursor: pointer;
 }
 @media (max-width: 900px) {
-  .sucessBox {
-    margin-top: 0px;
-  }
-  .sucessContainer h1 {
-    color: #003963;
-    font-size: 30px;
-    font-family: "Lexend", sans-serif;
-    margin-top: 20px;
-  }
-  .sucessContainer p {
-    font-size: 15px;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  .successButtons {
-    width: 80%;
-    height: 50px;
-    background-color: #003963;
-    border-radius: 3px;
-    border: none;
-    color: white;
-    font-family: "Lexend" sans-serif;
-    font-size: 15px;
-    margin-top: 10px;
-    cursor: pointer;
-    margin-right: 0px;
-  }
+	.sucessBox {
+		margin-top: 0px;
+	}
+	.sucessContainer h1 {
+		color: #003963;
+		font-size: 30px;
+		font-family: 'Lexend', sans-serif;
+		margin-top: 20px;
+	}
+	.sucessContainer p {
+		font-size: 15px;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.successButtons {
+		width: 80%;
+		height: 50px;
+		background-color: #003963;
+		border-radius: 3px;
+		border: none;
+		color: white;
+		font-family: 'Lexend' sans-serif;
+		font-size: 15px;
+		margin-top: 10px;
+		cursor: pointer;
+		margin-right: 0px;
+	}
 }

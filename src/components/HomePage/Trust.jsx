@@ -9,32 +9,32 @@ function Trust() {
 				<Image
 					src='/mLogo-02.svg'
 					alt='carefinder partner'
-					width={300}
-					height={300}
+					width={20}
+					height={150}
 				/>
 				<Image
 					src='/mLogo-03.svg'
 					alt='carefinder partner'
 					width={300}
-					height={300}
+					height={150}
 				/>
 				<Image
 					src='/mLogo-04.svg'
 					alt='carefinder partner'
 					width={300}
-					height={300}
+					height={150}
 				/>
 				<Image
 					src='/mLogo-05.svg'
 					alt='carefinder partner'
 					width={300}
-					height={300}
+					height={150}
 				/>
 				<Image
 					src='/mLogo-06.svg'
 					alt='carefinder partner'
 					width={300}
-					height={300}
+					height={150}
 				/>
 			</div>
 		</div>

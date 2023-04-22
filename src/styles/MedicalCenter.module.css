@@ -54,9 +54,9 @@
 }
 
 .filter_bar {
-	background-color: antiquewhite;
+	background-color: rgba(169, 255, 224, 0.5);
 	width: 70vw;
-	padding: 1em;
+	padding: 2em;
 	display: flex;
 	justify-content: space-around;
 }
@@ -107,11 +107,11 @@
 }
 
 .doctor_card > button {
-	padding: 0.5em 3em 0.5em 3em;
-	background-color: rgb(38, 38, 136);
+	padding: 0.8em 3em;
+	background-color: #003963;
 	color: white;
 	border: none;
-	border-radius: 5px;
+
 	margin-top: 2em;
 }
 

@@ -15,7 +15,7 @@ export default function MedicalCentre() {
 	const route = useRouter();
 	const centerID = route.query.centerID;
 
-	const currentData = MedicalCentreData.filter((item) => item.id == centerID);
+	const currentData = MedicalCentreData.filter((item) => item.id === centerID);
 
 	useEffect(() => {
 		if (showModal) {

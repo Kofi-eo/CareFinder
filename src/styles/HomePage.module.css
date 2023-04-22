@@ -424,9 +424,11 @@
   margin-left: 50px;
 }
 .infoSectionTwoImage img {
-  height: 320px;
-  width: 350px;
-  border-radius: 20px;
+
+	height: 300px;
+	width: 350px;
+	border-radius: 20px;
+
 }
 .drOwenText {
   left: -50px;

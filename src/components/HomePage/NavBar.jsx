@@ -1,3 +1,4 @@
+
 import HomepageStyles from "@/styles/HomePage.module.css";
 import { signOut } from "firebase/auth";
 import Image from "next/image";
@@ -16,52 +17,54 @@ function NavBar({ returnBack = false }) {
     position: "absolute",
   });
 
-  const [mobnav, setMobnav] = useState(false);
-  const showMobile = () => setMobnav(!mobnav);
 
-  useEffect(() => {
-    function handleScroll() {
-      if (window.scrollY > 300) {
-        setNav({
-          width: "100vw",
-          marginTop: "70px",
-          position: "fixed",
-        });
-      } else {
-        setNav({
-          width: "90vw",
-          marginTop: "120px",
-          position: "absolute",
-        });
-      }
-    }
+	const [mobnav, setMobnav] = useState(false);
+	const showMobile = () => setMobnav(!mobnav);
 
-    if (returnBack) {
-      setNav({
-        width: "100vw",
-        marginTop: "70px",
-      });
-    } else {
-      window.addEventListener("scroll", handleScroll);
-    }
+	useEffect(() => {
+		function handleScroll() {
+			if (window.scrollY > 300) {
+				setNav({
+					width: '100vw',
+					marginTop: '70px',
+					position: 'fixed',
+				});
+			} else {
+				setNav({
+					width: '90vw',
+					marginTop: '120px',
+					position: 'absolute',
+				});
+			}
+		}
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [returnBack]);
+		if (returnBack) {
+			setNav({
+				width: '100vw',
+				marginTop: '70px',
+			});
+		} else {
+			window.addEventListener('scroll', handleScroll);
+		}
 
-  return (
-    <div>
-      <div className={HomepageStyles.centerNav}>
-        <nav id="nav" className={HomepageStyles.nav} style={nav}>
-          <Link href="/">
-            <Image
-              src="/Logo-Black.svg"
-              alt="careFinder"
-              height={60}
-              width={60}
-            />
-          </Link>
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, [returnBack]);
+
+	return (
+		<div>
+			<div className={HomepageStyles.centerNav}>
+				<nav id='nav' className={HomepageStyles.nav} style={nav}>
+					<Link href='/'>
+						<Image
+							src='/Logo-Black.svg'
+							alt='careFinder'
+							height={60}
+							width={60}
+						/>
+					</Link>
+
 
           <div>
             <ul>
@@ -116,14 +119,20 @@ function NavBar({ returnBack = false }) {
                 </Link>
               </li>
             </ul>
-            <span style={{ position: "absolute", bottom: 50, left: 20 }} onClick={() => signOut(auth)}>
+            {user ? <span style={{ position: "absolute", bottom: 50, left: 20 }} onClick={() => signOut(auth)}>
               LOGOUT
+            </span> :
+            <Link href={"/Auth"}>
+            <span style={{ position: "absolute", bottom: 50, left: 20 }}>
+              LOG IN
             </span>
+            </Link>
           </div>
         </div>
       </div>
     </div>
   );
+
 }
 
 export default NavBar;
