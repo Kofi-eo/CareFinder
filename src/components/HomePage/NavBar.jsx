@@ -87,7 +87,7 @@ function NavBar({ returnBack = false }) {
 							</li>
 
 							<li>
-								<Link href='/Explore'>Appointment</Link>
+								<Link href='/Explore'>Explore</Link>
 							</li>
 
 							{user && (

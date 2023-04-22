@@ -33,16 +33,18 @@
 
 .centerNav nav ul {
 	display: flex;
-	width: 400px;
+	width: auto;
 	justify-content: space-around;
 	align-items: center;
 	flex-direction: row;
 	font-weight: 400;
 	font-size: 15px;
+	column-gap: 20;
 }
 
 .centerNav nav li {
 	list-style: none;
+	margin-right: 30px;
 }
 
 .loginButton {
