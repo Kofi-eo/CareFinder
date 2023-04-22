@@ -37,6 +37,7 @@ const Authentication = () => {
 				if (form.password != form.confirmPassword) return;
 				await createUserWithEmailAndPassword(form.email, form.password);
 				toast.success('account created');
+				router.push('/');
 			} else {
 				await signInWithEmailAndPassword(form.email, form.password);
 				toast.success('signed in');
