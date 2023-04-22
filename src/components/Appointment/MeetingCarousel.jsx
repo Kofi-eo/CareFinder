@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Navigation, Pagination, A11y } from 'swiper';
 import PopUpModal from '@/styles/PopUpModal.module.css';
 
-function MeetingCarousel() {
+function MeetingCarousel({formUpdate}) {
 	const dateArray = [];
 
 	for (let i = 0; i < 7; i++) {
@@ -33,7 +33,7 @@ function MeetingCarousel() {
 			>
 				{dateArray.map((date, index) => (
 					<SwiperSlide key={index}>
-						<div className={PopUpModal.dateCarouselContainer}>
+						<div onClick={() => formUpdate('meetingDate', `${date.day} ${date.date} `)} className={PopUpModal.dateCarouselContainer}>
 							<div className={PopUpModal.dateCarouselItem}>
 								<h1>{date.day}</h1>
 								<p>

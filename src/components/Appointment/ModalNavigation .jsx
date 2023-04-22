@@ -8,7 +8,7 @@ import SucessModal from './SucessModal';
 function ModalNav({ setShowModal }) {
 	const [formDetails, setFormDetails] = useState({
 		appointmentType: 'In-person',
-		meetingDate: '12 March 2023',
+		meetingDate: 'Tue April 25, 2023',
 		meetingTime: '7:50AM',
 		firstName: '',
 		lastName: '',
@@ -54,6 +54,7 @@ function ModalNav({ setShowModal }) {
 			),
 		},
 	];
+	const canNext = [formDetails.firstName, formDetails.lastName, formDetails.sex].every(Boolean)
 
 	return (
 		<>
@@ -95,7 +96,33 @@ function ModalNav({ setShowModal }) {
 				{/* Next Button */}
 				{/* Rendering different buttons depending on the displayed modal components  */}
 				<div className={PopUpModalstyles.buttonContainer}>
-					{nextModal < 2 ? (
+					{nextModal == 0 ? (
+						<button
+							className={PopUpModalstyles.button}
+							onClick={() => progress()}
+						>
+							Next
+						</button>
+					) : nextModal == 1 ? (
+						<button
+							className={PopUpModalstyles.button}
+							onClick={() => progress()}
+							disabled={!canNext}
+						>
+							Next
+						</button>
+					)
+					: nextModal == 2 ? (
+						<button
+							className={PopUpModalstyles.button}
+							onClick={() => bookAppointment()}
+						>
+							Book
+						</button>
+					) : (
+						''
+					)}
+					{/* {nextModal < 2 ? (
 						<button
 							className={PopUpModalstyles.button}
 							onClick={() => progress()}
@@ -111,7 +138,7 @@ function ModalNav({ setShowModal }) {
 						</button>
 					) : (
 						''
-					)}
+					)} */}
 				</div>
 			</div>
 		</>
