@@ -14,7 +14,7 @@ import PasswordSecurity from '@/components/ProfilePage/PasswordSecurity';
 const lexend = Lexend({ subsets: ['latin'], weight: ['400', '800'] });
 const pt_sans = PT_Sans({ subsets: ['latin'], weight: ['400', '700'] });
 
-export default function Profile() {
+export default function Profile(props) {
 	const displayArray = ['editProfile', 'appointHistory', 'passwordSecurity'];
 	const [display, setDisplay] = useState('');
 
@@ -26,7 +26,7 @@ export default function Profile() {
 		if (display == '' || display == displayArray[0]) {
 			return <EditProfile />;
 		} else if (display == displayArray[1]) {
-			return <AppointmentHistory />;
+			return <AppointmentHistory history={props.appointmentHistory}/>;
 		} else {
 			return <PasswordSecurity />;
 		}

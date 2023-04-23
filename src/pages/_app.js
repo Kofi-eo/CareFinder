@@ -16,6 +16,7 @@ export default function App({ Component, pageProps }) {
 	const [signedIn, setSignedIn] = useState(false);
 	const [user, setUser] = useState(null);
 	const [loading, setLoading] = useState(true);
+	const [appointmentHistory, setAppointmentHistory] = useState([])
 
 	useEffect(() => {
 		setLoading(true);
@@ -37,7 +38,7 @@ export default function App({ Component, pageProps }) {
 				<FilterProvider>
 					<MapsContextProvider>
 						<Layout>
-							<Component {...pageProps} />
+							<Component {...pageProps} setAppointment={setAppointmentHistory} appointmentHistory={appointmentHistory} />
 						</Layout>
 					</MapsContextProvider>
 				</FilterProvider>
