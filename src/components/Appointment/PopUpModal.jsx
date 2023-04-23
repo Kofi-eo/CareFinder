@@ -2,7 +2,7 @@ import PopUpModalstyles from "@/styles/PopUpModal.module.css";
 import ModalNavigation from "./ModalNavigation ";
 import { motion } from "framer-motion";
 
-function PopUpModal({ showModal, showModal, setShowModal }) {
+function PopUpModal({ setAppointment, showModal, setShowModal }) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
