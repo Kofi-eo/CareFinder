@@ -16,7 +16,7 @@ function PatientsForm({formDetails, formUpdate}) {
       <div className={PopUpModal.patientDOF}>
         <input type="number" placeholder="Day" />
         <input type="number" placeholder="Month" />
-        <input type="number" placeholder="Year" />
+        <input type="number" placeholder="Year"  />
       </div>
       {/* Sex */}
       <div className={PopUpModal.nameLabel}>
