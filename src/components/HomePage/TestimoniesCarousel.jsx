@@ -46,10 +46,7 @@ function TestimoniesCarousel() {
 						<p>
 							I recently used CareFinder to book an appointment with a
 							specialist physician and I must say it was a great experience. The
-							platform is very user-friendly and easy to navigate. The entire
-							process was hassle-free and I would definitely recommend
-							CareFinder to anyone looking for a convenient way to book
-							appointments with specialist physicians. - Mr. Nelson Mandela
+							platform is very user-friendly and easy to navigate. - Mr. Nelson Mandela
 						</p>
 					</SwiperSlide>
 					<SwiperSlide className={HomepageStyles.testimoniesCarouselItem}>
@@ -66,10 +63,7 @@ function TestimoniesCarousel() {
 						<p>
 							I have been using CareFinder for a few months now and I am
 							thoroughly impressed with the efficiency and reliability of their
-							service. The platform is very intuitive and user-friendly. The
-							entire process is seamless and I highly recommend CareFinder to
-							anyone looking for a reliable and efficient way to book
-							appointments with specialist physicians. - Dr. Emmanuel ofre
+							service. - Dr. Emmanuel ofre
 						</p>
 					</SwiperSlide>
 					<SwiperSlide className={HomepageStyles.testimoniesCarouselItem}>
@@ -87,10 +81,7 @@ function TestimoniesCarousel() {
 							CareFinder is an excellent platform that has made booking
 							appointments with specialist physicians a breeze. The platform is
 							very user-friendly and I was able to easily browse through
-							different specialties and choose the right doctor for my needs.
-							Overall, I would highly recommend CareFinder to anyone looking for
-							a convenient and hassle-free way to book appointments with
-							specialist physicians. - Dr. Mamu Levite
+							different specialties and choose the right doctor for my needs. - Dr. Mamu Levite
 						</p>
 					</SwiperSlide>
 				</div>
