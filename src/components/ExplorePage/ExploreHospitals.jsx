@@ -27,9 +27,6 @@ export default function ExploreHospital() {
 
 	const medicalcentres = MedicalCentreData.filter((x) => {
 		return (
-			filter.area &&
-			filter.state &&
-			filter.department &&
 			x.location.includes(filter.area) &&
 			x.location.includes(filter.state) &&
 			x.departments.includes(filter.department)

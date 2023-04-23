@@ -36,13 +36,15 @@ export default function Filter() {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		setFilter({ area, state, department, date });
+		if (area && state && department) {
+			setFilter({ area, state, department, date });
+		}
 		console.table(filter);
 	};
 
 	return (
 		<div className='filter-container'>
-			<form onSubmit={handleSubmit} className='filter-form'>
+			<form id='filterForm' onSubmit={handleSubmit} className='filter-form'>
 				<input
 					type='text'
 					placeholder='Area'
