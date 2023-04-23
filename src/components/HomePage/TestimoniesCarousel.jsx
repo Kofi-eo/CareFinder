@@ -42,7 +42,7 @@ function TestimoniesCarousel() {
 								quality={100}
 							/>
 						</div>
-						<h2>“Great Experience with CareFinder!”</h2>
+						<h2>“Great Experience!”</h2>
 						<p>
 							I recently used CareFinder to book an appointment with a
 							specialist physician and I must say it was a great experience. The
@@ -59,7 +59,7 @@ function TestimoniesCarousel() {
 								quality={100}
 							/>
 						</div>
-						<h2>“Efficient and Reliable Service”</h2>
+						<h2>“Efficient and Reliable”</h2>
 						<p>
 							I have been using CareFinder for a few months now and I am
 							thoroughly impressed with the efficiency and reliability of their
