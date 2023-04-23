@@ -42,7 +42,7 @@ function TestimoniesCarousel() {
 								quality={100}
 							/>
 						</div>
-						<h2>“Great Experience!”</h2>
+						<h2>“Excellence!”</h2>
 						<p>
 							I recently used CareFinder to book an appointment with a
 							specialist physician and I must say it was a great experience. The
@@ -59,7 +59,7 @@ function TestimoniesCarousel() {
 								quality={100}
 							/>
 						</div>
-						<h2>“Efficient and Reliable”</h2>
+						<h2>“Efficient”</h2>
 						<p>
 							I have been using CareFinder for a few months now and I am
 							thoroughly impressed with the efficiency and reliability of their
@@ -76,7 +76,7 @@ function TestimoniesCarousel() {
 								quality={100}
 							/>
 						</div>
-						<h2>“Highly Recommended!”</h2>
+						<h2>“Ease”</h2>
 						<p>
 							CareFinder is an excellent platform that has made booking
 							appointments with specialist physicians a breeze. The platform is
