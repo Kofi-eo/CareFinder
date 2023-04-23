@@ -8,6 +8,7 @@ import { MapsContextProvider } from '@/Context/googleMapsContext';
 import { onAuthStateChanged } from 'firebase/auth';
 import { createContext, useContext, useEffect, useState } from 'react';
 import { auth } from '../Firebase/firebase.config';
+import { FilterProvider } from '@/Context/filterCentres';
 
 const Auth = createContext();
 
@@ -33,11 +34,13 @@ export default function App({ Component, pageProps }) {
 			value={{ user, signedIn, loading, setSignedIn, setUser, setLoading }}
 		>
 			<LocalizationProvider dateAdapter={AdapterDayjs}>
-				<MapsContextProvider>
-					<Layout>
-						<Component {...pageProps} />
-					</Layout>
-				</MapsContextProvider>
+				<FilterProvider>
+					<MapsContextProvider>
+						<Layout>
+							<Component {...pageProps} />
+						</Layout>
+					</MapsContextProvider>
+				</FilterProvider>
 			</LocalizationProvider>
 		</Auth.Provider>
 	);

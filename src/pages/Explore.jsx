@@ -5,12 +5,6 @@ import Filter from '@/components/ExplorePage/Filter';
 import ExploreStyles from '@/styles/ExplorePage.module.css';
 import ExploreMaps from '@/components/ExplorePage/ExploreMaps';
 import ExploreHospital from '@/components/ExplorePage/ExploreHospitals';
-// import { Wrapper, Status } from "@googlemaps/react-wrapper"
-
-// const render = (status) => {
-//     if (status === Status.FAILURE) return <h3 style={{color: 'red'}}>An Error Occured</h3>;
-//     return <h1>Loading...</h1>;
-//   };
 
 export default function Explore() {
 	return (
