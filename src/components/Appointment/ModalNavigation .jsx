@@ -5,7 +5,7 @@ import Details from './Details';
 import Book from './Book';
 import SucessModal from './SucessModal';
 
-function ModalNav({ setShowModal }) {
+function ModalNav({ setShowModal, setAppointment }) {
 	const [formDetails, setFormDetails] = useState({
 		appointmentType: 'In-person',
 		meetingDate: 'Tue April 25, 2023',
@@ -38,6 +38,7 @@ function ModalNav({ setShowModal }) {
 
 	function bookAppointment() {
 		// add bookinng function here
+		setAppointment(prevState => [...prevState, {...formDetails}])
 		setNextModal(nextModal + 1);
 	}
 
