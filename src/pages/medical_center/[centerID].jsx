@@ -9,7 +9,7 @@ import PopUpModal from '@/components/Appointment/PopUpModal';
 import { MedicalCentreData } from '@/data/medicalCentres';
 import { useRouter } from 'next/router';
 
-export default function MedicalCentre() {
+export default function MedicalCentre({setAppointment}) {
 	// Testing modal with nav component
 	const [showModal, setShowModal] = useState(false);
 	const route = useRouter();
@@ -40,7 +40,7 @@ export default function MedicalCentre() {
 			</Head>
 
 			{showModal ? (
-				<PopUpModal showModal={showModal} setShowModal={setShowModal} />
+				<PopUpModal setAppointment={setAppointment} showModal={showModal} setShowModal={setShowModal} />
 			) : (
 				''
 			)}

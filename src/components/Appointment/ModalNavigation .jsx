@@ -1,5 +1,5 @@
 import PopUpModalstyles from '@/styles/PopUpModal.module.css';
-import useRouter from "next/router";
+import { useRouter } from "next/router";
 import { useState } from 'react';
 import toast, { Toaster } from "react-hot-toast";
 import useAuth from "../../pages/_app";

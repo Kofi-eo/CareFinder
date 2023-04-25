@@ -7,6 +7,7 @@ import { MapsContextProvider } from '@/Context/googleMapsContext';
 import { onAuthStateChanged } from 'firebase/auth';
 import { createContext, useContext, useEffect, useState } from 'react';
 import { auth } from '../Firebase/firebase.config';
+import { FilterProvider } from '@/Context/filterCentres';
 
 const Auth = createContext();
 
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }) {
 	const [signedIn, setSignedIn] = useState(false);
 	const [user, setUser] = useState(null);
 	const [loading, setLoading] = useState(true);
+	const [appointmentHistory, setAppointmentHistory] = useState([])
 
 	useEffect(() => {
 		setLoading(true);
@@ -32,11 +34,13 @@ export default function App({ Component, pageProps }) {
 			value={{ user, signedIn, loading, setSignedIn, setUser, setLoading }}
 		>
 			<LocalizationProvider dateAdapter={AdapterDayjs}>
-				<MapsContextProvider>
-					<Layout>
-						<Component {...pageProps} />
-					</Layout>
-				</MapsContextProvider>
+				<FilterProvider>
+					<MapsContextProvider>
+						<Layout>
+							<Component {...pageProps} setAppointment={setAppointmentHistory} appointmentHistory={appointmentHistory} />
+						</Layout>
+					</MapsContextProvider>
+				</FilterProvider>
 			</LocalizationProvider>
 		</Auth.Provider>
 	);

@@ -212,7 +212,7 @@ export const MedicalCentreData = [
 		id: 'mc0020',
 		image: '/Pharmacy1.webp',
 		hospital: 'A to Z Pharmacy',
-		location: '6, behind Keystone Bank, Abuja, Nigeria',
+		location: '6 behind Keystone Bank, Abuja, Nigeria',
 		distance: '3.9km',
 		specialists: 25,
 		type: 'pharmacy',

@@ -21,8 +21,9 @@ function HospitalsCarousel() {
 		}
 
 		window.addEventListener('resize', handleResize);
+
 		if (windowWidth <= 500) {
-			setSlides(1);
+			setSlides(1.1);
 		} else if (windowWidth <= 700) {
 			setSlides(1.5);
 		} else if (windowWidth <= 900) {
