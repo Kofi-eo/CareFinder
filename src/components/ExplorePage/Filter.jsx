@@ -1,8 +1,3 @@
-import ExploreStyles from '@/styles/ExplorePage.module.css';
-
-import { GoSearch } from 'react-icons/go';
-import { RiArrowDownSLine } from 'react-icons/ri';
-import { GoCalendar } from 'react-icons/go';
 
 export default function Filter() {
 	const xfilter = () => {

@@ -1,5 +1,4 @@
 import HomepageStyles from '@/styles/HomePage.module.css';
-import SearchBox from './SearchBox';
 
 function Header() {
 	return (

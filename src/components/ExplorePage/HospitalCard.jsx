@@ -1,8 +1,7 @@
-import { Lexend } from 'next/font/google';
-import { PT_Sans } from 'next/font/google';
 import ExploreStyles from '@/styles/ExplorePage.module.css';
-import { useRouter } from 'next/router';
+import { Lexend, PT_Sans } from 'next/font/google';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const lexend = Lexend({ subsets: ['latin'], weight: ['400', '800'] });
 const pt_sans = PT_Sans({ subsets: ['latin'], weight: ['400', '700'] });

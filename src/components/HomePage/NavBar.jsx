@@ -1,52 +1,44 @@
-import HomepageStyles from '@/styles/HomePage.module.css';
-
-import { signOut } from 'firebase/auth';
-
-import Image from 'next/image';
-
-import Link from 'next/link';
-
-import { useEffect, useState } from 'react';
-
-import { IoClose } from 'react-icons/io5';
-
-import { RiMenu4Fill } from 'react-icons/ri';
-
-import { auth } from '../../Firebase/firebase.config';
-
-import { useAuth } from '../../pages/_app';
+import HomepageStyles from "@/styles/HomePage.module.css";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { IoClose } from "react-icons/io5";
+import { RiMenu4Fill } from "react-icons/ri";
+import { auth } from "../../Firebase/firebase.config";
+import { useAuth } from "../../pages/_app";
 
 function NavBar({ returnBack = false }) {
-	const { user } = useAuth();
-
+	const { user, signedIn } = useAuth();
 	const [nav, setNav] = useState({
-		width: '90vw',
-
-		marginTop: '120px',
-
-		position: 'absolute',
+		width: "90vw",
+		marginTop: "120px",
+		position: "absolute",
 	});
 
-	const [mobnav, setMobnav] = useState(false);
 
+	const [mobnav, setMobnav] = useState(false);
 	const showMobile = () => setMobnav(!mobnav);
+
+
+	const signOut = async () => {
+		await auth.signOut();
+		toast.success('signed out');
+		router.push("/");
+	};
+
 
 	useEffect(() => {
 		function handleScroll() {
 			if (window.scrollY > 300) {
 				setNav({
 					width: '100vw',
-
 					marginTop: '70px',
-
 					position: 'fixed',
 				});
 			} else {
 				setNav({
 					width: '90vw',
-
 					marginTop: '120px',
-
 					position: 'absolute',
 				});
 			}
@@ -55,7 +47,6 @@ function NavBar({ returnBack = false }) {
 		if (returnBack) {
 			setNav({
 				width: '100vw',
-
 				marginTop: '70px',
 			});
 		} else {
@@ -83,93 +74,74 @@ function NavBar({ returnBack = false }) {
 					<div>
 						<ul>
 							<li>
-								<Link href='/'>Home</Link>
+								<Link href="/">Home</Link>
 							</li>
-
 							<li>
-								<Link href='/Explore'>Explore</Link>
+								<Link href="/Explore">Appointment</Link>
 							</li>
 
-							{user && (
-								<li>
-									<Link href='/profile'>Profile</Link>
-								</li>
-							)}
+							{user && <li>
+								<Link href="/profile">Profile</Link>
+							</li>}
 
-							{!user ? (
-								<li className={HomepageStyles.loginButton}>
-									<Link href='/Auth'>Login/SignUp</Link>
-								</li>
-							) : (
-								<li
-									className={HomepageStyles.loginButton}
-									onClick={() => signOut(auth)}
-								>
-									Logout
-								</li>
-							)}
+							{!signedIn ?
+								(<li className={HomepageStyles.loginButton}>
+									<Link href="/Auth">Login/SignUp</Link>
+								</li>)
+								: (<li className={HomepageStyles.loginButton} onClick={signOut}>Logout</li>
+								)}
+
 						</ul>
-
 						<button className={HomepageStyles.navButton} onClick={showMobile}>
 							<RiMenu4Fill />
 						</button>
 					</div>
 				</nav>
 
-				<div className={mobnav ? 'navMobile active' : 'navMobile'}>
-					<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+				<div className={mobnav ? "navMobile active" : "navMobile"}>
+					<div style={{ display: "flex", justifyContent: "space-between" }}>
 						<Image
-							src={'/Logo-White.svg'}
+							src={"/Logo-white.svg"}
 							width={150}
 							height={30}
-							alt='careFinder'
+							alt="careFinder"
 						/>
-
 						<button onClick={showMobile}>
-							<IoClose size={30} color='white' />
+							<IoClose size={30} color="white" />
 						</button>
 					</div>
-
-					<div className='navMobileMenu'>
-						<ul style={{ gap: 20, textDecoration: 'none' }}>
+					<div className="navMobileMenu">
+						<ul style={{ gap: 20, textDecoration: "none" }}>
 							<li>
-								<Link href={'/'}>
+								<Link href={"/"}>
 									<span onClick={showMobile}>HOME</span>
 								</Link>
 							</li>
-
 							<li onClick={showMobile}>
-								<Link href={'/Explore'}>
+								<Link href={"/Explore"}>
 									<span onClick={showMobile}>EXPLORE</span>
 								</Link>
 							</li>
-
-							{user && (
-								<li onClick={showMobile}>
-									<Link href={'/profile'}>
-										<span onClick={showMobile}>PROFILE</span>
-									</Link>
-								</li>
-							)}
+							{signedIn && <li onClick={showMobile}>
+								<Link href={"/profile"}>
+									<span onClick={showMobile}>PROFILE</span>
+								</Link>
+							</li>}
 						</ul>
-
-						{user ? (
-							<span
-								style={{ position: 'absolute', bottom: 50, left: 20 }}
-								onClick={() => signOut(auth)}
-							>
+						{signedIn ?
+							(<span style={{ position: "absolute", bottom: 50, left: 20 }} onClick={signOut}>
 								LOGOUT
-							</span>
-						) : (
-							<span style={{ position: 'absolute', bottom: 50, left: 20 }}>
-								<Link href={'/Auth'}>LOG IN</Link>
-							</span>
-						)}
+							</span>) :
+							(<span style={{ position: "absolute", bottom: 50, left: 20 }}>
+								<Link href={"/Auth"}>LOG IN</Link>
+							</span>)
+						}
 					</div>
 				</div>
 			</div>
 		</div>
 	);
+
 }
 
 export default NavBar;

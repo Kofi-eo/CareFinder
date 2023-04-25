@@ -1,9 +1,7 @@
 import HomepageStyles from "@/styles/HomePage.module.css";
-import SwiperCore, { Autoplay } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
-import { delay } from "framer-motion";
 import Image from "next/image";
+import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 SwiperCore.use([Autoplay]);
 
 function TestimoniesCarousel() {
@@ -24,11 +22,7 @@ function TestimoniesCarousel() {
         spaceBetween={30}
         // grabCursor={true}
         wrapperClass={HomepageStyles.testimoniesCarousel}
-        // navigation={{
-        // 	nextEl: '.image3-swiper-button-next',
-        // 	prevEl: '.image-swiper-button-prev',
-        // 	disabledClass: 'swiper-button-disabled',
-        // }}
+
         className={HomepageStyles.swipers}
       >
         <div className={HomepageStyles.hospitalsCarousel}>

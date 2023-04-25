@@ -1,13 +1,13 @@
 import PopUpModal from "@/styles/PopUpModal.module.css";
 
-function PatientsForm({formDetails, formUpdate}) {
+function PatientsForm({ formDetails, formUpdate }) {
   return (
     <form className={PopUpModal.form}>
       {/* Name */}
       <label className={PopUpModal.nameLabel}>Name</label>
       <div className={PopUpModal.patientName}>
-        <input type="text" placeholder="First Name" value={formDetails.firstName} onChange={(e) => formUpdate('firstName',e.target.value)}/>
-        <input type="text" placeholder="Last Name" value={formDetails.lastName} onChange={(e) => formUpdate('lastName',e.target.value)}/>
+        <input type="text" placeholder="First Name" value={formDetails.firstName} onChange={(e) => formUpdate('firstName', e.target.value)} />
+        <input type="text" placeholder="Last Name" value={formDetails.lastName} onChange={(e) => formUpdate('lastName', e.target.value)} />
       </div>
       {/* Date of birth */}
       <div className={PopUpModal.nameLabel}>

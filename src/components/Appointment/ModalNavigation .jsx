@@ -1,11 +1,16 @@
 import PopUpModalstyles from '@/styles/PopUpModal.module.css';
+import useRouter from "next/router";
 import { useState } from 'react';
+import toast, { Toaster } from "react-hot-toast";
+import useAuth from "../../pages/_app";
 import Appointment from './Appointment';
-import Details from './Details';
 import Book from './Book';
+import Details from './Details';
 import SucessModal from './SucessModal';
 
 function ModalNav({ setShowModal }) {
+	const { signedIn } = useAuth();
+	const router = useRouter();
 	const [formDetails, setFormDetails] = useState({
 		appointmentType: 'In-person',
 		meetingDate: 'Tue April 25, 2023',
@@ -38,26 +43,25 @@ function ModalNav({ setShowModal }) {
 
 	function bookAppointment() {
 		// add bookinng function here
+		if (!signedIn) {
+			toast.success('sign in required');
+			router.push('/Auth');
+		}
 		setNextModal(nextModal + 1);
 	}
 
 	// Modal contents Array
 	const modalContents = [
-		{
-			modal: <Appointment formDetails={formDetails} formUpdate={formUpdate} />,
-		},
+		{ modal: <Appointment formDetails={formDetails} formUpdate={formUpdate} /> },
 		{ modal: <Details formDetails={formDetails} formUpdate={formUpdate} /> },
 		{ modal: <Book formDetails={formDetails} formUpdate={formUpdate} /> },
-		{
-			modal: (
-				<SucessModal formDetails={formDetails} setShowModal={setShowModal} />
-			),
-		},
+		{ modal: <SucessModal formDetails={formDetails} setShowModal={setShowModal} /> },
 	];
-	const canNext = [formDetails.firstName, formDetails.lastName, formDetails.sex].every(Boolean)
+	const canNext = [formDetails.firstName, formDetails.lastName, formDetails.sex].every(Boolean);
 
 	return (
 		<>
+			<Toaster />
 			<div className={PopUpModalstyles.modalNav}>
 				{/* Close Button */}
 				<div
@@ -112,33 +116,17 @@ function ModalNav({ setShowModal }) {
 							Next
 						</button>
 					)
-					: nextModal == 2 ? (
-						<button
-							className={PopUpModalstyles.button}
-							onClick={() => bookAppointment()}
-						>
-							Book
-						</button>
-					) : (
-						''
-					)}
-					{/* {nextModal < 2 ? (
-						<button
-							className={PopUpModalstyles.button}
-							onClick={() => progress()}
-						>
-							Next
-						</button>
-					) : nextModal < 3 ? (
-						<button
-							className={PopUpModalstyles.button}
-							onClick={() => bookAppointment()}
-						>
-							Book
-						</button>
-					) : (
-						''
-					)} */}
+						: nextModal == 2 ? (
+							<button
+								className={PopUpModalstyles.button}
+								onClick={() => bookAppointment()}
+							>
+								Book
+							</button>
+						) : (
+							''
+						)}
+
 				</div>
 			</div>
 		</>

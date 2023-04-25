@@ -1,17 +1,17 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Navigation, Pagination, A11y } from 'swiper';
 import PopUpModal from '@/styles/PopUpModal.module.css';
+import { Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 function MeetingDateCarousel({ formUpdate }) {
 	const timeArray = [];
 	const start = 7 * 60;
 	const end = 11.25 * 60;
 	const interval = 15;
-
+	ó;
 	for (let i = start; i < end; i += interval) {
 		const time = `${Math.floor(i / 60)}:${(i % 60)
 			.toString()
-			.padStart(2, '0')}`;
+			.padStart(2, '0')}`; ó;
 		timeArray.push({ value: time });
 	}
 
