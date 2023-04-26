@@ -6,12 +6,12 @@ function MapsContextProvider({children}) {
     const [coordinates,setCoordinates] = useState({lat:'', lng: ''})
     const [errorPharm, setErrorPharm] = useState(false)
     const [errorHosp, setErrorHosp] = useState(false)
-    const [nearByHosp, setNearByHosp] = useState([])
+    const [nearByHosp, setNearByHosp] = useState([]) // state to store nearbyHospital data
     const [geoError, setGeoError]  = useState({status: false, message: ''})
     const [userCoordinates,setUserCoordinates] = useState({lat:'', lng: ''})
-
-    const [nearByPharm, setNearByPharm] = useState([])
-
+    const [nearByPharm, setNearByPharm] = useState([]) // state to store nearbyHospital data
+    
+    // function to get Nearby Hospitals based on user location
     async function getHospitalsNearBy(lat, log) {
         console.log('getting Hospitals')
         try {
@@ -27,7 +27,7 @@ function MapsContextProvider({children}) {
         }
     
       }
-
+    // function to get Nearby Pharmacies based on user location
       async function getPharmaciesNearBy(lat, log) {
         console.log('getting Pharmacies')
         try {
