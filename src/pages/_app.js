@@ -1,4 +1,4 @@
-import { FilterProvider } from "@/Context/filterCentres";
+import { FilterProvider } from "@/Context/filterContext";
 import { MapsContextProvider } from "@/Context/googleMapsContext";
 import Layout from "@/components/Layout";
 import "@/styles/globals.css";

@@ -16,6 +16,7 @@ export default function PasswordSecurity() {
     const handleReset = async (e) => {
         e.preventDefault();
         try {
+            // send password reset email
             await sendPasswordResetEmail(email);
             toast.success('reset password email sent, please check your inbox');
         } catch (error) {

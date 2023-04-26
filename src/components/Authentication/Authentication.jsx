@@ -28,17 +28,21 @@ const Authentication = () => {
 	const [signInWithGoogle] = useSignInWithGoogle(auth);
 	const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
-	// console.log(user);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
+			//check if new user
 			if (form.isNewUser) {
+				//check if passwords match
 				if (form.password != form.confirmPassword) return;
+				//call create user fxn
 				await createUserWithEmailAndPassword(form.email, form.password);
 				toast.success('account created');
 				router.push('/');
+
 			} else {
+				//call sign in fxn
 				await signInWithEmailAndPassword(form.email, form.password);
 				toast.success('signed in');
 				router.push('/');
@@ -46,6 +50,7 @@ const Authentication = () => {
 		} catch (error) {
 			toast.error('something went wrong');
 		} finally {
+			//reset form state
 			setForm((prev) => ({
 				...prev,
 				email: '',
@@ -67,6 +72,7 @@ const Authentication = () => {
 	const googleSignIn = async (e) => {
 		e.preventDefault();
 		try {
+			//call google sign in fxn
 			await signInWithGoogle();
 			toast.success('signed in');
 			router.push('/');
@@ -78,6 +84,7 @@ const Authentication = () => {
 	const sendResetPassword = async (e) => {
 		e.preventDefault();
 		try {
+			//call send password reset email fxn
 			await sendPasswordResetEmail(form.email);
 			toast.success('reset password email sent please check your inbox');
 			setForm((prev) => ({

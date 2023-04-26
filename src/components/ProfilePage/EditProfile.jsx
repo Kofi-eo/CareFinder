@@ -93,12 +93,14 @@ export default function EditProfile() {
 
 
         } else {
+            // if user is not signed in then redirect to the sign in page
             toast('sign in required');
             router.push('/Auth');
         }
     };
 
     const onChange = (event) => {
+        // set the form state to the value of the input
         setForm((prev) => ({
             ...prev,
             [event.target.name]: event.target.value,
