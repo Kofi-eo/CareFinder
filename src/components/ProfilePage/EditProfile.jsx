@@ -33,7 +33,7 @@ export default function EditProfile() {
     useEffect(() => {
         const fetchProfile = async () => {
             if (user?.email || signedIn) {
-                // if user is signed in check if the user profile exists then setForm
+                // if user is signed in check if the user profile exists 
                 const userProfile = collection(firestore,
                     "Profiles",
                     user?.email,
@@ -41,7 +41,7 @@ export default function EditProfile() {
                 const q = query(userProfile);
                 const docSnap = await getDocs(q);
                 const profile = docSnap?.docs[0]?.data();
-
+                //if the profile exists then disable the button and fill in the details
                 if (!docSnap.empty) {
                     setDisabled(true);
                     setForm(profile);
@@ -264,15 +264,11 @@ export default function EditProfile() {
                             onChange={onChange} />
                     </div>
 
-                    {disabled ? <input
+                    <input
                         value='edit profile'
-                        disabled
+                        disabled={disabled}
                         className={Styles.button}
-                    /> : <input
-                        value='save'
-                        type='submit'
-                        className={Styles.button}
-                    />}
+                    />
                 </section>
             </form>
         </>

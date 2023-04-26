@@ -3,7 +3,8 @@ import { PT_Sans } from "next/font/google";
 const pt_sans = PT_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function AppointmentHistory({ history }) {
-    console.log(history);
+
+    // conditionally render appointmentHistory Data
     const display = history.length <= 0 ?
         <p>You currently have no appointments</p> :
         history.map(({ meetingTime, meetingDate, sex, firstName, lastName, appointmentType }, i) => (

@@ -12,6 +12,7 @@ export default function PasswordSecurity() {
     const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
     const [email, setEmail] = useState('');
 
+    // handle password reset
     const handleReset = async (e) => {
         e.preventDefault();
         try {

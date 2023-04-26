@@ -1,9 +1,8 @@
-import DoctorsCard from './DoctorsCard';
-import Styles from '@/styles/MedicalCenter.module.css';
-import { Lexend } from 'next/font/google';
-import { PT_Sans } from 'next/font/google';
 import { SpecialistData } from '@/data/specialistsData';
+import Styles from '@/styles/MedicalCenter.module.css';
+import { Lexend, PT_Sans } from 'next/font/google';
 import { useState } from 'react';
+import DoctorsCard from './DoctorsCard';
 
 const lexend = Lexend({ subsets: ['latin'], weight: ['400', '800'] });
 const pt_sans = PT_Sans({ subsets: ['latin'], weight: ['400', '700'] });
@@ -11,14 +10,7 @@ const pt_sans = PT_Sans({ subsets: ['latin'], weight: ['400', '700'] });
 export default function HospitalDoctors({ data, showModal, setShowModal }) {
 	const {
 		id,
-		image,
-		hospital,
-		location,
-		distance,
-		specialists,
-		type,
-		departments,
-		phoneNumber,
+		departments
 	} = data || {};
 
 	const specialistData = SpecialistData.filter(

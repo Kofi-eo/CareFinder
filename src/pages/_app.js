@@ -1,9 +1,10 @@
+import { FilterProvider } from "@/Context/filterCentres";
+import { MapsContextProvider } from "@/Context/googleMapsContext";
 import Layout from "@/components/Layout";
 import "@/styles/globals.css";
 import "@/styles/style.css";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { MapsContextProvider } from "@/Context/googleMapsContext";
 import { onAuthStateChanged } from "firebase/auth";
 import {
   createContext,
@@ -12,7 +13,6 @@ import {
   useState,
 } from "react";
 import { auth } from "../Firebase/firebase.config";
-import { FilterProvider } from "@/Context/filterCentres";
 
 const Auth = createContext();
 

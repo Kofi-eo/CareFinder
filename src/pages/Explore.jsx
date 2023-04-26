@@ -4,6 +4,7 @@ import Filter from '@/components/ExplorePage/Filter';
 import Footer from '@/components/HomePage/Footer';
 import NavBar from '@/components/HomePage/NavBar';
 import ExploreStyles from '@/styles/ExplorePage.module.css';
+import Head from "next/head";
 
 export default function Explore() {
 	return (
@@ -23,7 +24,6 @@ export default function Explore() {
 				<div className={ExploreStyles.hospitalmap_container}>
 					<ExploreHospital />
 					<ExploreMaps />
-
 				</div>
 			</div>
 			<Footer />

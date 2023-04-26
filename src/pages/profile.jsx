@@ -12,13 +12,17 @@ const lexend = Lexend({ subsets: ['latin'], weight: ['400', '800'] });
 const pt_sans = PT_Sans({ subsets: ['latin'], weight: ['400', '700'] });
 
 export default function Profile(props) {
+	// Name of sections/components that can be viewed on this page.
 	const displayArray = ['editProfile', 'appointHistory', 'passwordSecurity'];
-	const [display, setDisplay] = useState('');
+	// store section/component currently in view
+	const [display, setDisplay] = useState(''); 
 
+	// switch sections/components
 	function switchDisplay(newSection) {
 		setDisplay(newSection);
 	}
 
+	// decide which section/component will be visible to a user 
 	function displayWhat() {
 		if (display == '' || display == displayArray[0]) {
 			return <EditProfile />;
