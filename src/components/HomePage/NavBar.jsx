@@ -8,13 +8,12 @@ import { auth } from "../../Firebase/firebase.config";
 import { useAuth } from "../../pages/_app";
 
 function NavBar({ returnBack = false }) {
-	const { user, signedIn } = useAuth();
+	const { signedIn } = useAuth();
 	const [nav, setNav] = useState({
 		width: "90vw",
 		marginTop: "120px",
 		position: "absolute",
 	});
-
 
 	const [mobnav, setMobnav] = useState(false);
 	const showMobile = () => setMobnav(!mobnav);
@@ -80,17 +79,14 @@ function NavBar({ returnBack = false }) {
 								<Link href="/Explore">Appointment</Link>
 							</li>
 
-							{user && <li>
+							{signedIn && <li>
 								<Link href="/profile">Profile</Link>
 							</li>}
 
-							{!signedIn ?
-								(<li className={HomepageStyles.loginButton}>
-									<Link href="/Auth">Login/SignUp</Link>
-								</li>)
-								: (<li className={HomepageStyles.loginButton} onClick={signOut}>Logout</li>
-								)}
-
+							{!signedIn ? (<Link href="/Auth">
+								<li className={HomepageStyles.loginButton}>Login/SignUp</li>
+							</Link>) : (<li className={HomepageStyles.loginButton} onClick={signOut}>Logout</li>
+							)}
 						</ul>
 						<button className={HomepageStyles.navButton} onClick={showMobile}>
 							<RiMenu4Fill />
@@ -135,6 +131,7 @@ function NavBar({ returnBack = false }) {
 							(<span style={{ position: "absolute", bottom: 50, left: 20 }}>
 								<Link href={"/Auth"}>LOG IN</Link>
 							</span>)
+
 						}
 					</div>
 				</div>
@@ -145,3 +142,4 @@ function NavBar({ returnBack = false }) {
 }
 
 export default NavBar;
+
