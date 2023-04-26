@@ -13,6 +13,7 @@ export default function PasswordSecurity() {
     const [confirmPassword, setConfirmPassword] = useState('')
     const [error, setError] = useState({display: false, message: ''})
 
+    // handle password reset.
     function handleReset() {
         if (confirmPassword !== newPassword) {
             setError({display: true, message: 'new passwords dont match'})

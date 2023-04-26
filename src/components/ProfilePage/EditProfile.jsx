@@ -23,6 +23,7 @@ export default function EditProfile() {
         additionalInfo: ''
     }) 
 
+    // update form Details
     function updateState(e, key) {
         setFormDetails(prevState => ({...prevState, [key]: e.target.value}))
     }

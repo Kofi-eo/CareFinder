@@ -52,7 +52,8 @@ function NavBar({ returnBack = false }) {
 			}
 		}
 
-		if (returnBack) {
+
+		if (returnBack) { // To return Navbar back to full width on page mount
 			setNav({
 				width: '100vw',
 

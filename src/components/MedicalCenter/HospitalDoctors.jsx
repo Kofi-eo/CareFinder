@@ -11,14 +11,7 @@ const pt_sans = PT_Sans({ subsets: ['latin'], weight: ['400', '700'] });
 export default function HospitalDoctors({ data, showModal, setShowModal }) {
 	const {
 		id,
-		image,
-		hospital,
-		location,
-		distance,
-		specialists,
-		type,
-		departments,
-		phoneNumber,
+		departments
 	} = data || {};
 
 	const specialistData = SpecialistData.filter(

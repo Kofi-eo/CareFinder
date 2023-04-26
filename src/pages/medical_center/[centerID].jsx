@@ -9,13 +9,14 @@ import PopUpModal from '@/components/Appointment/PopUpModal';
 import { MedicalCentreData } from '@/data/medicalCentres';
 import { useRouter } from 'next/router';
 
+// Note: This is a Dynamic Page/Route
 export default function MedicalCentre({setAppointment}) {
-	// Testing modal with nav component
-	const [showModal, setShowModal] = useState(false);
+
+	const [showModal, setShowModal] = useState(false); // for popup Appointment Modal
 	const route = useRouter();
 	const centerID = route.query.centerID;
 
-	const currentData = MedicalCentreData.filter((item) => item.id === centerID);
+	const currentData = MedicalCentreData.filter((item) => item.id === centerID); // getting current Hospital/pharmacy data
 
 	useEffect(() => {
 		if (showModal) {
@@ -27,6 +28,7 @@ export default function MedicalCentre({setAppointment}) {
 		}
 		console.log(showModal);
 	}, [showModal]);
+
 	return (
 		<>
 			<Head>
