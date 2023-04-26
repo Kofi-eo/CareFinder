@@ -7,7 +7,7 @@ import { departmentsData } from '@/data/departmentsData';
 import { StateData } from '@/data/locationData';
 
 import { useContext, useState } from 'react';
-import { filterContext } from '@/Context/filterCentres';
+import { filterContext } from '@/Context/filterContext';
 import { MedicalCentreData } from '@/data/medicalCentres';
 
 export default function Filter() {
