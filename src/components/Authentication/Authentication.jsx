@@ -28,7 +28,6 @@ const Authentication = () => {
 	const [signInWithGoogle] = useSignInWithGoogle(auth);
 	const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
-
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
@@ -40,7 +39,6 @@ const Authentication = () => {
 				await createUserWithEmailAndPassword(form.email, form.password);
 				toast.success('account created');
 				router.push('/');
-
 			} else {
 				//call sign in fxn
 				await signInWithEmailAndPassword(form.email, form.password);

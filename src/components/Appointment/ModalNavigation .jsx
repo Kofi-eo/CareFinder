@@ -1,8 +1,8 @@
 import PopUpModalstyles from '@/styles/PopUpModal.module.css';
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 import { useState } from 'react';
-import toast, { Toaster } from "react-hot-toast";
-import useAuth from "../../pages/_app";
+import toast, { Toaster } from 'react-hot-toast';
+import useAuth from '../../pages/_app';
 import Appointment from './Appointment';
 import Book from './Book';
 import Details from './Details';
@@ -18,6 +18,7 @@ function ModalNav({ setShowModal }) {
 		firstName: '',
 		lastName: '',
 		sex: '',
+		doctorsName: doctorsName,
 	});
 
 	function formUpdate(key, newvalue) {
@@ -52,12 +53,22 @@ function ModalNav({ setShowModal }) {
 
 	// Modal contents Array
 	const modalContents = [
-		{ modal: <Appointment formDetails={formDetails} formUpdate={formUpdate} /> },
+		{
+			modal: <Appointment formDetails={formDetails} formUpdate={formUpdate} />,
+		},
 		{ modal: <Details formDetails={formDetails} formUpdate={formUpdate} /> },
 		{ modal: <Book formDetails={formDetails} formUpdate={formUpdate} /> },
-		{ modal: <SucessModal formDetails={formDetails} setShowModal={setShowModal} /> },
+		{
+			modal: (
+				<SucessModal formDetails={formDetails} setShowModal={setShowModal} />
+			),
+		},
 	];
-	const canNext = [formDetails.firstName, formDetails.lastName, formDetails.sex].every(Boolean);
+	const canNext = [
+		formDetails.firstName,
+		formDetails.lastName,
+		formDetails.sex,
+	].every(Boolean);
 
 	return (
 		<>
@@ -115,18 +126,16 @@ function ModalNav({ setShowModal }) {
 						>
 							Next
 						</button>
-					)
-						: nextModal == 2 ? (
-							<button
-								className={PopUpModalstyles.button}
-								onClick={() => bookAppointment()}
-							>
-								Book
-							</button>
-						) : (
-							''
-						)}
-
+					) : nextModal == 2 ? (
+						<button
+							className={PopUpModalstyles.button}
+							onClick={() => bookAppointment()}
+						>
+							Book
+						</button>
+					) : (
+						''
+					)}
 				</div>
 			</div>
 		</>
