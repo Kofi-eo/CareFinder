@@ -52,17 +52,11 @@ export default function DoctorsCard({
 			<p className={pt_sans.className}>Wed, 12 March(7:15AM)</p>
 
 			{user ? (
-				<button
-					style={{ cursor: 'pointer' }}
-					onClick={() => (setShowModal(true), setDoctorsName(name))}
-				>
+				<button style={{ cursor: 'pointer' }} onClick={displayModal}>
 					Book Appointment
 				</button>
 			) : (
-				<button
-					style={{ cursor: 'pointer' }}
-					onClick={() => setDisplayError(true)}
-				>
+				<button style={{ cursor: 'pointer' }} onClick={displayModal}>
 					Book Appointment
 				</button>
 			)}
