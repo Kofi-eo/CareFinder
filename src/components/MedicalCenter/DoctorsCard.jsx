@@ -45,7 +45,10 @@ export default function DoctorsCard({
 			{user ? (
 				<button
 					style={{ cursor: 'pointer' }}
-					onClick={() => (setShowModal(true), setDoctorsName(name))}
+					onClick={() => {
+						setShowModal(true);
+						setDoctorsName(name);
+					}}
 				>
 					Book Appointment
 				</button>
