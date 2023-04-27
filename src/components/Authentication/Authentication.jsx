@@ -32,7 +32,7 @@ const Authentication = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		try {
+		try {	
 			if (form.isNewUser) {
 				if (form.password != form.confirmPassword) return;
 				await createUserWithEmailAndPassword(form.email, form.password);

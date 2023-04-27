@@ -2,6 +2,67 @@
 	padding-top: 70px;
 }
 
+
+/* Styling Error Modal */
+.error_modal {
+	border: 1px solid green;
+	position: fixed;
+	display: flex;
+	/* align-items: center;
+	justify-content: center; */
+	flex-direction: column;
+	bottom: 40%;
+	left: 40%;
+	background-color: white;
+	/* padding: 1em; */
+	z-index: 9;
+}
+
+.error_modal > svg {
+	fill: #14df96;
+	height: 40px;
+	width: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0.5em;
+	margin-top: 0.3em;
+}
+
+.error_modal > p {
+	padding-left: 1em;
+	padding-right: 1em;
+	font-family: "PT sans",sans-serif;
+	font-weight: 400;
+}
+.error_modal > p > a {
+	color: green;
+}
+.error_modal > button {
+	margin-top: 0.8em;
+	width: 100%;
+	background-color: #14df96;
+	border: none;
+	color: white;
+	padding: 0.5em;
+}
+@media (max-width: 720px) {
+	.error_modal {
+		bottom: 40%;
+		left: 8%;
+		right: 8%;
+	}
+}
+
+@media (max-width: 420px) {
+	.error_modal {
+		bottom: 38%;
+		left: 6%;
+		right: 6%;
+	}
+	
+}
+/* END Stying Error Nav */
+
 .grid_container {
 	display: grid;
 	grid-template-columns: auto auto;
@@ -51,6 +112,7 @@
 /* hospital doctors section */
 .hospital_doctors {
 	margin-left: 30vw;
+	position: relative;
 }
 
 .filter_bar {
@@ -125,7 +187,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	/* background-color: rgba(0, 0, 0, 0.5); */
+	/* background-color: rgba(0; 0; 0; 0.5); */
 	border-radius: 6px;
 	backdrop-filter: blur(2px);
 }

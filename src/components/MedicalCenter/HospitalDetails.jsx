@@ -9,6 +9,7 @@ export default function HospitalDetails({ data }) {
 	const hospText = useRef(0);
 	const [mobileView, setMobileView] = useState(false);
 
+	// handle show more and show less text option on mobile view
 	function handleShowMore(backNormal = false) {
 		if (backNormal) {
 			hospText.current.style = 'unset';

@@ -3,30 +3,58 @@
 
 /* Styling appointment Details Receipt */
 .receipt {
-	position: absolute;
+	position: fixed;
 	border: 1px solid black;
 	padding: 0;
 	margin: 0;
 	z-index: -1;
+	display: flex;
+	background-color: white; /* Remove */
+	/* width: 30em; */
 }
 
-.receipt ul {
-	list-style: none;
+.leftSide {
+	background-color: rgb(248, 244, 244);
+	text-align: left;
+	padding-left: 1em;
+	padding-right: 1em;
+	border-right: 3px solid green;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.rightSide > h3 {
+	padding-top: 0.5em;
+	padding-bottom: 0.2em;
+	color: #14df96;
+}
+.rightSide {
+	padding: 0.5em 1em 0.5em 1em;
+	text-align: center;
 }
 
-.receipt ul > li > span {
-	padding-right: 0.5em;
-	border-right: 2px solid black
+.rightSide > p {
+	font-style: italic;
+	color: rgb(159, 157, 157);
+	font-size: 0.8em;
+	font-family: "PT_sans",sans-serif;
+}
+.receiptDetails {
+
+	margin-top: -1em;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
-.receipt ul > li {
-	padding: 0.5em;
-	border: 1px solid black;
+.receiptDetails > p > span{
+	border-bottom: 1px solid black;
 }
 
-.receipt li > h1 {
-	padding: 0;
-	margin: 0;
+@media (max-width: 410px) {
+	.receiptDetails p {
+
+	}
 }
 /* END styling Appointment Details receipt  */
 

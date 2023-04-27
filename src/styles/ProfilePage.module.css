@@ -187,3 +187,57 @@
 		width: 10em;
 	}
 }
+
+/* Styling the Appointment Section */
+.appointment_section > p {
+	color: green;
+	padding-top: 2em;
+	padding-bottom: 1em;
+}
+
+.appointment_section > hr {
+	border: 1px solid rgb(210, 209, 209);
+}
+
+.appointment_item {
+	margin-top: 1em;
+	margin-bottom: 0.7em;
+	display: flex;
+	justify-content: space-between;
+	transition: 0.3s;
+}
+
+.appointment_item:hover {
+	scale: 1.03;
+}
+.appointment_item > h3 {
+	display: flex;
+	flex-direction: column;
+}
+
+.appointment_item > h3 > span {
+	font-weight: lighter;
+	font-size: 0.8em;
+	font-style: italic;
+	color: rgb(138, 136, 136);
+}
+
+.appointment_item > button {
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	background-color: blue;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	transition: 0.4s;
+}
+
+.appointment_item > button:hover {
+	background-color: white;
+	color: blue;
+	border: 1px solid blue;
+}
+
+

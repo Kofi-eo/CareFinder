@@ -5,7 +5,7 @@ import Details from './Details';
 import Book from './Book';
 import SucessModal from './SucessModal';
 
-function ModalNav({ setShowModal, setAppointment }) {
+function ModalNav({ doctorsName, medData, setShowModal, setAppointment }) {
 	const [formDetails, setFormDetails] = useState({
 		appointmentType: 'In-person',
 		meetingDate: 'Tue April 25, 2023',
@@ -13,6 +13,7 @@ function ModalNav({ setShowModal, setAppointment }) {
 		firstName: '',
 		lastName: '',
 		sex: '',
+		doctorsName: doctorsName
 	});
 
 	function formUpdate(key, newvalue) {
@@ -51,7 +52,7 @@ function ModalNav({ setShowModal, setAppointment }) {
 		{ modal: <Book formDetails={formDetails} formUpdate={formUpdate} /> },
 		{
 			modal: (
-				<SucessModal formDetails={formDetails} setShowModal={setShowModal} />
+				<SucessModal medData={medData} formDetails={formDetails} setShowModal={setShowModal} />
 			),
 		},
 	];

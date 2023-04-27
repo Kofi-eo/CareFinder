@@ -3,8 +3,9 @@ import PopUpModal from "@/styles/PopUpModal.module.css";
 import { RiCalendarCheckLine } from "react-icons/ri";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
+import Image from "next/image";
 
-function SucessModal({ setShowModal, formDetails }) {
+function SucessModal({ medData, setShowModal, formDetails }) {
   
   function handleDocument() {
 
@@ -26,7 +27,7 @@ function SucessModal({ setShowModal, formDetails }) {
   }
 
   const {firstName, lastName, sex, appointmentType, meetingDate, meetingTime} = formDetails
-
+  console.log(medData)
   return (
     <>
       <div className={PopUpModal.sucessContainer}>
@@ -38,14 +39,26 @@ function SucessModal({ setShowModal, formDetails }) {
 
         {/* Downloadable Appointment Details */}
         <div id='formData' className={PopUpModal.receipt}>
-          <ul>
-            <li><h1> {firstName} {lastName}</h1></li>
-            <li><span style={{color: '#003963'}}>Date:</span> {meetingDate} </li>
-            <li><span style={{color: '#003963'}}>TIme:</span> @{meetingTime}AM</li>
-            <li><span style={{color: '#003963'}}>Appointment Type:</span> {appointmentType}</li>
-            <li><span style={{color: '#003963'}}>sex:</span> {sex}</li>
-            <li><h3><span style={{color: '#003963'}}>Doctor:</span> Mr Phil Michaelson</h3></li>
-          </ul>
+          <div className={PopUpModal.leftSide}>
+            <Image
+                src='/Logo-Black.svg'
+                alt='careFinder'
+                height={80}
+                width={80}
+              />
+              <p>{medData.hospital}</p>
+              <p>{medData.phoneNumber}</p>
+          </div>
+          <div className={PopUpModal.rightSide}>
+            <h3>Appointment</h3>
+            <p>Reminder</p>
+            <div className={PopUpModal.receiptDetails}>
+              <p>Name: <span>{firstName} {lastName}</span></p>
+              <p>Date: <span>{meetingDate}</span></p>
+              <p>Time: <span>{meetingTime}</span></p>
+            </div>
+            <p>www.<span style={{color: '#14df96'}}>careFinder</span>.com</p>
+          </div>
         </div>
         {/*  */}
 

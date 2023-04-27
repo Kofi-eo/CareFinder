@@ -3,12 +3,15 @@ import Image from 'next/image';
 import { AiFillStar } from 'react-icons/ai';
 import { Lexend } from 'next/font/google';
 import { PT_Sans } from 'next/font/google';
+import { useAuth } from '../../pages/_app';
 
 const lexend = Lexend({ subsets: ['latin'], weight: ['400', '800'] });
 const pt_sans = PT_Sans({ subsets: ['latin'], weight: ['400', '700'] });
 
-export default function DoctorsCard({ showModal, setShowModal, data }) {
+export default function DoctorsCard({ setDoctorsName, setDisplayError, showModal, setShowModal, data }) {
 	const { name, title } = data;
+	const {user} = useAuth()
+	
 	return (
 		<div className={Styles.doctor_card}>
 			<Image
@@ -30,9 +33,16 @@ export default function DoctorsCard({ showModal, setShowModal, data }) {
 				Next Available Appointment
 			</p>
 			<p className={pt_sans.className}>Wed, 12 March(7:15AM)</p>
-			<button style={{ cursor: 'pointer' }} onClick={() => setShowModal(true)}>
-				Book Appointment
-			</button>
+
+			{user ? 
+				<button style={{ cursor: 'pointer' }} onClick={() => (setShowModal(true), setDoctorsName(name))}>
+					Book Appointment
+				</button> 
+				:
+				<button style={{ cursor: 'pointer' }} onClick={() => setDisplayError(true)}>
+					Book Appointment
+				</button>
+			}
 		</div>
 	);
 }

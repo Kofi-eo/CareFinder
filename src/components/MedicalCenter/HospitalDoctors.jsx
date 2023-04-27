@@ -4,11 +4,16 @@ import { Lexend } from 'next/font/google';
 import { PT_Sans } from 'next/font/google';
 import { SpecialistData } from '@/data/specialistsData';
 import { useState } from 'react';
+import { RiErrorWarningFill } from 'react-icons/ri';
+import Link from 'next/link';
 
 const lexend = Lexend({ subsets: ['latin'], weight: ['400', '800'] });
 const pt_sans = PT_Sans({ subsets: ['latin'], weight: ['400', '700'] });
 
 export default function HospitalDoctors({ data, showModal, setShowModal }) {
+	const [displayError, setDisplayError] = useState(false)
+	const [selectedDepartment, setSelectedDepartment] = useState('default');
+
 	const {
 		id,
 		departments
@@ -18,7 +23,13 @@ export default function HospitalDoctors({ data, showModal, setShowModal }) {
 		(item) => item.medicalCenterId === id
 	);
 
-	const [selectedDepartment, setSelectedDepartment] = useState('default');
+	const ErrorModal = 
+		<div className={Styles.error_modal}>
+			<RiErrorWarningFill />
+			<p >You need to be logged in to perform this action</p>
+			<p  >Click here to <Link href='/Auth'>Login</Link> </p>
+			<button onClick={() => setDisplayError(false)}>Close</button>
+		</div>
 
 	const filteredSpecialistData = specialistData.filter((item) => {
 		if (selectedDepartment === 'default') {
@@ -30,6 +41,7 @@ export default function HospitalDoctors({ data, showModal, setShowModal }) {
 
 	return (
 		<div className={Styles.hospital_doctors}>
+			{displayError && ErrorModal}
 			<div className={Styles.filter_bar}>
 				<div className={Styles.filter_item}>
 					<label className={pt_sans.className}>Sort By</label>
@@ -74,6 +86,8 @@ export default function HospitalDoctors({ data, showModal, setShowModal }) {
 							data={x}
 							showModal={showModal}
 							setShowModal={setShowModal}
+							displayError={displayError}
+							setDisplayError={setDisplayError}
 						/>
 					))}
 			</div>

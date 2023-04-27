@@ -16,7 +16,7 @@ For Video Call Appointments, A video call meeting will be created for the user a
 For the Frontend We made use of NextJS, Javascript and CSS. The app also has some backend functionalities. For that we made use of Firebase to setup User Authentication and also store some user data. The Front End was deployed on Vercel.
 
 ## Challenges We Ran Into
-One issue we faced was working with the google maps API. Since one on our team had worked with it before and the documentations were not really straight forward, we had to conduct an extensive reasearch on the task, but we finally decided to go with the `@react-google-maps/api` package to integrate google maps functionality to out application.
+One issue we faced was working with the google maps API. No one on our team had worked with it before and the documentations were not really straight forward,so we had to conduct an extensive reasearch on the task, but we finally decided to go with the `@react-google-maps/api` package to integrate google maps functionality into our application.
 
 ## Accomplishments we're proud of
 We are proud that we were able to make use of tools that we haven't used before and come together to accomplish what we set for in a relatively short period of time.
@@ -25,7 +25,7 @@ We are proud that we were able to make use of tools that we haven't used before 
 We Leart many new technologies and skills like how to structure projects in a better way and how to effectively work in a team. We also strengthend our expertise on some of our existing skills like integrating Firebase to a web app and creating responsive carousels with swiper JS.
 
 ## Whats Next for Care Finder
-We hope to expand our services to more people in the future and look for ways to increase our app scalability. We'd also like to pitch our app to existing Hospitals or clinics that may be in need of a similar system setup for their business.
+We hope to expand our services to more people in the future and look for ways to increase our app scalability. We'd also like to pitch our app to existing Hospitals or clinics that may be in need of a similar system setup for their doctors and patients.
 
 ## Built With
 - NextJS

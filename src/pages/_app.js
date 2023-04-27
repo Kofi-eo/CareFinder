@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
 	const [user, setUser] = useState(null);
 	const [loading, setLoading] = useState(true);
 	const [appointmentHistory, setAppointmentHistory] = useState([]);
-
+	console.log(appointmentHistory)
 	useEffect(() => {
 		setLoading(true);
 

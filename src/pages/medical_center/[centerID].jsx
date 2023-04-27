@@ -13,8 +13,10 @@ import { useRouter } from 'next/router';
 export default function MedicalCentre({setAppointment}) {
 
 	const [showModal, setShowModal] = useState(false); // for popup Appointment Modal
+	const [doctorsName, setDoctorsName] = useState('')
 	const route = useRouter();
 	const centerID = route.query.centerID;
+
 
 	const currentData = MedicalCentreData.filter((item) => item.id === centerID); // getting current Hospital/pharmacy data
 
@@ -42,7 +44,7 @@ export default function MedicalCentre({setAppointment}) {
 			</Head>
 
 			{showModal ? (
-				<PopUpModal setAppointment={setAppointment} showModal={showModal} setShowModal={setShowModal} />
+				<PopUpModal doctorsName={doctorsName} medData={currentData[0]} setAppointment={setAppointment} showModal={showModal} setShowModal={setShowModal} />
 			) : (
 				''
 			)}
@@ -54,6 +56,7 @@ export default function MedicalCentre({setAppointment}) {
 						data={currentData[0]}
 						showModal={showModal}
 						setShowModal={setShowModal}
+						setDoctorsName={setDoctorsName}
 					/>
 				</div>
 			</div>
