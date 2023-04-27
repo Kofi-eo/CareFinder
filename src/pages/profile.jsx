@@ -1,15 +1,12 @@
-import { useState } from 'react';
-import Styles from '@/styles/ProfilePage.module.css';
 import NavBar from '@/components/HomePage/NavBar';
-import Head from 'next/head';
-import { FaHistory } from 'react-icons/fa';
-import { FaLock } from 'react-icons/fa';
-import { FaPen } from 'react-icons/fa';
-import { Lexend } from 'next/font/google';
-import { PT_Sans } from 'next/font/google';
-import EditProfile from '@/components/ProfilePage/EditProfile';
 import AppointmentHistory from '@/components/ProfilePage/AppointHistory';
+import EditProfile from '@/components/ProfilePage/EditProfile';
 import PasswordSecurity from '@/components/ProfilePage/PasswordSecurity';
+import Styles from '@/styles/ProfilePage.module.css';
+import { Lexend, PT_Sans } from 'next/font/google';
+import Head from 'next/head';
+import { useState } from 'react';
+import { FaHistory, FaLock, FaPen } from 'react-icons/fa';
 
 const lexend = Lexend({ subsets: ['latin'], weight: ['400', '800'] });
 const pt_sans = PT_Sans({ subsets: ['latin'], weight: ['400', '700'] });

@@ -1,5 +1,4 @@
-import React, { createContext, useState } from 'react';
-import { MedicalCentreData } from '@/data/medicalCentres';
+import { createContext, useState } from 'react';
 
 export const filterContext = createContext();
 

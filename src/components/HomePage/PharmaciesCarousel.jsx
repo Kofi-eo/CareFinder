@@ -1,12 +1,9 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Navigation, Pagination, A11y } from 'swiper';
-import HomepageStyles from '@/styles/HomePage.module.css';
-import { IoLocationSharp } from 'react-icons/io5';
-import { useEffect, useState } from 'react';
-import { useContext } from 'react';
-import { mapsContext } from '@/Context/googleMapsContext';
-import MedicalCentreCard from '../Cards/MedicalCentreCard';
 import { MedicalCentreData } from '@/data/medicalCentres';
+import HomepageStyles from '@/styles/HomePage.module.css';
+import { useEffect, useState } from 'react';
+import { A11y, EffectCoverflow, Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import MedicalCentreCard from '../Cards/MedicalCentreCard';
 
 function HospitalsCarousel() {
 	const [slides, setSlides] = useState(3.5);

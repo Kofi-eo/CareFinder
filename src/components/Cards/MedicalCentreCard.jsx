@@ -1,7 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
-import { IoLocationOutline, IoLocationSharp } from 'react-icons/io5';
 import { useRouter } from 'next/router';
+import { IoLocationSharp } from 'react-icons/io5';
 
 const MedicalCentreCard = ({ details, width, height, shadow = false }) => {
 	const route = useRouter();

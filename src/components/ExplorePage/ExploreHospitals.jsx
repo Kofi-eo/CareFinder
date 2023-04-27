@@ -1,3 +1,4 @@
+import { MedicalCentreData } from '@/data/medicalCentres';
 import ExploreStyles from '@/styles/ExplorePage.module.css';
 import MedicalCentreCard from '../Cards/MedicalCentreCard';
 import { MedicalCentreData } from '@/data/medicalCentres';

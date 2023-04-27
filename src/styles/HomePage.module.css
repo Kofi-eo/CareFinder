@@ -1,873 +1,874 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
 /* Nav Bar */
 
 .centerNav {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100vw;
-	flex-direction: column;
-	z-index: 10;
-	font-family: 'Lexend', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  flex-direction: column;
+  z-index: 10;
+  font-family: "Lexend", sans-serif;
 }
 
 .centerNav nav {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 90vw;
-	height: 90px;
-	background-color: #14df96;
-	backdrop-filter: blur(10px);
-	position: fixed;
-	z-index: 10;
-	transition: 0.2s;
-	padding: 0px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90vw;
+  height: 90px;
+  background-color: #14df96;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  z-index: 10;
+  transition: 0.2s;
+  padding: 0px 80px;
 }
 
 .centerNav nav img {
-	width: 160px;
-	height: 82px;
+  width: 160px;
+  height: 82px;
 }
 
 .centerNav nav ul {
-	display: flex;
-	width: auto;
-	justify-content: space-around;
-	align-items: center;
-	flex-direction: row;
-	font-weight: 400;
-	font-size: 15px;
-	column-gap: 20;
+  display: flex;
+  width: auto;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  font-weight: 400;
+  font-size: 15px;
+  column-gap: 20;
 }
 
 .centerNav nav li {
-	list-style: none;
-	margin-right: 30px;
+  list-style: none;
+  margin-right: 30px;
 }
 
 .loginButton {
-	background-color: black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	width: 140px;
-	height: 40px;
-	padding: 25px 85px;
-	position: relative;
-	z-index: 5;
-	font-size: 0.8rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 140px;
+  height: 40px;
+  padding: 25px 85px;
+  position: relative;
+  z-index: 5;
+  font-size: 0.8rem;
 }
 
 .navButton {
-	display: none;
+  display: none;
 }
 
 /* Mobile Nav */
 @media (max-width: 950px) {
-	.centerNav nav ul {
-		display: none;
-	}
+  .centerNav nav ul {
+    display: none;
+  }
 
-	.centerNav nav {
-		padding: 0px 20px;
-		height: 70px;
-	}
+  .centerNav nav {
+    padding: 0px 20px;
+    height: 70px;
+  }
 
-	.centerNav nav img {
-		width: 150px;
-	}
-	.navButton {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border: none;
-		background-color: transparent;
-		color: black;
-		font-size: 20px;
-	}
+  .centerNav nav img {
+    width: 150px;
+  }
+  .navButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+  }
 }
 
 /* Mobile Nav */
 
 /* Header */
 .headerContainer {
-	width: 100vw;
-	background-color: rgba(169, 255, 224, 0.2);
+  width: 100vw;
+  background-color: rgba(169, 255, 224, 0.2);
 }
 
 .headerContainer header {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	align-items: center;
-	height: 100vh;
-	position: relative;
-	overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .headerText {
-	padding-top: 90px;
-	grid-column: span 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	height: 100%;
-	padding-left: 13%;
+  padding-top: 90px;
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  padding-left: 13%;
 }
 
 .headerText h1 {
-	width: 50%;
-	font-size: 4.5rem;
-	font-family: 'Lexend', sans-serif;
-	line-height: 1.1;
+  width: 50%;
+  font-size: 4.5rem;
+  font-family: "Lexend", sans-serif;
+  line-height: 1.1;
 }
 
 .headerText h1::first-line {
-	font-size: 4rem;
-	color: #076643;
+  font-size: 4rem;
+  color: #076643;
 }
 
 .headerText p {
-	width: 75%;
-	margin-top: 25px;
-	font-size: 1.2rem;
-	color: #505050;
-	font-family: 'PT Sans', sans-serif;
+  width: 75%;
+  margin-top: 25px;
+  font-size: 1.2rem;
+  color: #505050;
+  font-family: "PT Sans", sans-serif;
 }
 
 .headerImage {
-	height: 100%;
-	grid-column: span 1;
-	background-image: url(/heroImage.webp);
-	background-size: cover;
+  height: 100%;
+  grid-column: span 1;
+  background-image: url(/heroImage.webp);
+  background-size: cover;
 }
 
 /* Mobile Header */
 @media (max-width: 950px) {
-	.headerContainer {
-		height: auto;
-		background-color: rgba(169, 255, 224, 0.2);
-		padding-bottom: 20px;
-	}
-	.headerImage {
-		display: none;
-	}
-	.headerContainer header {
-		display: flex;
-		height: fit-content;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: flex-start;
-		overflow: visible;
-	}
+  .headerContainer {
+    height: auto;
+    background-color: rgba(169, 255, 224, 0.2);
+    padding-bottom: 20px;
+  }
+  .headerImage {
+    display: none;
+  }
+  .headerContainer header {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: visible;
+  }
 
-	.headerText {
-		padding: 15vh 7vw 2vh 7vw;
-		height: auto;
-	}
-	.headerText h1 {
-		width: 200px;
-		font-size: 3.5rem;
-	}
-	.headerText h1::first-line {
-		font-size: 3rem;
-		color: #076643;
-	}
-	.headerText p {
-		padding-top: 2px;
-		font-size: 15px;
-		width: 340px;
-	}
+  .headerText {
+    padding: 15vh 7vw 2vh 7vw;
+    height: auto;
+  }
+  .headerText h1 {
+    width: 200px;
+    font-size: 3.5rem;
+  }
+  .headerText h1::first-line {
+    font-size: 3rem;
+    color: #076643;
+  }
+  .headerText p {
+    padding-top: 2px;
+    font-size: 15px;
+    width: 340px;
+  }
 }
 
 /* Hero Buttons */
 .heroButtonsContainer {
-	padding-top: 30px;
-	display: flex;
-	flex-direction: row;
-	gap: 20px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
 @media (max-width: 950px) {
-	.heroButtonsContainer {
-		display: flex;
-		flex-direction: row;
-		column-gap: 10px;
-	}
+  .heroButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+  }
 }
 
 /* Search */
 .searchBoxContainer {
-	position: absolute;
-	bottom: 20px;
-	display: flex;
-	width: 100%;
-	justify-content: center;
-	align-items: center;
-	font-family: 'Lexend', sans-serif;
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lexend", sans-serif;
 }
 .searchBox {
-	width: 90vw;
-	height: 15vh;
-	background-color: white;
-	color: black;
-	border: 1px solid black;
+  width: 90vw;
+  height: 15vh;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
 }
 .searchBox form {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .columnInputLocation {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .columnInputs {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .columnInputs label {
-	font-size: 20px;
-	font-weight: 700;
+  font-size: 20px;
+  font-weight: 700;
 }
 .columnInputLocation {
-	font-size: 20px;
-	font-weight: 700;
+  font-size: 20px;
+  font-weight: 700;
 }
 .columnInputLocation input {
-	border: none;
-	border-bottom: 3px solid black;
-	border-radius: 0%;
-	width: 200px;
-	margin-top: 10px;
-	font-size: 15px;
-	padding-bottom: 15px;
-	font-weight: 700;
-	outline: none;
-	appearance: none;
-	-webkit-appearance: none;
+  border: none;
+  border-bottom: 3px solid black;
+  border-radius: 0%;
+  width: 200px;
+  margin-top: 10px;
+  font-size: 15px;
+  padding-bottom: 15px;
+  font-weight: 700;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
 }
 .columnInputs input {
-	border: none;
-	border-bottom: 3px solid black;
-	border-radius: 0%;
-	width: 150px;
-	margin-top: 10px;
-	font-size: 15px;
-	padding-bottom: 15px;
-	font-weight: 700;
-	outline: none;
-	appearance: none;
-	-webkit-appearance: none;
+  border: none;
+  border-bottom: 3px solid black;
+  border-radius: 0%;
+  width: 150px;
+  margin-top: 10px;
+  font-size: 15px;
+  padding-bottom: 15px;
+  font-weight: 700;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .columnInputs select {
-	border: none;
-	border-bottom: 3px solid black;
-	width: 200px;
-	margin-top: 10px;
-	font-size: 15px;
-	padding-bottom: 15px;
-	font-weight: 700;
-	outline: none;
-	cursor: pointer;
-	background-color: transparent;
-	color: #000000a5;
-	appearance: none;
-	-webkit-appearance: none;
+  border: none;
+  border-bottom: 3px solid black;
+  width: 200px;
+  margin-top: 10px;
+  font-size: 15px;
+  padding-bottom: 15px;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #000000a5;
+  appearance: none;
+  -webkit-appearance: none;
 }
 .selectArrow {
-	font-size: 20px;
-	position: absolute;
-	margin-top: 35px;
-	margin-left: 180px;
+  font-size: 20px;
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 180px;
 }
 .calender {
-	font-size: 20px;
-	position: absolute;
-	margin-top: 35px;
-	margin-left: 130px;
+  font-size: 20px;
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 130px;
 }
 .searchButton {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 180px;
-	height: 50px;
-	font-size: 15px;
-	font-weight: 700;
-	color: white;
-	background-color: black;
-	border: none;
-	border-radius: 6px;
-	cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 /* Mobile Search */
 @media (max-width: 950px) {
-	.searchBoxContainer {
-		position: unset;
-		padding-top: 20px;
-		bottom: 0px;
-	}
-	.searchBox {
-		width: 90vw;
-		height: 500px;
-	}
-	.searchBox form {
-		flex-direction: column;
-	}
-	.columnInputLocation input {
-		width: 250px;
-	}
-	.columnInputs input {
-		width: 250px;
-	}
-	.selectArrow {
-		font-size: 20px;
-		position: absolute;
-		margin-top: 35px;
-		margin-left: 230px;
-	}
-	.calender {
-		font-size: 20px;
-		position: absolute;
-		margin-top: 35px;
-		margin-left: 230px;
-	}
-	.columnInputs select {
-		width: 250px;
-	}
+  .searchBoxContainer {
+    position: unset;
+    padding-top: 20px;
+    bottom: 0px;
+  }
+  .searchBox {
+    width: 90vw;
+    height: 500px;
+  }
+  .searchBox form {
+    flex-direction: column;
+  }
+  .columnInputLocation input {
+    width: 250px;
+  }
+  .columnInputs input {
+    width: 250px;
+  }
+  .selectArrow {
+    font-size: 20px;
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 230px;
+  }
+  .calender {
+    font-size: 20px;
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 230px;
+  }
+  .columnInputs select {
+    width: 250px;
+  }
 }
 
 /* Info Section */
 .infoSectionContainer {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
-	width: 100vw;
-	height: 450px;
-	background-color: #1e1e1e;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 450px;
+  background-color: #1e1e1e;
 }
 
 .imgAndIcon {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: white;
-	width: 150px;
-	height: 150px;
-	border-radius: 100%;
-	overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  overflow: hidden;
 }
 .imgAndIcon img {
-	width: 150px;
-	object-fit: contain;
+  width: 150px;
+  object-fit: contain;
 }
 .infoIcons {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 40px;
-	height: 40px;
-	background-color: black;
-	border-radius: 100%;
-	position: absolute;
-	margin-left: 120px;
-	margin-top: 100px;
-	font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 100%;
+  position: absolute;
+  margin-left: 120px;
+  margin-top: 100px;
+  font-size: 20px;
 }
 
 .infoSection {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
 .infoSection h1 {
-	margin-top: 15px;
-	font-family: 'Lexend', sans-serif;
-	font-size: 1.5rem;
+  margin-top: 15px;
+  font-family: "Lexend", sans-serif;
+  font-size: 1.5rem;
 }
 .infoSection p {
-	margin-top: 0.8rem;
-	width: 250px;
-	font-size: 0.8rem;
-	text-align: center;
-	font-family: 'Lexend', sans-serif;
+  margin-top: 0.8rem;
+  width: 250px;
+  font-size: 0.8rem;
+  text-align: center;
+  font-family: "Lexend", sans-serif;
 }
 /* Mobile Info Section   */
 @media (max-width: 950px) {
-	.infoSectionContainer {
-		flex-direction: column;
-		height: 950px;
-	}
+  .infoSectionContainer {
+    flex-direction: column;
+    height: 950px;
+  }
 }
 
 /* InfoSection Two */
 .infoSectionTwoContainer {
-	padding: 80px 0px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
+  padding: 80px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .infoSectionTwoImage {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	margin-left: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
 }
 .infoSectionTwoImage img {
-	height: 300px;
-	width: 350px;
-	border-radius: 20px;
+  height: 300px;
+  width: 350px;
+  border-radius: 20px;
 }
 .drOwenText {
-	left: -50px;
-	bottom: 100px;
-	position: absolute;
-	color: white;
-	width: 200px;
-	height: 60px;
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: center;
-	background-color: rgba(0, 0, 0, 0.5);
-	border-radius: 6px;
-	backdrop-filter: blur(2px);
-	font-family: 'PT Sans', sans-serif;
+  left: -50px;
+  bottom: 100px;
+  position: absolute;
+  color: white;
+  width: 200px;
+  height: 60px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  backdrop-filter: blur(2px);
+  font-family: "PT Sans", sans-serif;
 }
 .drOwenStars {
-	right: -100px;
-	bottom: 30px;
-	position: absolute;
-	color: #ffd75f;
-	width: 130px;
-	height: 40px;
-	padding: 20px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: rgba(0, 0, 0, 0.5);
-	border-radius: 6px;
-	backdrop-filter: blur(2px);
+  right: -100px;
+  bottom: 30px;
+  position: absolute;
+  color: #ffd75f;
+  width: 130px;
+  height: 40px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  backdrop-filter: blur(2px);
 }
 
 .infoSectionTwoText {
-	margin-top: 50px;
+  margin-top: 50px;
 }
 
 .infoSectionTwoText h1 {
-	font-size: 30px;
-	font-weight: 800;
-	font-family: 'Lexend', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Lexend", sans-serif;
 }
 .infoSectionTwoText p {
-	font-size: 1.2rem;
-	font-weight: 400;
-	width: 430px;
-	margin: 15px 0px 30px 0px;
-	font-family: 'PT Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 430px;
+  margin: 15px 0px 30px 0px;
+  font-family: "PT Sans", sans-serif;
 }
 .infoSectionTwoText button {
-	width: 200px;
-	height: 40px;
-	background-color: black;
-	color: white;
-	font-size: 15px;
-	border: none;
-	border-radius: 6px;
-	cursor: pointer;
-	font-family: 'Lexend', sans-serif;
+  width: 200px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Lexend", sans-serif;
 }
 
 /* Mobile Info Section Two   */
 @media (max-width: 950px) {
-	.infoSectionTwoContainer {
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-	.infoSectionTwoImage {
-		display: flex;
-		flex-direction: column;
-		margin-left: 0px;
-	}
-	.infoSectionTwoImage img {
-		width: 300px;
-	}
-	.drOwenText {
-		left: -30px;
-		bottom: 70px;
-		width: 150px;
-		height: 60px;
-		font-size: 12px;
-	}
-	.drOwenStars {
-		right: -30px;
-		bottom: 25px;
-		width: 90px;
-		height: 40px;
-	}
-	.infoSectionTwoText {
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-	.infoSectionTwoText h1 {
-		font-size: 25px;
-	}
-	.infoSectionTwoText p {
-		font-size: 16px;
-		width: 300px;
-	}
+  .infoSectionTwoContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .infoSectionTwoImage {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+  }
+  .infoSectionTwoImage img {
+    width: 300px;
+  }
+  .drOwenText {
+    left: -30px;
+    bottom: 70px;
+    width: 150px;
+    height: 60px;
+    font-size: 12px;
+  }
+  .drOwenStars {
+    right: -30px;
+    bottom: 25px;
+    width: 90px;
+    height: 40px;
+  }
+  .infoSectionTwoText {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .infoSectionTwoText h1 {
+    font-size: 25px;
+  }
+  .infoSectionTwoText p {
+    font-size: 16px;
+    width: 300px;
+  }
 }
 
 /* Hospitals Near You  */
 .hospitalsNearContainer {
-	padding: 40px 0px 40px 120px;
-	background-color: #fff9e8;
-	overflow-x: hidden;
+  padding: 40px 0px 40px 120px;
+  background-color: #fff9e8;
+  overflow-x: hidden;
 }
 
 .hospitalsNearText {
-	display: flex;
-	width: 90vw;
-	position: relative;
-	font-family: 'Lexend', sans-serif;
-	font-size: 0.9rem;
-	color: #83703c;
+  display: flex;
+  width: 90vw;
+  position: relative;
+  font-family: "Lexend", sans-serif;
+  font-size: 0.9rem;
+  color: #83703c;
 }
 
 .arrowContainer {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 30px;
-	height: 30px;
-	border-radius: 100%;
-	background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: white;
 }
 
 .hospitalsNearArrBtns {
-	display: flex;
-	justify-content: space-around;
-	width: 70px;
-	position: absolute;
-	right: 50px;
-	font-size: 20px;
-	cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  width: 70px;
+  position: absolute;
+  right: 50px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .swiperContainer {
-	width: 85vw;
-	height: 300px;
-	position: relative;
+  width: 85vw;
+  height: 300px;
+  position: relative;
 }
 
 .slideClass {
-	width: fit-content;
-	height: fit-content;
+  width: fit-content;
+  height: fit-content;
 }
 
 .hospitalsCarousel {
-	margin-top: 50px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
-	position: absolute;
-	font-family: 'Lexend', sans-serif;
-	margin-right: 40px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  font-family: "Lexend", sans-serif;
+  margin-right: 40px;
 }
 
 .SpecialistsAvailable {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 150px;
-	height: 20px;
-	background-color: black;
-	border-radius: 15px;
-	position: absolute;
-	top: 10px;
-	right: 5px;
-	color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 20px;
+  background-color: black;
+  border-radius: 15px;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  color: white;
 }
 .hospitalsCarouselContainer img {
-	width: 100%;
-	height: 70%;
-	object-fit: cover;
-	border-radius: 6px 6px 0 0;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 6px 6px 0 0;
 }
 .hospitalsCarouselItem {
-	width: 100%;
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-around;
-	padding-top: 10px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-top: 10px;
 }
 .hospitalsCarouselItem .address {
-	width: 180px;
+  width: 180px;
 }
 
 .hospitalsNearViewButton {
-	display: flex;
-	justify-content: center;
-	padding-top: 70px;
-	margin-left: -120px;
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+  margin-left: -120px;
 }
 
 .hospitalsNearDivider {
-	background-color: #fffcf6;
-	border-color: #fffdf9;
+  background-color: #fffcf6;
+  border-color: #fffdf9;
 }
 
 /* Mobile Hospitals Near */
 @media (max-width: 950px) {
-	.hospitalsNearContainer {
-		padding-left: 20px;
-	}
-	.hospitalsNearText {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 90vw;
-		position: relative;
-		font-family: 'Lexend', sans-serif;
-	}
-	.hospitalsNearText h1 {
-		font-size: 25px;
-		text-align: center;
-	}
+  .hospitalsNearContainer {
+    padding-left: 20px;
+  }
+  .hospitalsNearText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    position: relative;
+    font-family: "Lexend", sans-serif;
+  }
+  .hospitalsNearText h1 {
+    font-size: 25px;
+    text-align: center;
+  }
 
-	.hospitalsNearArrBtns {
-		display: none;
-	}
-	.hospitalsCarouselContainer {
-		margin-right: 30px;
-		width: 300px;
-		height: 250px;
-		border: none;
-		border-radius: 6px;
-		background-color: white;
-	}
-	.hospitalsCarouselItem .address {
-		width: 200px;
-		font-size: 13px;
-	}
-	.hospitalsCarouselContainer img {
-		height: 60%;
-	}
-	.SpecialistsAvailable {
-		height: 25px;
-		font-size: 12px;
-	}
-	.hospitalsNearViewButton {
-		margin-left: -20px;
-	}
+  .hospitalsNearArrBtns {
+    display: none;
+  }
+  .hospitalsCarouselContainer {
+    margin-right: 30px;
+    width: 300px;
+    height: 250px;
+    border: none;
+    border-radius: 6px;
+    background-color: white;
+  }
+  .hospitalsCarouselItem .address {
+    width: 200px;
+    font-size: 13px;
+  }
+  .hospitalsCarouselContainer img {
+    height: 60%;
+  }
+  .SpecialistsAvailable {
+    height: 25px;
+    font-size: 12px;
+  }
+  .hospitalsNearViewButton {
+    margin-left: -20px;
+  }
 }
 
 /* Trust */
 .trustContainer {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	width: 100vw;
-	padding: 100px 0px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 100px 0px;
 }
 .trustContainer h1 {
-	color: #505050;
-	font-size: 30px;
-	font-family: 'PT Snas', sans-serif;
+  color: #505050;
+  font-size: 30px;
+  font-family: "PT Snas", sans-serif;
 }
 .trustLogos {
-	display: flex;
+  display: flex;
 }
 .trustLogos img {
-	width: 200px;
+  width: 200px;
 }
 @media (max-width: 950px) {
-	.trustContainer {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		width: 100vw;
-		text-align: start;
-	}
-	.trustContainer h1 {
-		color: #505050;
-		width: 300px;
-		font-size: 35px;
-		margin-left: 0px;
-	}
-	.trustLogos {
-		display: grid;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		margin-left: 50px;
-		grid-template-columns: 200px 200px;
-	}
-	.trustLogos img {
-		width: 150px;
-	}
+  .trustContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    text-align: start;
+  }
+  .trustContainer h1 {
+    color: #505050;
+    width: 300px;
+    font-size: 35px;
+    margin-left: 0px;
+  }
+  .trustLogos {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 50px;
+    grid-template-columns: 200px 200px;
+  }
+  .trustLogos img {
+    width: 150px;
+  }
 }
 
 /* Testimonies */
 
 .TestimoniesContainer {
-	padding: 50px 0px 100px 0px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	background-color: #ebf7ff;
+  padding: 50px 0px 100px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #ebf7ff;
 }
 .TestimoniesContainer h1 {
-	font-size: 35px;
-	font-weight: 700;
-	margin-bottom: 50px;
-	color: #003963;
-	font-family: 'Lexend', sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #003963;
+  font-family: "Lexend", sans-serif;
 }
 .testimoniesSwiperContainer {
-	width: 80vw;
-	height: 440px;
-	position: relative;
-	overflow: hidden;
+  width: 80vw;
+  height: 440px;
+  position: relative;
+  overflow: hidden;
 }
 
 .testimoniesCarousel {
-	margin-top: 50px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
-	position: absolute;
-	height: 300px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  height: 300px;
 }
 
 .testimoniesCarouselItem {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin-top: 100px;
-	background-color: #003963;
-	width: 80vw;
-	height: 300px;
-	color: white;
-	border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  background-color: #003963;
+  width: 80vw;
+  height: 300px;
+  color: white;
+  border-radius: 6px;
 }
 .testimoniesCarouselItem h2 {
-	margin-top: 30px;
-	font-size: 30px;
-	font-family: 'Lexend', sans-serif;
+  margin-top: 30px;
+  font-size: 30px;
+  font-family: "Lexend", sans-serif;
 }
 .testimoniesCarouselItem p {
-	width: 70%;
-	padding-top: 20px;
-	text-align: center;
-	font-weight: 400;
-	font-size: 20px;
-	position: relative;
-	font-family: 'PT Sans', sans-serif;
+  width: 70%;
+  padding-top: 20px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  position: relative;
+  font-family: "PT Sans", sans-serif;
 }
 .testimoniesCarouselImg {
-	margin-top: -120px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  margin-top: -120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .testimoniesCarouselImg img {
-	width: 150px;
-	height: auto;
-	border-radius: 100%;
+  width: 150px;
+  height: auto;
+  border-radius: 100%;
 }
 
 /* Mobile Testimonies */
 @media (max-width: 700px) {
-	.TestimoniesContainer h1 {
-		text-align: center;
-		font-size: 35px;
-		font-weight: 700;
-		color: #505050;
-		margin-bottom: 100px;
-	}
-	.testimoniesSwiperContainer {
-		width: 85vw;
-		height: 500px;
-		position: relative;
-		overflow: unset;
-	}
-	.testimoniesCarousel {
-		height: 500px;
-		margin-top: 0px;
-	}
-	.testimoniesCarouselItem {
-		height: 500px;
-	}
-	.testimoniesCarouselImg {
-		margin-top: 50px;
-	}
-	.testimoniesCarouselImg img {
-		top: -35px;
-		position: absolute;
-	}
-	.testimoniesPagination {
-		margin-top: 100px;
-	}
+  .TestimoniesContainer h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    color: #505050;
+    margin-bottom: 100px;
+  }
+  .testimoniesSwiperContainer {
+    width: 85vw;
+    height: 500px;
+    position: relative;
+    overflow: unset;
+  }
+  .testimoniesCarousel {
+    height: 500px;
+    margin-top: 0px;
+  }
+  .testimoniesCarouselItem {
+    height: 500px;
+  }
+  .testimoniesCarouselImg {
+    margin-top: 50px;
+  }
+  .testimoniesCarouselImg img {
+    top: -35px;
+    position: absolute;
+  }
+  .testimoniesPagination {
+    margin-top: 100px;
+  }
 }
 
 /* Footer */
 .footerContainer {
-	width: 100vw;
-	height: 300px;
-	background-color: #003963;
-	color: white;
-	padding: 50px;
-	display: grid;
-	justify-content: space-around;
-	grid-template-columns: 208px 41px 143px 197px;
-	font-family: 'PT Sans', sans-serif;
+  width: 100vw;
+  height: 300px;
+  background-color: #003963;
+  color: white;
+  padding: 50px;
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: 208px 41px 143px 197px;
+  font-family: "PT Sans", sans-serif;
 }
 .footerContainer p {
-	font-size: 15px;
-	padding-bottom: 20px;
+  font-size: 15px;
+  padding-bottom: 20px;
 }
 .footerContainer h3 {
-	padding-top: 10px;
-	padding-bottom: 25px;
-	font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  font-size: 20px;
 }
 .footerContainer li {
-	list-style: none;
-	padding-bottom: 10px;
-	font-size: 15px;
+  list-style: none;
+  padding-bottom: 10px;
+  font-size: 15px;
 }
 .footerContainer .carefinder img {
-	width: 200px;
-	padding-bottom: 20px;
+  width: 200px;
+  padding-bottom: 20px;
 }
 @media (max-width: 900px) {
-	.footerContainer {
-		display: flex;
-		flex-direction: column;
-		height: 800px;
-	}
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+  }
 }

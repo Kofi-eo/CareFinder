@@ -1,13 +1,10 @@
 import PopUpModal from '@/styles/PopUpModal.module.css';
-import { color } from 'framer-motion';
-import { useState } from 'react';
-import { AiFillStar } from 'react-icons/ai';
-import { MdHeight } from 'react-icons/md';
-import { RiHospitalLine } from 'react-icons/ri';
-import MeetingOption from './MeetingOption';
-import MeetingDate from './MeetingDate';
-import MeetingTime from './MeetingTime';
 import Image from 'next/image';
+import { AiFillStar } from 'react-icons/ai';
+import { RiHospitalLine } from 'react-icons/ri';
+import MeetingDate from './MeetingDate';
+import MeetingOption from './MeetingOption';
+import MeetingTime from './MeetingTime';
 
 function Appointment({ formUpdate, formDetails }) {
 	return (
@@ -33,7 +30,7 @@ function Appointment({ formUpdate, formDetails }) {
 				</div>
 			</div>
 			<MeetingOption formUpdate={formUpdate} formDetails={formDetails} />
-			<MeetingDate  formUpdate={formUpdate} />
+			<MeetingDate formUpdate={formUpdate} />
 			<MeetingTime formUpdate={formUpdate} />
 		</>
 	);

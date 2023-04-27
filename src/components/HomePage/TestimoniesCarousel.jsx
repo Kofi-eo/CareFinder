@@ -1,9 +1,7 @@
 import HomepageStyles from '@/styles/HomePage.module.css';
-import SwiperCore, { Autoplay } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper';
-import { delay } from 'framer-motion';
 import Image from 'next/image';
+import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 SwiperCore.use([Autoplay]);
 
 function TestimoniesCarousel() {

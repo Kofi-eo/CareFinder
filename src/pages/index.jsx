@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import Head from 'next/head';
 import Footer from '../components/HomePage/Footer';
 import Header from '../components/HomePage/Header';
 import HospitalsNear from '../components/HomePage/HospitalsNear';
@@ -8,8 +8,6 @@ import NavBar from '../components/HomePage/NavBar';
 import PharmaciesNear from '../components/HomePage/PharmaciesNear';
 import Testimonies from '../components/HomePage/Testimonies';
 import Trust from '../components/HomePage/Trust';
-import Head from 'next/head';
-import PopUpModal from '@/components/Appointment/PopUpModal';
 
 function HomePageHeader() {
 	return (

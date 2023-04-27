@@ -1,9 +1,7 @@
 import HomepageStyles from '@/styles/HomePage.module.css';
-import HospitalsCarousel from './HospitalsCarousel';
-import { RiArrowRightLine } from 'react-icons/ri';
-import { RiArrowLeftLine } from 'react-icons/ri';
-import { RxDotFilled } from 'react-icons/rx';
 import Link from 'next/link';
+import { RiArrowLeftLine, RiArrowRightLine } from 'react-icons/ri';
+import HospitalsCarousel from './HospitalsCarousel';
 
 function HospitalsNear() {
 	return (

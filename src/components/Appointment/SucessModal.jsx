@@ -1,16 +1,15 @@
-import React from "react";
 import PopUpModal from "@/styles/PopUpModal.module.css";
-import { RiCalendarCheckLine } from "react-icons/ri";
-import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
+import { RiCalendarCheckLine } from "react-icons/ri";
 
 function SucessModal({ setShowModal, formDetails }) {
-  
+
   function handleDocument() {
 
     const doc = new jsPDF();
 
-    const formData = document.getElementById('formData')
+    const formData = document.getElementById('formData');
 
     setTimeout(() => {
       // Convert the HTML element to canvas
@@ -18,14 +17,14 @@ function SucessModal({ setShowModal, formDetails }) {
         // Add the canvas to the PDF document
         const imgData = canvas.toDataURL("image/png");
         doc.addImage(imgData, "PNG", 10, 10, 180, 180);
-  
+
         // Save and download the PDF document
         doc.save("form-data.pdf");
       });
-    })
+    });
   }
 
-  const {firstName, lastName, sex, appointmentType, meetingDate, meetingTime} = formDetails
+  const { firstName, lastName, sex, appointmentType, meetingDate, meetingTime } = formDetails;
 
   return (
     <>
@@ -40,11 +39,11 @@ function SucessModal({ setShowModal, formDetails }) {
         <div id='formData' className={PopUpModal.receipt}>
           <ul>
             <li><h1> {firstName} {lastName}</h1></li>
-            <li><span style={{color: '#003963'}}>Date:</span> {meetingDate} </li>
-            <li><span style={{color: '#003963'}}>TIme:</span> @{meetingTime}AM</li>
-            <li><span style={{color: '#003963'}}>Appointment Type:</span> {appointmentType}</li>
-            <li><span style={{color: '#003963'}}>sex:</span> {sex}</li>
-            <li><h3><span style={{color: '#003963'}}>Doctor:</span> Mr Phil Michaelson</h3></li>
+            <li><span style={{ color: '#003963' }}>Date:</span> {meetingDate} </li>
+            <li><span style={{ color: '#003963' }}>TIme:</span> @{meetingTime}AM</li>
+            <li><span style={{ color: '#003963' }}>Appointment Type:</span> {appointmentType}</li>
+            <li><span style={{ color: '#003963' }}>sex:</span> {sex}</li>
+            <li><h3><span style={{ color: '#003963' }}>Doctor:</span> Mr Phil Michaelson</h3></li>
           </ul>
         </div>
         {/*  */}

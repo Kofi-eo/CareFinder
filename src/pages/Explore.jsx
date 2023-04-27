@@ -1,10 +1,10 @@
-import Head from 'next/head';
-import NavBar from '@/components/HomePage/NavBar';
-import Footer from '@/components/HomePage/Footer';
-import Filter from '@/components/ExplorePage/Filter';
-import ExploreStyles from '@/styles/ExplorePage.module.css';
-import ExploreMaps from '@/components/ExplorePage/ExploreMaps';
 import ExploreHospital from '@/components/ExplorePage/ExploreHospitals';
+import ExploreMaps from '@/components/ExplorePage/ExploreMaps';
+import Filter from '@/components/ExplorePage/Filter';
+import Footer from '@/components/HomePage/Footer';
+import NavBar from '@/components/HomePage/NavBar';
+import ExploreStyles from '@/styles/ExplorePage.module.css';
+import Head from "next/head";
 
 export default function Explore() {
 	return (
