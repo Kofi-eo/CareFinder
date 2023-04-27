@@ -20,15 +20,6 @@ export default function DoctorsCard({
 	const { name, title } = data;
 	const { user } = useAuth();
 
-	const displayModal = () => {
-		if (user) {
-			setShowModal(true);
-			setDoctorsName(name);
-		} else {
-			setDisplayError(true);
-		}
-	};
-
 	return (
 		<div className={Styles.doctor_card}>
 			<Image
@@ -52,11 +43,17 @@ export default function DoctorsCard({
 			<p className={pt_sans.className}>Wed, 12 March(7:15AM)</p>
 
 			{user ? (
-				<button style={{ cursor: 'pointer' }} onClick={displayModal}>
+				<button
+					style={{ cursor: 'pointer' }}
+					onClick={() => (setShowModal(true), setDoctorsName(name))}
+				>
 					Book Appointment
 				</button>
 			) : (
-				<button style={{ cursor: 'pointer' }} onClick={displayModal}>
+				<button
+					style={{ cursor: 'pointer' }}
+					onClick={() => setDisplayError(true)}
+				>
 					Book Appointment
 				</button>
 			)}
