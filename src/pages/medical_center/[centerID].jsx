@@ -10,13 +10,11 @@ import { MedicalCentreData } from '@/data/medicalCentres';
 import { useRouter } from 'next/router';
 
 // Note: This is a Dynamic Page/Route
-export default function MedicalCentre({setAppointment}) {
-
+export default function MedicalCentre({ setAppointment }) {
 	const [showModal, setShowModal] = useState(false); // for popup Appointment Modal
-	const [doctorsName, setDoctorsName] = useState('')
+	const [doctorsName, setDoctorsName] = useState('');
 	const route = useRouter();
 	const centerID = route.query.centerID;
-
 
 	const currentData = MedicalCentreData.filter((item) => item.id === centerID); // getting current Hospital/pharmacy data
 
@@ -28,7 +26,7 @@ export default function MedicalCentre({setAppointment}) {
 			const main = document.querySelector('html');
 			main.style.overflowY = 'scroll';
 		}
-		console.log(showModal);
+		// console.log(showModal);
 	}, [showModal]);
 
 	return (
@@ -44,7 +42,13 @@ export default function MedicalCentre({setAppointment}) {
 			</Head>
 
 			{showModal ? (
-				<PopUpModal doctorsName={doctorsName} medData={currentData[0]} setAppointment={setAppointment} showModal={showModal} setShowModal={setShowModal} />
+				<PopUpModal
+					doctorsName={doctorsName}
+					medData={currentData[0]}
+					setAppointment={setAppointment}
+					showModal={showModal}
+					setShowModal={setShowModal}
+				/>
 			) : (
 				''
 			)}
