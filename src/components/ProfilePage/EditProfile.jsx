@@ -267,7 +267,8 @@ export default function EditProfile() {
                     </div>
 
                     <input
-                        value='edit profile'
+                       type='submit'
+                       value={!disabled ? "submit" : "edit profile"}
                         disabled={disabled}
                         className={Styles.button}
                     />
