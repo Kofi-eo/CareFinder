@@ -1,8 +1,9 @@
-import { SpecialistData } from '@/data/specialistsData';
-import Styles from '@/styles/MedicalCenter.module.css';
-import { Lexend, PT_Sans } from 'next/font/google';
-import { useState } from 'react';
 import DoctorsCard from './DoctorsCard';
+import Styles from '@/styles/MedicalCenter.module.css';
+import { Lexend } from 'next/font/google';
+import { PT_Sans } from 'next/font/google';
+import { SpecialistData } from '@/data/specialistsData';
+import { useState } from 'react';
 import { RiErrorWarningFill } from 'react-icons/ri';
 import Link from 'next/link';
 
